@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Jost", sans-serif;
+  
+  --color-primary: #F15A29;
+  --color-prestige-black: #0A0A0A;
+  --color-prestige-white: #FFFFFF;
+  --color-prestige-cream: #FAF9F7;
+  --color-prestige-gray: #F2F0ED;
+  --color-prestige-text: #5C5C5C;
+}
+
+@layer base {
+  body {
+    @apply bg-prestige-white text-prestige-black font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display uppercase tracking-tight;
+  }
+}
+
+@layer utilities {
+  .noise-overlay {
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+      radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+      radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+      radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 32px 32px, 48px 48px, 40px 40px, 56px 56px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
