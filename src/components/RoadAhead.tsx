@@ -62,7 +62,6 @@ export default function RoadAhead() {
                 initial={{ opacity: 0, y: 26 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.35 }}
-                transition={{ delay: index * 0.08, duration: 0.55 }}
                 whileHover={{ y: -8, rotate: index % 2 === 0 ? -1 : 1 }}
                 animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
                 transition={{
@@ -73,6 +72,7 @@ export default function RoadAhead() {
                   },
                   opacity: { delay: index * 0.08, duration: 0.55 },
                   y: { delay: index * 0.08, duration: 0.55 },
+                  rotate: { duration: 0.25 },
                 }}
                 style={{
                   background: initiative.gradient,
