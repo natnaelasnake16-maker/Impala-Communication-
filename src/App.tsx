@@ -20,7 +20,6 @@ import {
   Menu, 
   X, 
   Compass, 
-  Video, 
   Radio, 
   Globe, 
   Users, 
@@ -104,31 +103,31 @@ const Navbar = () => {
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-white/90 backdrop-blur-md py-3 sm:py-4 shadow-sm"
-          : "bg-white/60 backdrop-blur-lg border-b border-white/40 py-4 sm:py-6 lg:py-8 shadow-sm"
+          ? "bg-white/90 backdrop-blur-md py-2.5 sm:py-3 shadow-sm"
+          : "bg-white/68 backdrop-blur-lg border-b border-white/40 py-3 sm:py-4 lg:py-5 shadow-sm"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center gap-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-5 lg:px-6 flex justify-between items-center gap-3 sm:gap-4">
         <Link to="/" className="flex items-center gap-2">
           <BrandLogo
             className="inline-flex"
-            imageClassName="h-10 sm:h-12 lg:h-14 w-auto"
+            imageClassName="h-8 sm:h-10 lg:h-12 w-auto"
           />
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-6 lg:gap-8">
+        <div className="hidden md:flex items-center gap-5 lg:gap-6">
           {navLinks.map((link) => (
             <Link 
               key={link.name} 
               to={link.href}
-              className="font-sans text-sm font-medium uppercase tracking-widest text-prestige-black hover:text-primary transition-colors relative group"
+              className="font-sans text-xs lg:text-sm font-medium uppercase tracking-[0.16em] text-prestige-black hover:text-primary transition-colors relative group"
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
-          <Link to="/get-in-touch" className="border-2 border-primary text-primary px-5 lg:px-6 py-2 font-display text-sm font-semibold uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300">
+          <Link to="/get-in-touch" className="border-2 border-primary text-primary px-4 lg:px-5 py-2 font-display text-xs lg:text-sm font-semibold uppercase tracking-[0.16em] hover:bg-primary hover:text-white transition-all duration-300">
             Get In Touch
           </Link>
         </div>
@@ -138,7 +137,7 @@ const Navbar = () => {
           className="md:hidden text-prestige-black shrink-0"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
@@ -147,13 +146,13 @@ const Navbar = () => {
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute top-full left-0 w-full bg-white shadow-xl py-6 sm:py-8 px-4 sm:px-6 md:hidden flex flex-col gap-5 sm:gap-6"
+          className="absolute top-full left-0 w-full bg-white shadow-xl py-4 sm:py-5 px-4 sm:px-5 md:hidden flex flex-col gap-4 sm:gap-5"
         >
           {navLinks.map((link) => (
             <Link 
               key={link.name} 
               to={link.href}
-              className="font-display text-lg sm:text-xl font-medium uppercase tracking-widest text-prestige-black"
+              className="font-display text-base sm:text-lg font-medium uppercase tracking-[0.16em] text-prestige-black"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
@@ -161,7 +160,7 @@ const Navbar = () => {
           ))}
           <Link 
             to="/get-in-touch" 
-            className="bg-primary text-white px-6 py-3.5 sm:py-4 font-display text-base sm:text-lg font-semibold uppercase tracking-widest text-center"
+            className="bg-primary text-white px-5 py-3 font-display text-sm sm:text-base font-semibold uppercase tracking-[0.16em] text-center"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Get In Touch
@@ -174,7 +173,7 @@ const Navbar = () => {
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-[92svh] items-center justify-center overflow-hidden sm:min-h-[96svh]">
       {/* Full Width Background Image */}
       <div className="absolute inset-0 z-0">
         <motion.img 
@@ -189,34 +188,34 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-prestige-black/45 via-prestige-black/28 to-prestige-black/12" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center text-white">
+      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-5 text-center text-white">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 flex-wrap">
-            <div className="w-6 sm:w-12 h-0.5 bg-primary" />
-            <span className="font-sans text-[10px] sm:text-xs font-semibold uppercase tracking-[0.16em] sm:tracking-[0.2em]">
+          <div className="mb-4 flex flex-wrap items-center justify-center gap-2 sm:mb-5 sm:gap-3">
+            <div className="h-0.5 w-5 sm:w-8 bg-primary" />
+            <span className="font-sans text-[9px] sm:text-[11px] md:text-xs font-semibold uppercase tracking-[0.14em] sm:tracking-[0.18em]">
               Strategic Communication & Institutional Positioning
             </span>
-            <div className="w-6 sm:w-12 h-0.5 bg-primary" />
+            <div className="h-0.5 w-5 sm:w-8 bg-primary" />
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold leading-tight mb-6 sm:mb-8 text-balance uppercase tracking-tight">
+          <h1 className="mb-4 text-[2.1rem] font-bold leading-[1.01] text-balance uppercase tracking-tight sm:mb-5 sm:text-[2.85rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4.7rem]">
             Shaping Africa’s <br />
             <span className="text-primary italic font-light">Investment Narrative</span>
           </h1>
-          <p className="font-sans text-base sm:text-lg md:text-xl opacity-90 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto">
+          <p className="mx-auto mb-4 max-w-3xl font-sans text-sm leading-relaxed opacity-90 sm:mb-5 sm:text-base md:text-lg lg:text-[1.15rem]">
             Strategic Communication. Institutional Positioning. Narratives That Drive Investment and Influence.
           </p>
-          <p className="font-sans text-sm opacity-70 mb-8 sm:mb-10 leading-relaxed max-w-xl mx-auto italic">
+          <p className="mx-auto mb-6 max-w-2xl font-sans text-xs leading-relaxed opacity-70 italic sm:mb-7 sm:text-sm md:text-base">
             We work with institutions, governments, and market leaders to position Africa’s transformation with clarity, credibility, and strategic intent.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 items-center">
-            <button className="w-full sm:w-auto bg-primary text-white px-6 sm:px-8 py-3.5 sm:py-4 font-display text-sm sm:text-base font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300 shadow-xl">
+          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
+            <button className="w-full sm:w-auto bg-primary text-white px-5 sm:px-7 py-3 sm:py-3.5 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-white hover:text-primary transition-all duration-300 shadow-xl">
               View Our Work
             </button>
-            <button className="w-full sm:w-auto border-2 border-white text-white px-6 sm:px-8 py-3.5 sm:py-4 font-display text-sm sm:text-base font-bold uppercase tracking-widest hover:bg-white hover:text-prestige-black transition-all duration-300">
+            <button className="w-full sm:w-auto border-2 border-white text-white px-5 sm:px-7 py-3 sm:py-3.5 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-white hover:text-prestige-black transition-all duration-300">
               Who We Are
             </button>
           </div>
@@ -228,9 +227,9 @@ const Hero = () => {
 
 const ClientTicker = () => {
   return (
-    <div className="bg-white border-y border-prestige-gray py-8 sm:py-10 lg:py-12 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-6 sm:mb-8 text-center">
-        <h3 className="font-sans text-xs font-bold uppercase tracking-[0.3em] text-prestige-text opacity-60">
+    <div className="bg-white border-y border-prestige-gray py-5 sm:py-6 lg:py-8 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-5 lg:px-6 mb-4 sm:mb-5 text-center">
+        <h3 className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.24em] text-prestige-text opacity-60">
           Trusted by institutions shaping economies and communities
         </h3>
       </div>
@@ -238,12 +237,12 @@ const ClientTicker = () => {
         {[...homeTickerClients, ...homeTickerClients].map((client, i) => (
           <div
             key={`${client.slug}-${i}`}
-            className="mx-3 sm:mx-4 lg:mx-6 flex min-w-[140px] sm:min-w-[160px] lg:min-w-[180px] items-center justify-center rounded-2xl border border-prestige-gray bg-prestige-cream px-5 sm:px-6 lg:px-8 py-4 sm:py-5 shadow-sm"
+            className="mx-2 sm:mx-3 lg:mx-4 flex min-w-[120px] sm:min-w-[140px] lg:min-w-[160px] items-center justify-center rounded-xl border border-prestige-gray bg-prestige-cream px-4 sm:px-5 lg:px-6 py-3 sm:py-4 shadow-sm"
           >
             <img
               src={client.logoUrl}
               alt={client.alt}
-              className="h-8 sm:h-10 w-full object-contain"
+              className="h-7 sm:h-8 w-full object-contain"
               loading="lazy"
               referrerPolicy="no-referrer"
             />
@@ -257,57 +256,131 @@ const ClientTicker = () => {
 const Services = () => {
   const services = [
     {
-      title: "Impact Strategy Building",
+      title: "Strategic Narrative & Positioning",
       icon: <Compass className="text-primary" size={32} />,
-      desc: "We craft plans that resonate deeply, shaping messages that tackle significant obstacles such as economic development, healthcare disparities, and environmental sustainability. With original ideas and forward-thinking methods, we ignite the drive to create change."
+      desc: "We define how institutions articulate their role, relevance, and strategic value within Africa’s transformation and wider global conversations."
     },
     {
-      title: "Compelling Narrative & Media Expertise",
-      icon: <Video className="text-primary" size={32} />,
-      desc: "We craft captivating narratives and produce stunning visuals that deeply resonate with multiple audiences, including governments, decision-makers, communities, and beyond. Through our work, we ignite enthusiasm and motivate diverse stakeholders to contribute toward making the world a better place."
+      title: "Investment & Sector Positioning",
+      icon: <TrendingUp className="text-primary" size={32} />,
+      desc: "We translate complex market, financial, and sector developments into clear positioning that attracts investors, partners, and institutional confidence."
     },
     {
-      title: "PR & Brand Positioning",
-      icon: <Radio className="text-primary" size={32} />,
-      desc: "We empower organizations to craft strategic messages that cut through the noise and connect with their audience. Whether shaping public narratives or building media presence, we help you stay in control of your story while strengthening trust and credibility."
+      title: "Institutional Credibility & Engagement",
+      icon: <Handshake className="text-primary" size={32} />,
+      desc: "We build communication systems that strengthen trust, align stakeholders, and position institutions with clarity, authority, and long-term relevance."
     }
   ];
 
   return (
     <section id="services" className="bg-white section-space section-shell">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">
+        <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+          <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
             What We Do
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-prestige-black mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-prestige-black mb-4 sm:mb-5">
             What We Do
           </h2>
-          <p className="font-sans text-base sm:text-lg text-prestige-text max-w-3xl mx-auto leading-relaxed">
+          <p className="font-sans text-sm sm:text-base text-prestige-text max-w-3xl mx-auto leading-relaxed">
             We work at the intersection of communication, investment, and institutional strategy — helping organizations position themselves with clarity, credibility, and relevance in evolving markets.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
           {services.map((s, i) => (
             <motion.div 
               key={i}
-              whileHover={{ y: -10 }}
-              className="bg-prestige-cream p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl transition-all duration-500 border-t-4 border-transparent hover:border-primary group flex flex-col h-full"
+              whileHover={{ y: -8 }}
+              className="bg-prestige-cream p-5 sm:p-6 lg:p-7 shadow-sm hover:shadow-xl transition-all duration-500 border-t-4 border-transparent hover:border-primary group flex flex-col h-full"
             >
-              <div className="mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-500">
+              <div className="mb-4 sm:mb-5 group-hover:scale-105 transition-transform duration-500">
                 {s.icon}
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-prestige-black">{s.title}</h3>
-              <p className="font-sans text-prestige-text leading-relaxed mb-8 flex-grow">
+              <h3 className="text-lg sm:text-xl font-bold mb-3 text-prestige-black">{s.title}</h3>
+              <p className="font-sans text-sm text-prestige-text leading-relaxed mb-5 sm:mb-6 flex-grow">
                 {s.desc}
               </p>
-              <button className="flex items-center gap-2 text-primary font-bold text-xs sm:text-sm uppercase tracking-widest group/btn">
+              <button className="flex items-center gap-2 text-primary font-bold text-[10px] sm:text-xs uppercase tracking-[0.18em] group/btn">
                 More Info <ChevronRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
               </button>
             </motion.div>
           ))}
         </div>
+      </div>
+    </section>
+  );
+};
+
+const WhoWeWorkWithStrip = () => {
+  const audienceGroups = [
+    {
+      label: "Financial institutions and banks",
+      icon: <BarChart3 size={22} />,
+    },
+    {
+      label: "Investment and capital market actors",
+      icon: <TrendingUp size={22} />,
+    },
+    {
+      label: "Governments and regulatory bodies",
+      icon: <Scale size={22} />,
+    },
+    {
+      label: "Development and multilateral institutions",
+      icon: <Handshake size={22} />,
+    },
+    {
+      label: "High-growth African enterprises",
+      icon: <Briefcase size={22} />,
+    },
+  ];
+
+  return (
+    <section className="bg-white px-4 py-4 sm:px-6 sm:py-6">
+      <div className="mx-auto max-w-7xl">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={{ duration: 0.55 }}
+          className="relative overflow-hidden rounded-[1.6rem] border border-primary/20 bg-[linear-gradient(135deg,#b9471f_0%,#ff8d52_44%,#f15a29_100%)] px-4 py-6 shadow-[0_22px_56px_rgba(241,90,41,0.2)] sm:px-6 sm:py-8 lg:px-8 lg:py-9"
+        >
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.36),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(15,15,15,0.22),transparent_36%)]" />
+          <div className="absolute inset-y-5 right-6 hidden w-40 rounded-full bg-white/12 blur-3xl lg:block" />
+
+          <div className="relative z-10">
+            <div className="mb-5 max-w-3xl">
+              <span className="mb-2 block font-sans text-[10px] font-bold uppercase tracking-[0.22em] text-white/78">
+                Who We Work With
+              </span>
+              <h2 className="text-xl font-bold leading-tight text-white sm:text-2xl lg:text-[2rem]">
+                We partner with institutions shaping markets, regulation, and growth across Africa.
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3 lg:grid-cols-5">
+              {audienceGroups.map((item, index) => (
+                <motion.div
+                  key={item.label}
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.35 }}
+                  transition={{ delay: index * 0.05, duration: 0.4 }}
+                  whileHover={{ y: -4, scale: 1.01 }}
+                  className="flex min-h-[104px] flex-col justify-between rounded-[1.1rem] border border-white/18 bg-white/12 px-3.5 py-3.5 text-white backdrop-blur-sm transition-all duration-300 hover:border-white/35 hover:bg-white/16 hover:shadow-[0_16px_28px_rgba(0,0,0,0.12)] sm:min-h-[116px] sm:px-4"
+                >
+                  <div className="flex h-9 w-9 items-center justify-center rounded-[1rem] border border-white/22 bg-white/14 text-white shadow-[0_0_18px_rgba(255,255,255,0.08)] sm:h-10 sm:w-10">
+                    {item.icon}
+                  </div>
+                  <p className="font-sans text-xs sm:text-sm font-semibold leading-snug text-white/92">
+                    {item.label}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -352,25 +425,25 @@ const WhyImpala = () => {
   ];
 
   return (
-    <section className="bg-white py-16 sm:py-20 lg:py-24 section-shell">
+    <section className="bg-white py-10 sm:py-14 lg:py-16 section-shell">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12 sm:mb-16">
-          <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">
+        <div className="text-center mb-8 sm:mb-10">
+          <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
             Why Impala
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-prestige-black mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-prestige-black mb-4">
             Why Impala
           </h2>
-          <p className="font-sans text-base text-prestige-text max-w-3xl mx-auto leading-relaxed">
+          <p className="font-sans text-sm sm:text-base text-prestige-text max-w-3xl mx-auto leading-relaxed">
             We understand the audience you aim to reach and the change you want to create.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {values.map((v, i) => (
             <motion.div 
               key={i}
-              className="relative h-72 sm:h-80 lg:h-64 overflow-hidden group cursor-pointer"
+              className="relative h-60 sm:h-64 lg:h-56 overflow-hidden group cursor-pointer"
             >
               {/* Background Image */}
               <div className="absolute inset-0 z-0">
@@ -384,15 +457,15 @@ const WhyImpala = () => {
               </div>
 
               {/* Content */}
-              <div className="relative z-10 h-full p-6 sm:p-8 flex flex-col justify-end text-white">
-                <h3 className="text-base sm:text-lg font-bold mb-2 leading-tight uppercase tracking-wide">{v.title}</h3>
+              <div className="relative z-10 h-full p-4 sm:p-5 lg:p-6 flex flex-col justify-end text-white">
+                <h3 className="text-[15px] sm:text-base font-bold mb-2 leading-tight uppercase tracking-[0.08em]">{v.title}</h3>
                 
                 <motion.div
                   initial={false}
                   animate={{ height: expandedIndex === i ? 'auto' : 0, opacity: expandedIndex === i ? 1 : 0 }}
                   className="overflow-hidden"
                 >
-                  <p className="font-sans text-xs sm:text-sm opacity-90 leading-relaxed mb-4">
+                  <p className="font-sans text-[11px] sm:text-xs opacity-90 leading-relaxed mb-3">
                     {v.desc}
                   </p>
                 </motion.div>
@@ -402,7 +475,7 @@ const WhyImpala = () => {
                     e.stopPropagation();
                     setExpandedIndex(expandedIndex === i ? null : i);
                   }}
-                  className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] mt-2"
+                  className="mt-1.5 flex items-center gap-2 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.16em]"
                 >
                   {expandedIndex === i ? 'Show Less' : 'More Info'} 
                   <ChevronDown size={12} className={`transition-transform duration-300 ${expandedIndex === i ? 'rotate-180' : ''}`} />
@@ -426,11 +499,11 @@ const ImpactStats = () => {
   return (
     <section className="bg-prestige-black section-space section-shell text-white text-center">
       <div className="max-w-6xl mx-auto">
-        <div className="mb-10 sm:mb-12 lg:mb-16">
-          <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">
+        <div className="mb-8 sm:mb-10 lg:mb-12">
+          <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
             Our Reach
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
             Amplifying Your Impact
           </h2>
         </div>
@@ -443,12 +516,12 @@ const ImpactStats = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.45 }}
               whileHover={{ y: -6, scale: 1.02 }}
-              className="rounded-2xl border border-white/10 bg-white/5 px-5 py-6 sm:px-6 sm:py-7 lg:px-7 lg:py-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] transition-all duration-300 hover:border-primary/70 hover:bg-white/8 hover:shadow-[0_24px_45px_rgba(0,0,0,0.24)]"
+              className="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 sm:px-5 sm:py-6 lg:px-6 lg:py-7 shadow-[0_18px_40px_rgba(0,0,0,0.18)] transition-all duration-300 hover:border-primary/70 hover:bg-white/8 hover:shadow-[0_24px_45px_rgba(0,0,0,0.24)]"
             >
-              <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-primary mb-3">
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-primary mb-2">
                 {s.value}
               </div>
-              <div className="font-sans text-[11px] sm:text-xs font-semibold uppercase tracking-[0.24em] text-white/70">
+              <div className="font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70">
                 {s.label}
               </div>
             </motion.div>
@@ -494,26 +567,26 @@ const PrioritiesSection = () => {
   ];
 
   return (
-    <section className="bg-prestige-cream py-16 sm:py-20 lg:py-24 section-shell">
+    <section className="bg-prestige-cream py-10 sm:py-14 lg:py-16 section-shell">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12 sm:mb-16">
-          <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">
+        <div className="text-center mb-8 sm:mb-10">
+          <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
             Focus Areas
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-prestige-black mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-prestige-black mb-4">
             Our Priorities
           </h2>
-          <p className="font-sans text-base text-prestige-text max-w-3xl mx-auto leading-relaxed">
+          <p className="font-sans text-sm sm:text-base text-prestige-text max-w-3xl mx-auto leading-relaxed">
             Empowering communities through impactful communication.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
           {priorities.map((p, i) => (
             <motion.div 
               key={i}
-              whileHover={{ y: -10 }}
-              className="relative h-[340px] sm:h-80 lg:h-96 overflow-hidden group cursor-pointer shadow-xl"
+              whileHover={{ y: -8 }}
+              className="relative h-[280px] sm:h-[300px] lg:h-[320px] overflow-hidden group cursor-pointer shadow-xl"
             >
               {/* Background Image */}
               <div className="absolute inset-0 z-0">
@@ -527,12 +600,12 @@ const PrioritiesSection = () => {
               </div>
 
               {/* Content */}
-              <div className="relative z-10 h-full p-6 sm:p-8 lg:p-10 flex flex-col justify-center text-white text-center items-center">
-                <div className="mb-6 text-primary group-hover:text-white transition-colors duration-300">
+              <div className="relative z-10 h-full p-5 sm:p-6 lg:p-7 flex flex-col justify-center text-white text-center items-center">
+                <div className="mb-4 text-primary group-hover:text-white transition-colors duration-300">
                   {p.icon}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold mb-4 uppercase tracking-wider">{p.title}</h3>
-                <p className="font-sans text-sm opacity-80 leading-relaxed max-w-xs">
+                <h3 className="text-lg sm:text-xl font-bold mb-3 uppercase tracking-[0.12em]">{p.title}</h3>
+                <p className="max-w-xs font-sans text-xs sm:text-sm opacity-80 leading-relaxed">
                   {p.desc}
                 </p>
               </div>
@@ -571,21 +644,21 @@ const FeaturedWork = () => {
   return (
     <section className="section-space section-shell bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 sm:mb-16 gap-4 sm:gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 sm:mb-10 gap-4 sm:gap-5">
           <div>
-            <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">
+            <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
               Selected Work
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-prestige-black">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black">
               Impact, Across Sectors
             </h2>
           </div>
-          <button className="font-sans font-bold text-prestige-black hover:text-primary transition-colors flex items-center gap-2 group border-b-2 border-prestige-black hover:border-primary pb-1">
+          <button className="font-sans font-bold text-sm text-prestige-black hover:text-primary transition-colors flex items-center gap-2 group border-b-2 border-prestige-black hover:border-primary pb-1">
             Explore Portfolio <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
           {projects.map((p, i) => (
             <motion.div 
               key={i}
@@ -594,7 +667,7 @@ const FeaturedWork = () => {
               viewport={{ once: true }}
               className="group cursor-pointer"
             >
-              <div className="overflow-hidden mb-6 aspect-[4/3]">
+              <div className="overflow-hidden mb-4 aspect-[4/3]">
                 <img 
                   src={p.image} 
                   alt={p.title} 
@@ -602,16 +675,16 @@ const FeaturedWork = () => {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <span className="font-sans text-xs font-bold uppercase tracking-widest text-primary mb-2 block">
+              <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-2 block">
                 {p.category}
               </span>
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 text-prestige-black group-hover:text-primary transition-colors">
+              <h3 className="text-lg sm:text-xl font-bold mb-2 text-prestige-black group-hover:text-primary transition-colors">
                 {p.title}
               </h3>
-              <p className="font-sans text-prestige-text leading-relaxed mb-4">
+              <p className="font-sans text-sm text-prestige-text leading-relaxed mb-3">
                 {p.desc}
               </p>
-              <div className="flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-[0.18em] opacity-0 group-hover:opacity-100 transition-opacity">
                 View Project <ArrowRight size={16} />
               </div>
             </motion.div>
@@ -624,20 +697,20 @@ const FeaturedWork = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-prestige-black text-white pt-16 sm:pt-20 lg:pt-32 pb-8 sm:pb-10 lg:pb-12 px-4 sm:px-6">
+    <footer className="bg-prestige-black text-white pt-10 sm:pt-14 lg:pt-20 pb-6 sm:pb-8 lg:pb-10 px-4 sm:px-5 lg:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 mb-12 sm:mb-16 lg:mb-20">
+        <div className="grid md:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-10 lg:mb-12">
           <div className="col-span-1 md:col-span-2">
             <BrandLogo
-              className="mb-6 inline-flex"
-              imageClassName="h-16 sm:h-20 w-auto"
+              className="mb-4 inline-flex"
+              imageClassName="h-12 sm:h-14 w-auto"
             />
-            <p className="font-sans text-base sm:text-lg opacity-60 max-w-md leading-relaxed mb-8">
+            <p className="font-sans text-sm sm:text-base opacity-60 max-w-md leading-relaxed mb-6">
               For when communication can change lives. Strategic narratives grounded in truth, culture, and impact.
             </p>
-            <div className="flex gap-6">
+            <div className="flex gap-4">
               {["FB", "IG", "TW", "YT"].map(s => (
-                <a key={s} href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300">
+                <a key={s} href="#" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300">
                   <span className="text-xs font-bold">{s}</span>
                 </a>
               ))}
@@ -645,8 +718,8 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-display text-lg font-bold uppercase tracking-widest mb-6 sm:mb-8">Quick Links</h4>
-            <ul className="flex flex-col gap-4 opacity-60 font-sans text-sm">
+            <h4 className="font-display text-base font-bold uppercase tracking-[0.16em] mb-4 sm:mb-5">Quick Links</h4>
+            <ul className="flex flex-col gap-3 opacity-60 font-sans text-sm">
               <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
               <li><Link to="/who-we-are" className="hover:text-primary transition-colors">Who We Are</Link></li>
               <li><Link to="/our-services" className="hover:text-primary transition-colors">Our Services</Link></li>
@@ -657,8 +730,8 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-display text-lg font-bold uppercase tracking-widest mb-6 sm:mb-8">Contact</h4>
-            <ul className="flex flex-col gap-4 opacity-60 font-sans text-sm">
+            <h4 className="font-display text-base font-bold uppercase tracking-[0.16em] mb-4 sm:mb-5">Contact</h4>
+            <ul className="flex flex-col gap-3 opacity-60 font-sans text-sm">
               <li>info@impalacommunication.com</li>
               <li>Addis Ababa, Ethiopia</li>
               <li>+251 911 000 000</li>
@@ -666,10 +739,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 sm:pt-10 lg:pt-12 flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 opacity-40 font-sans text-[10px] sm:text-xs uppercase tracking-widest">
+        <div className="border-t border-white/10 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 opacity-40 font-sans text-[9px] sm:text-[10px] uppercase tracking-[0.14em]">
           <span>© 2026 Impala Communication. All rights reserved.</span>
           <p className="text-center md:text-left">Leveraging over 12 years of experience, shaping narratives that influence impact, investment, and institutional growth.</p>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
@@ -689,10 +762,11 @@ const HomeContent = () => {
       <div id="services">
         <Services />
       </div>
-      <BrandStoryForge />
+      <WhoWeWorkWithStrip />
       <WhyImpala />
-      <ImpactStats />
+      <BrandStoryForge />
       <PrioritiesSection />
+      <ImpactStats />
       <div id="work">
         <FeaturedWork />
       </div>

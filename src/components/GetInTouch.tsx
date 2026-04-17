@@ -34,13 +34,13 @@ const GetInTouch = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <span className="font-sans text-xs font-bold uppercase tracking-[0.4em] text-primary mb-6 block">
+            <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.24em] text-primary mb-4 block">
               Contact Us
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-bold mb-6 sm:mb-8 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
               Let's build something <span className="text-primary italic">meaningful</span> together.
             </h1>
-            <p className="font-sans text-lg sm:text-xl lg:text-2xl text-white/70 leading-relaxed">
+            <p className="font-sans text-sm sm:text-base lg:text-lg text-white/70 leading-relaxed">
               Whether you have a project in mind or just want to say hello, we're ready to listen and collaborate.
             </p>
           </motion.div>
@@ -49,48 +49,48 @@ const GetInTouch = () => {
 
       {/* 2. Contact Content */}
       <section className="section-space section-shell">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-20">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-14">
           {/* Left: Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-12 sm:space-y-14 lg:space-y-16"
+            className="space-y-8 sm:space-y-10 lg:space-y-12"
           >
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-prestige-black mb-8 sm:mb-12">Reach out directly</h2>
-              <div className="space-y-8">
-                <div className="flex items-start gap-6 group">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-prestige-cream flex items-center justify-center rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                    <Mail size={24} />
+              <h2 className="text-xl sm:text-2xl font-bold text-prestige-black mb-6 sm:mb-8">Reach out directly</h2>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4 group">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-prestige-cream flex items-center justify-center rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                    <Mail size={20} />
                   </div>
                   <div>
-                    <p className="font-sans text-xs font-bold uppercase tracking-widest text-prestige-text opacity-60 mb-1">Email Us</p>
-                    <a href="mailto:info@impalacommunication.com" className="text-lg sm:text-xl font-bold text-prestige-black hover:text-primary transition-colors break-all sm:break-normal">
+                    <p className="font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-prestige-text opacity-60 mb-1">Email Us</p>
+                    <a href="mailto:info@impalacommunication.com" className="text-base sm:text-lg font-bold text-prestige-black hover:text-primary transition-colors break-all sm:break-normal">
                       info@impalacommunication.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-6 group">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-prestige-cream flex items-center justify-center rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                    <Phone size={24} />
+                <div className="flex items-start gap-4 group">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-prestige-cream flex items-center justify-center rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                    <Phone size={20} />
                   </div>
                   <div>
-                    <p className="font-sans text-xs font-bold uppercase tracking-widest text-prestige-text opacity-60 mb-1">Call Us</p>
-                    <a href="tel:+251911000000" className="text-lg sm:text-xl font-bold text-prestige-black hover:text-primary transition-colors">
+                    <p className="font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-prestige-text opacity-60 mb-1">Call Us</p>
+                    <a href="tel:+251911000000" className="text-base sm:text-lg font-bold text-prestige-black hover:text-primary transition-colors">
                       +251 911 000 000
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-6 group">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-prestige-cream flex items-center justify-center rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                    <MapPin size={24} />
+                <div className="flex items-start gap-4 group">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-prestige-cream flex items-center justify-center rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                    <MapPin size={20} />
                   </div>
                   <div>
-                    <p className="font-sans text-xs font-bold uppercase tracking-widest text-prestige-text opacity-60 mb-1">Visit Us</p>
-                    <p className="text-lg sm:text-xl font-bold text-prestige-black">
+                    <p className="font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-prestige-text opacity-60 mb-1">Visit Us</p>
+                    <p className="text-base sm:text-lg font-bold text-prestige-black">
                       Addis Ababa, Ethiopia<br />
                       Bole Sub-city, Ward 03
                     </p>
@@ -100,8 +100,8 @@ const GetInTouch = () => {
             </div>
 
             <div>
-              <h3 className="font-sans text-xs font-bold uppercase tracking-widest text-primary mb-6">Follow Our Journey</h3>
-              <div className="flex gap-4">
+              <h3 className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-4">Follow Our Journey</h3>
+              <div className="flex gap-3">
                 {[
                   { icon: <Linkedin size={20} />, href: "#" },
                   { icon: <Instagram size={20} />, href: "#" },
@@ -110,7 +110,7 @@ const GetInTouch = () => {
                   <a 
                     key={i} 
                     href={social.href}
-                    className="w-12 h-12 border border-prestige-gray flex items-center justify-center rounded-full text-prestige-black hover:bg-primary hover:border-primary hover:text-white transition-all duration-300"
+                    className="w-10 h-10 border border-prestige-gray flex items-center justify-center rounded-full text-prestige-black hover:bg-primary hover:border-primary hover:text-white transition-all duration-300"
                   >
                     {social.icon}
                   </a>
@@ -124,31 +124,31 @@ const GetInTouch = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white p-6 sm:p-8 lg:p-12 shadow-2xl border border-prestige-gray rounded-3xl"
+            className="bg-white p-5 sm:p-6 lg:p-8 shadow-2xl border border-prestige-gray rounded-[1.7rem]"
           >
-            <form className="space-y-8">
-              <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
+            <form className="space-y-6">
+              <div className="grid sm:grid-cols-2 gap-5 sm:gap-6">
                 <div className="space-y-2">
-                  <label className="font-sans text-[10px] font-bold uppercase tracking-widest text-prestige-text opacity-60">Full Name</label>
+                  <label className="font-sans text-[9px] font-bold uppercase tracking-[0.18em] text-prestige-text opacity-60">Full Name</label>
                   <input 
                     type="text" 
                     placeholder="John Doe"
-                    className="w-full border-b border-prestige-gray py-3 focus:border-primary outline-none transition-colors font-sans"
+                    className="w-full border-b border-prestige-gray py-2.5 text-sm focus:border-primary outline-none transition-colors font-sans"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="font-sans text-[10px] font-bold uppercase tracking-widest text-prestige-text opacity-60">Email Address</label>
+                  <label className="font-sans text-[9px] font-bold uppercase tracking-[0.18em] text-prestige-text opacity-60">Email Address</label>
                   <input 
                     type="email" 
                     placeholder="john@example.com"
-                    className="w-full border-b border-prestige-gray py-3 focus:border-primary outline-none transition-colors font-sans"
+                    className="w-full border-b border-prestige-gray py-2.5 text-sm focus:border-primary outline-none transition-colors font-sans"
                   />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label className="font-sans text-[10px] font-bold uppercase tracking-widest text-prestige-text opacity-60">Subject</label>
-                <select className="w-full border-b border-prestige-gray py-3 focus:border-primary outline-none transition-colors font-sans bg-transparent">
+                <label className="font-sans text-[9px] font-bold uppercase tracking-[0.18em] text-prestige-text opacity-60">Subject</label>
+                <select className="w-full border-b border-prestige-gray py-2.5 text-sm focus:border-primary outline-none transition-colors font-sans bg-transparent">
                   <option>General Inquiry</option>
                   <option>Project Proposal</option>
                   <option>Partnership</option>
@@ -157,15 +157,15 @@ const GetInTouch = () => {
               </div>
 
               <div className="space-y-2">
-                <label className="font-sans text-[10px] font-bold uppercase tracking-widest text-prestige-text opacity-60">Message</label>
+                <label className="font-sans text-[9px] font-bold uppercase tracking-[0.18em] text-prestige-text opacity-60">Message</label>
                 <textarea 
                   rows={4}
                   placeholder="Tell us about your vision..."
-                  className="w-full border-b border-prestige-gray py-3 focus:border-primary outline-none transition-colors font-sans resize-none"
+                  className="w-full border-b border-prestige-gray py-2.5 text-sm focus:border-primary outline-none transition-colors font-sans resize-none"
                 />
               </div>
 
-              <button className="w-full bg-primary text-white py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-prestige-black transition-all duration-300 flex items-center justify-center gap-3 group">
+              <button className="w-full bg-primary text-white py-3.5 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-prestige-black transition-all duration-300 flex items-center justify-center gap-3 group">
                 Send Message
                 <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </button>
@@ -175,21 +175,21 @@ const GetInTouch = () => {
       </section>
 
       {/* 3. Inspirational Quote/Image Section */}
-      <section className="py-16 sm:py-20 lg:py-24 section-shell bg-prestige-cream/30">
+      <section className="py-10 sm:py-14 lg:py-16 section-shell bg-prestige-cream/30">
         <div className="max-w-7xl mx-auto">
-          <div className="relative rounded-[1.75rem] sm:rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden aspect-[4/5] sm:aspect-[16/10] lg:aspect-[21/9] group">
+          <div className="relative rounded-[1.4rem] sm:rounded-[2rem] lg:rounded-[2.4rem] overflow-hidden aspect-[5/6] sm:aspect-[16/10] lg:aspect-[18/8] group">
             <img 
               src={getInTouchImages.quote}
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               alt="Team collaboration"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-prestige-black/55 via-prestige-black/18 to-transparent flex items-end p-6 sm:p-10 lg:p-20">
+            <div className="absolute inset-0 bg-gradient-to-t from-prestige-black/55 via-prestige-black/18 to-transparent flex items-end p-4 sm:p-8 lg:p-12">
               <div className="max-w-2xl">
-                <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
+                <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white mb-3 sm:mb-4">
                   "Communication is the bridge between confusion and clarity."
                 </h2>
-                <p className="font-sans text-white/60 uppercase tracking-widest text-sm">— Nat Turner</p>
+                <p className="font-sans text-white/60 uppercase tracking-[0.16em] text-xs sm:text-sm">— Nat Turner</p>
               </div>
             </div>
           </div>

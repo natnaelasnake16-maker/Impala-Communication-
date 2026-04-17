@@ -58,15 +58,15 @@ const WhoWeAre = () => {
   ];
 
   const initiatives = [
-    { title: "Education Enhancement Project", icon: <BookOpen size={18} /> },
-    { title: "Healthcare Access Initiative", icon: <Activity size={18} /> },
-    { title: "Diversity and Inclusion Training Program", icon: <Users size={18} /> },
-    { title: "Women’s Economic Empowerment Program", icon: <UserCheck size={18} /> },
-    { title: "Environmental Conservation Campaign", icon: <Leaf size={18} /> },
-    { title: "Community Infrastructure Development Project", icon: <Target size={18} /> },
-    { title: "SME Support Initiative", icon: <Zap size={18} /> },
-    { title: "Supply Chain Sustainability Project", icon: <ShieldCheck size={18} /> },
-    { title: "Digital Literacy Initiative", icon: <Smartphone size={18} /> }
+    { title: "Financial sector transformation", icon: <Activity size={18} /> },
+    { title: "Banking and Islamic finance positioning", icon: <ShieldCheck size={18} /> },
+    { title: "Capital market narrative development", icon: <BookOpen size={18} /> },
+    { title: "Institutional profiling and executive visibility", icon: <Users size={18} /> },
+    { title: "Industrial and sector positioning", icon: <Target size={18} /> },
+    { title: "Global value chain repositioning", icon: <Leaf size={18} /> },
+    { title: "Strategic stakeholder engagement", icon: <UserCheck size={18} /> },
+    { title: "Governance and communication systems", icon: <Zap size={18} /> },
+    { title: "High-growth enterprise visibility", icon: <Smartphone size={18} /> }
   ];
 
   return (
@@ -89,20 +89,20 @@ const WhoWeAre = () => {
             transition={{ duration: 0.8 }}
             className="max-w-4xl"
           >
-            <span className="font-sans text-xs font-bold uppercase tracking-[0.3em] text-primary mb-6 block">
+            <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.22em] text-primary mb-4 block">
               Who We Are
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 leading-tight">
-              A dedicated team of communication experts driving meaningful social change.
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+              Positioning institutions, markets, and ideas that shape Africa’s future.
             </h1>
-            <p className="font-sans text-lg sm:text-xl lg:text-2xl text-white/70 mb-8 sm:mb-12 leading-relaxed max-w-2xl">
-              Impala Communication operates at the intersection of communication, investment, and institutional strategy — shaping how Africa’s transformation is positioned, understood, and engaged with.
+            <p className="font-sans text-sm sm:text-base lg:text-lg text-white/70 mb-6 sm:mb-8 leading-relaxed max-w-2xl">
+              Impala Communication operates at the intersection of communication, investment, and institutional strategy. Our work goes beyond storytelling — we shape how Africa’s transformation is understood, positioned, and engaged with by global and local audiences alike.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-              <Link to="/our-work" className="w-full sm:w-auto text-center bg-primary text-white px-8 sm:px-10 py-4 sm:py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Link to="/our-work" className="w-full sm:w-auto text-center bg-primary text-white px-6 sm:px-8 py-3 sm:py-3.5 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-white hover:text-primary transition-all duration-300">
                 Explore Our Work
               </Link>
-              <Link to="/get-in-touch" className="w-full sm:w-auto text-center border-2 border-white text-white px-8 sm:px-10 py-4 sm:py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-prestige-black transition-all duration-300">
+              <Link to="/get-in-touch" className="w-full sm:w-auto text-center border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-3.5 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-white hover:text-prestige-black transition-all duration-300">
                 Contact Us
               </Link>
             </div>
@@ -113,7 +113,7 @@ const WhoWeAre = () => {
       {/* 2. About Impala - Story Section */}
       <section className="section-space section-shell">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-10 sm:gap-12 lg:gap-20 items-center">
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 lg:gap-14 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -128,7 +128,7 @@ const WhoWeAre = () => {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <div className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 w-20 h-20 sm:w-32 sm:h-32 bg-primary/10 -z-10 rounded-lg" />
+              <div className="absolute -bottom-3 sm:-bottom-5 -right-3 sm:-right-5 w-16 h-16 sm:w-24 sm:h-24 bg-primary/10 -z-10 rounded-lg" />
             </motion.div>
 
             <motion.div
@@ -136,24 +136,24 @@ const WhoWeAre = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <span className="font-sans text-xs font-bold uppercase tracking-widest text-primary mb-4 block">
+              <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
                 About Impala Communication
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-prestige-black mb-6 sm:mb-8 leading-tight">
-                More Than a Company — <br />A Purpose-Driven Journey
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black mb-4 sm:mb-5 leading-tight">
+                Repositioning Africa Through <br />Strategic Narrative
               </h2>
-              <div className="font-sans text-prestige-text space-y-5 sm:space-y-6 leading-relaxed text-base sm:text-lg">
+              <div className="font-sans text-prestige-text space-y-4 sm:space-y-5 leading-relaxed text-sm sm:text-base">
                 <p>
-                  Impala Communication is not just a company; it is a passion project born from a deep-rooted desire to rewrite the narrative of Ethiopia and Africa.
+                  Africa’s challenge is not only performance — it is perception, structure, and articulation. We work with institutions to ensure that Africa’s growth, reform, and innovation are communicated with the clarity and credibility required to unlock investment and global engagement.
                 </p>
                 <p>
-                  Founded by a husband and wife team, Meron and Terusew, Impala began with a vision to showcase the beauty, resilience, and complexity of our continent and its people. Their mission was deeply personal — to ensure their daughters grow up proud of their identity and culture.
+                  Impala Communication operates where communication, investment, and institutional strategy meet. We help organisations define how they are understood within national, continental, and international conversations.
                 </p>
                 <p>
-                  In 2011, they returned to Ethiopia to bring this vision to life. Since then, Impala has remained committed to humanizing narratives, tackling challenging topics with dignity, and ensuring every narrative is told with care and respect.
+                  Founded by Meron and Terusew, Impala began as a response to incomplete narratives about Ethiopia and Africa. What started as a personal commitment has evolved into a strategic advisory practice shaping market perception, institutional credibility, and public relevance.
                 </p>
                 <p>
-                  Today, our work extends beyond storytelling into shaping institutional narratives that influence investment, policy, and global perception.
+                  Today, we work with institutions, development partners, and high-growth enterprises to position ideas, sectors, and reforms with clarity, authority, and strategic intent.
                 </p>
               </div>
             </motion.div>
@@ -162,22 +162,22 @@ const WhoWeAre = () => {
       </section>
 
       {/* 3. Our Story + Our Commitment */}
-      <section className="py-14 sm:py-16 lg:py-20 section-shell bg-prestige-black text-white">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-[1.15fr_0.85fr] gap-8 lg:gap-12 items-start">
+      <section className="py-10 sm:py-12 lg:py-14 section-shell bg-prestige-black text-white">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-[1.15fr_0.85fr] gap-6 lg:gap-8 items-start">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.35 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="font-sans text-xs font-bold uppercase tracking-[0.28em] text-primary mb-4 block">
+            <span className="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-3 block">
               How We Work
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-5 sm:mb-6">
-              Turning positioning into momentum
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-5">
+              Narrative architecture for institutional momentum
             </h2>
-            <p className="font-sans text-base sm:text-lg text-white/74 leading-relaxed max-w-3xl">
-              Through our proprietary BrandStory Forge™ model, we transform complex social, economic, and investment narratives into movements that build trust, inspire collaboration, and unlock opportunity.
+            <p className="font-sans text-sm sm:text-base text-white/74 leading-relaxed max-w-3xl">
+              Through our proprietary BrandStory Forge™ model, we turn complex institutional, economic, and sector narratives into communication systems that build trust, strengthen credibility, and unlock engagement.
             </p>
           </motion.div>
 
@@ -186,20 +186,20 @@ const WhoWeAre = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.35 }}
             transition={{ delay: 0.1, duration: 0.5 }}
-            className="grid gap-3"
+            className="grid gap-2.5"
           >
             {[
               {
                 icon: ShieldCheck,
-                text: "Build trust and credibility with local and global audiences",
+                text: "Build institutional credibility with local and global audiences",
               },
               {
                 icon: Globe,
-                text: "Position institutions as leaders in Africa’s transformation",
+                text: "Align public positioning with investment, policy, and sector relevance",
               },
               {
                 icon: Users,
-                text: "Inspire collaboration across public, private, and diaspora sectors",
+                text: "Create coherence across leadership, stakeholders, and market-facing communication",
               },
             ].map((item) => {
               const Icon = item.icon;
@@ -207,12 +207,12 @@ const WhoWeAre = () => {
               return (
                 <div
                   key={item.text}
-                  className="rounded-[1.35rem] border border-white/10 bg-white/6 px-4 py-4 sm:px-5 sm:py-5 flex items-start gap-4"
+                  className="rounded-[1.15rem] border border-white/10 bg-white/6 px-3.5 py-3.5 sm:px-4 sm:py-4 flex items-start gap-3"
                 >
-                  <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-primary/40 bg-primary/10 text-primary shadow-[0_0_18px_rgba(241,90,41,0.25)]">
-                    <Icon size={18} strokeWidth={1.9} />
+                  <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-[1rem] border border-primary/40 bg-primary/10 text-primary shadow-[0_0_18px_rgba(241,90,41,0.25)]">
+                    <Icon size={16} strokeWidth={1.9} />
                   </div>
-                  <p className="font-sans text-sm sm:text-[15px] leading-relaxed text-white/78">
+                  <p className="font-sans text-xs sm:text-sm leading-relaxed text-white/78">
                     {item.text}
                   </p>
                 </div>
@@ -224,35 +224,35 @@ const WhoWeAre = () => {
 
       {/* 3. Our Story + Our Commitment */}
       <section className="bg-prestige-gray section-space section-shell">
-        <div className="max-w-7xl mx-auto space-y-12 sm:space-y-16 lg:space-y-24">
-          <div className="grid md:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-start">
-            <div className="flex gap-4 sm:gap-6 lg:gap-8">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white flex items-center justify-center rounded-full shadow-sm shrink-0 text-primary">
-                <PenTool size={28} />
+        <div className="max-w-7xl mx-auto space-y-8 sm:space-y-10 lg:space-y-14">
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start">
+            <div className="flex gap-4 sm:gap-5 lg:gap-6">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-white flex items-center justify-center rounded-full shadow-sm shrink-0 text-primary">
+                <PenTool size={22} />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-prestige-black mb-4">Our Story</h3>
-                <p className="font-sans text-prestige-text leading-relaxed">
-                  We employ a wide range of communication techniques to deliver effective results. These include communication strategy, message development, narrative development, visual identity and brand building, campaign creation, digital media production, as well as print and publication services.
+                <h3 className="text-xl font-bold text-prestige-black mb-3">Strategic Origin</h3>
+                <p className="font-sans text-sm text-prestige-text leading-relaxed">
+                  Our origin is deeply personal, but our role today is strategic. We returned to Ethiopia to contribute to how the country and the continent are understood, then built Impala into a firm that helps institutions shape perception with discipline, confidence, and relevance.
                 </p>
               </div>
             </div>
 
-            <div className="flex gap-4 sm:gap-6 lg:gap-8">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white flex items-center justify-center rounded-full shadow-sm shrink-0 text-primary">
-                <Globe size={28} />
+            <div className="flex gap-4 sm:gap-5 lg:gap-6">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-white flex items-center justify-center rounded-full shadow-sm shrink-0 text-primary">
+                <Globe size={22} />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-prestige-black mb-4">Our Commitment</h3>
-                <p className="font-sans text-prestige-text leading-relaxed">
-                  We are committed to supporting advocacy efforts and promoting positive social and environmental action. Whether identifying opportunities for impact, promoting sustainability initiatives, or implementing responsible and diverse practices, we help organizations communicate their commitments clearly and effectively.
+                <h3 className="text-xl font-bold text-prestige-black mb-3">What We Build</h3>
+                <p className="font-sans text-sm text-prestige-text leading-relaxed">
+                  We help institutions build communication systems that support leadership visibility, sector positioning, stakeholder alignment, and long-term institutional credibility in moments that matter.
                 </p>
               </div>
             </div>
           </div>
-          <div className="text-center pt-8 sm:pt-10 lg:pt-12 border-t border-prestige-black/5">
-            <p className="text-2xl sm:text-3xl font-bold text-primary italic">
-              Together, let’s create a better future for all.
+          <div className="text-center pt-6 sm:pt-8 border-t border-prestige-black/5">
+            <p className="text-xl sm:text-2xl font-bold text-primary italic">
+              Positioning Africa with clarity, credibility, and strategic intent.
             </p>
           </div>
         </div>
@@ -261,7 +261,7 @@ const WhoWeAre = () => {
       {/* 4. Impact Stats Section */}
       <section className="section-space section-shell bg-prestige-black text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-10 sm:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-10 lg:mb-12">
             This Year, We Are Going Bigger Than Ever
           </h2>
           <div className="mx-auto max-w-5xl grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
@@ -277,11 +277,11 @@ const WhoWeAre = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08, duration: 0.45 }}
                 whileHover={{ y: -6, scale: 1.02 }}
-                className="rounded-2xl border border-white/10 bg-white/5 px-5 py-6 sm:px-6 sm:py-7 lg:px-7 lg:py-8 backdrop-blur-sm shadow-[0_18px_40px_rgba(0,0,0,0.18)] transition-all duration-300 hover:border-primary/70 hover:bg-white/8 hover:shadow-[0_24px_45px_rgba(0,0,0,0.24)]"
+                className="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 sm:px-5 sm:py-6 lg:px-6 lg:py-7 backdrop-blur-sm shadow-[0_18px_40px_rgba(0,0,0,0.18)] transition-all duration-300 hover:border-primary/70 hover:bg-white/8 hover:shadow-[0_24px_45px_rgba(0,0,0,0.24)]"
               >
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-3">{stat.val}</div>
-                <div className="text-sm sm:text-base font-bold uppercase tracking-[0.22em] mb-1.5">{stat.label}</div>
-                <div className="font-sans text-[11px] sm:text-xs text-white/45 uppercase tracking-[0.22em]">{stat.sub}</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-2">{stat.val}</div>
+                <div className="text-xs sm:text-sm font-bold uppercase tracking-[0.18em] mb-1.5">{stat.label}</div>
+                <div className="font-sans text-[10px] sm:text-[11px] text-white/45 uppercase tracking-[0.18em]">{stat.sub}</div>
               </motion.div>
             ))}
           </div>
@@ -289,28 +289,28 @@ const WhoWeAre = () => {
       </section>
 
       {/* 5. Where We Are Currently Working */}
-      <section className="py-16 sm:py-20 lg:py-24 section-shell bg-prestige-cream/30">
+      <section className="py-10 sm:py-14 lg:py-16 section-shell bg-prestige-cream/30">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">
-              Our Current Focus
+          <div className="text-center mb-8 sm:mb-10">
+            <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
+              Current Focus Areas
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-prestige-black mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-prestige-black mb-4">
               Where We Are Currently Working
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
             {[
               "Financial sector transformation and banking positioning",
               "Investment and capital market narratives",
-              "Institutional profiling and global visibility",
-              "Industrial and sector positioning",
-              "Global value chain narratives",
-              "High-growth African enterprise positioning"
+              "Strategic institutional profiling and thought leadership",
+              "Industrialisation and sector positioning",
+              "Global value chain repositioning",
+              "High-growth African enterprise visibility"
             ].map((item, i) => (
-              <div key={i} className="bg-white p-6 sm:p-8 border border-prestige-gray flex items-center gap-4">
+              <div key={i} className="bg-white p-4 sm:p-5 border border-prestige-gray flex items-center gap-3">
                 <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
-                <p className="font-sans text-prestige-black font-medium">{item}</p>
+                <p className="font-sans text-sm text-prestige-black font-medium">{item}</p>
               </div>
             ))}
           </div>
@@ -320,24 +320,24 @@ const WhoWeAre = () => {
       {/* 6. Our Values */}
       <section className="section-space section-shell bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-            <span className="font-sans text-xs font-bold uppercase tracking-widest text-primary mb-4 block">
+          <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+            <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
               Our Values
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-prestige-black">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black">
               What Drives Us
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
             {values.map((v, i) => (
               <motion.div 
                 key={i}
-                whileHover={{ y: -10 }}
-                className="p-6 sm:p-8 lg:p-10 bg-prestige-cream border border-prestige-gray hover:border-primary transition-all duration-300"
+                whileHover={{ y: -8 }}
+                className="p-5 sm:p-6 lg:p-7 bg-prestige-cream border border-prestige-gray hover:border-primary transition-all duration-300"
               >
-                <div className="text-primary mb-6">{v.icon}</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-prestige-black mb-4">{v.title}</h3>
-                <p className="font-sans text-prestige-text leading-relaxed">
+                <div className="text-primary mb-4">{v.icon}</div>
+                <h3 className="text-lg sm:text-xl font-bold text-prestige-black mb-3">{v.title}</h3>
+                <p className="font-sans text-sm text-prestige-text leading-relaxed">
                   {v.desc}
                 </p>
               </motion.div>
@@ -347,7 +347,7 @@ const WhoWeAre = () => {
       </section>
 
       {/* 6. Visual Story Strip */}
-      <section className="flex overflow-hidden h-[220px] sm:h-[280px] lg:h-[400px]">
+      <section className="flex overflow-hidden h-[170px] sm:h-[220px] lg:h-[300px]">
         {whoWeAreImages.visualStrip.map((img, i) => (
           <div key={i} className="flex-1 relative group cursor-pointer overflow-hidden">
             <img 
@@ -369,9 +369,9 @@ const WhoWeAre = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
-            <span className="text-primary text-5xl sm:text-6xl font-display block mb-6 sm:mb-8">“</span>
-            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-prestige-black leading-tight italic">
-              Empowering Communities: Leveraging over 12 years of experience, we have impacted the lives of thousands across Ethiopia and Sub-Saharan Africa, catalysing change through effective communication strategies.
+            <span className="text-primary text-4xl sm:text-5xl font-display block mb-4 sm:mb-5">“</span>
+            <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold text-prestige-black leading-tight italic">
+              Leveraging more than a decade of experience, we help institutions communicate reform, growth, and public value with the clarity needed to influence trust, investment, and long-term relevance.
             </h2>
           </motion.div>
         </div>
@@ -380,16 +380,16 @@ const WhoWeAre = () => {
       {/* 8. Social Impact Initiatives */}
       <section className="section-space section-shell bg-prestige-gray">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-prestige-black mb-6">
-              Our Focus on Social Impact Initiatives
+          <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black mb-4">
+              Where Our Advisory Is Creating Strategic Value
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             {initiatives.map((item, i) => (
-              <div key={i} className="bg-white p-5 sm:p-6 flex items-center gap-4 shadow-sm hover:shadow-md transition-all">
+              <div key={i} className="bg-white p-4 sm:p-5 flex items-center gap-3 shadow-sm hover:shadow-md transition-all">
                 <div className="text-primary shrink-0">{item.icon}</div>
-                <span className="font-sans text-sm font-bold text-prestige-black uppercase tracking-wide">
+                <span className="font-sans text-xs sm:text-sm font-bold text-prestige-black uppercase tracking-[0.08em]">
                   {item.title}
                 </span>
               </div>

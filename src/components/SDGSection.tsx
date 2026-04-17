@@ -61,21 +61,21 @@ const SDGSection = () => {
   ];
 
   return (
-    <section className="bg-prestige-cream py-16 sm:py-20 lg:py-24 section-shell">
+    <section className="bg-prestige-cream py-10 sm:py-14 lg:py-16 section-shell">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12 sm:mb-16">
-          <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">
+        <div className="text-center mb-8 sm:mb-10">
+          <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
             Global Impact
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-prestige-black mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-prestige-black mb-4">
             Global Development Sustainability Goals (SDGs)
           </h2>
-          <p className="font-sans text-base text-prestige-text max-w-3xl mx-auto leading-relaxed">
+          <p className="font-sans text-sm sm:text-base text-prestige-text max-w-3xl mx-auto leading-relaxed">
             Impala Communication’s services and programmes contribute directly and indirectly to key Sustainable Development Goals.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
           {sdgs.map((sdg, i) => (
             <motion.div 
               key={i}
@@ -83,12 +83,12 @@ const SDGSection = () => {
             >
               <button 
                 onClick={() => setExpandedId(expandedId === sdg.id ? null : sdg.id)}
-                className="w-full p-4 sm:p-6 flex items-center justify-between text-left hover:bg-prestige-gray/30 transition-colors gap-4"
+                className="w-full p-4 sm:p-5 flex items-center justify-between text-left hover:bg-prestige-gray/30 transition-colors gap-3"
               >
-                <div className="flex items-center gap-3 sm:gap-4">
+                <div className="flex items-center gap-3">
                   {sdg.icon}
                   <div>
-                    <span className="block text-[10px] font-bold text-primary uppercase tracking-widest">{sdg.id}</span>
+                    <span className="block text-[9px] font-bold text-primary uppercase tracking-[0.18em]">{sdg.id}</span>
                     <h3 className="text-sm font-bold text-prestige-black leading-tight">{sdg.title}</h3>
                   </div>
                 </div>
@@ -103,9 +103,9 @@ const SDGSection = () => {
                 animate={{ height: expandedId === sdg.id ? 'auto' : 0, opacity: expandedId === sdg.id ? 1 : 0 }}
                 className="overflow-hidden"
               >
-                <div className="p-4 sm:p-6 pt-0 font-sans text-xs sm:text-sm text-prestige-text leading-relaxed border-t border-prestige-gray/50">
+                <div className="p-4 sm:p-5 pt-0 font-sans text-[11px] sm:text-xs text-prestige-text leading-relaxed border-t border-prestige-gray/50">
                   {sdg.desc}
-                  <button className="mt-4 flex items-center gap-1 text-primary font-bold uppercase tracking-widest text-[10px]">
+                  <button className="mt-3 flex items-center gap-1 text-primary font-bold uppercase tracking-[0.16em] text-[9px] sm:text-[10px]">
                     More Info <ChevronRight size={12} />
                   </button>
                 </div>

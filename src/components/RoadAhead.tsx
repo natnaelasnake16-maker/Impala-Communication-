@@ -40,19 +40,19 @@ export default function RoadAhead() {
   return (
     <section className="section-space section-shell bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="max-w-3xl mb-10 sm:mb-12 lg:mb-16">
-          <span className="font-sans text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4 block">
+        <div className="max-w-3xl mb-8 sm:mb-10 lg:mb-12">
+          <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.22em] text-primary mb-3 block">
             The Road Ahead
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-prestige-black mb-5 sm:mb-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black mb-4 sm:mb-5">
             Building the Bridge Between Africa and the World
           </h2>
-          <p className="font-sans text-base sm:text-lg text-prestige-text leading-relaxed">
+          <p className="font-sans text-sm sm:text-base text-prestige-text leading-relaxed">
             Impala Communication is evolving beyond a communications agency — becoming a platform that connects Africa’s opportunities with global investors, innovators, and change-makers.
           </p>
         </div>
 
-        <div className="overflow-hidden border border-prestige-gray/20 bg-prestige-gray/20 shadow-[0_22px_60px_rgba(20,20,20,0.12)]">
+        <div className="overflow-hidden border border-prestige-gray/20 bg-prestige-gray/20 shadow-[0_18px_44px_rgba(20,20,20,0.1)]">
           <div className="grid gap-px sm:grid-cols-2">
           {initiatives.map((initiative, index) => {
             const Icon = initiative.icon;
@@ -63,7 +63,7 @@ export default function RoadAhead() {
                 initial={{ opacity: 0, y: 26 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.35 }}
-                whileHover={{ scale: 1.015, rotate: index % 2 === 0 ? -0.75 : 0.75 }}
+                whileHover={{ scale: 1.01, rotate: index % 2 === 0 ? -0.5 : 0.5 }}
                 animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
                 transition={{
                   backgroundPosition: {
@@ -80,22 +80,22 @@ export default function RoadAhead() {
                   background: initiative.gradient,
                   backgroundSize: "200% 200%",
                 }}
-                className="relative min-h-[260px] overflow-hidden p-5 text-white sm:min-h-[280px] sm:p-6 lg:min-h-[320px] lg:p-8"
+                className="relative min-h-[220px] overflow-hidden p-4 text-white sm:min-h-[240px] sm:p-5 lg:min-h-[260px] lg:p-6"
               >
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.22),transparent_36%)]" />
                 <div className="relative z-10">
                   <motion.div
                     animate={{ y: [0, -4, 0] }}
                     transition={{ duration: 3 + index * 0.4, repeat: Infinity, ease: "easeInOut" }}
-                    className="mb-5 flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl border border-white/20 bg-white/10 shadow-[0_0_22px_rgba(255,255,255,0.18)]"
+                    className="mb-4 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-[1rem] border border-white/20 bg-white/10 shadow-[0_0_22px_rgba(255,255,255,0.18)]"
                   >
-                    <Icon size={28} strokeWidth={1.8} />
+                    <Icon size={24} strokeWidth={1.8} />
                   </motion.div>
 
-                  <h3 className="max-w-md text-xl sm:text-2xl font-bold leading-tight">
+                  <h3 className="max-w-md text-lg sm:text-xl font-bold leading-tight">
                     {initiative.title}
                   </h3>
-                  <p className="mt-4 max-w-xl font-sans text-sm sm:text-base leading-relaxed text-white/82">
+                  <p className="mt-3 max-w-xl font-sans text-xs sm:text-sm leading-relaxed text-white/82">
                     {initiative.description}
                   </p>
                 </div>

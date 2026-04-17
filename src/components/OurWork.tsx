@@ -121,12 +121,12 @@ const projects: Project[] = [
     title: "African Business Magazine – Ethiopia Representation",
     logoFallbackText: "ABM",
     hook:
-      "Positioning Ethiopia within Africa’s broader growth and investment story through credible institutional storytelling.",
-    tagline: "Profiling national momentum for African and global audiences.",
+      "Positioning Ethiopia within Africa’s broader growth and investment story through credible institutional profiling.",
+    tagline: "Institutional profiling for a more investment-ready Ethiopian narrative.",
     challenge:
       "Ethiopia needed stronger narrative placement within high-trust African business conversations so its growth story could land with institutional, investor, and policy audiences.",
     approach:
-      "We shaped representation through editorial storytelling, strategic positioning, and message framing that connected Ethiopia’s progress to wider African opportunity narratives.",
+      "We shaped representation through editorial positioning, strategic framing, and message architecture that connected Ethiopia’s progress to wider African opportunity narratives.",
     solution: [
       "Institutional profiling strategy",
       "Editorial narrative development",
@@ -134,7 +134,7 @@ const projects: Project[] = [
       "Cross-market positioning support",
     ],
     impact:
-      "Profiling Africa’s growth through institutional storytelling — positioning Ethiopia within the African and global investment narrative.",
+      "Positioned Ethiopia more credibly within African and global business conversations by strengthening its institutional and investment narrative.",
     deliverables: [
       { icon: <Compass size={16} />, label: "Positioning" },
       { icon: <PenTool size={16} />, label: "Narrative" },
@@ -153,22 +153,24 @@ const projects: Project[] = [
     logoUrl: brandMarks.lonadd,
     logoFallbackText: "LON",
     hook:
-      "Repositioning a 17-year HR legacy into a pan-African thought leader with sharper strategic visibility.",
-    tagline: "Building authority around an established HR legacy.",
+      "Repositioning a 17-year HR legacy into a category leader with sharper visibility and stronger institutional credibility.",
+    tagline: "Institutional repositioning anchored in category leadership and ISO-ready credibility.",
     challenge:
-      "LonAdd needed to evolve from a respected legacy consultancy into a clearer thought leader with a stronger continental voice and modern brand architecture.",
+      "LonAdd needed to evolve from a respected legacy consultancy into a clearer category leader with stronger governance signals, sharper market positioning, and a more contemporary institutional profile.",
     approach:
-      "We developed a positioning framework that elevated the company’s legacy into a forward-looking leadership narrative rooted in expertise, credibility, and African relevance.",
+      "We developed a positioning framework that translated LonAdd’s legacy into a forward-looking advisory profile rooted in expertise, governance, ISO credibility, and African market relevance.",
     solution: [
       "Brand architecture refinement",
       "Thought leadership positioning",
+      "ISO credibility narrative",
       "Narrative and messaging framework",
       "Strategic visibility support",
     ],
     impact:
-      "Repositioning a 17-year HR legacy into a thought leader across Africa through strategic communication and brand architecture.",
+      "Strengthened LonAdd’s category leadership by aligning its brand architecture, credibility signals, and institutional narrative with a more ambitious market position.",
     deliverables: [
       { icon: <Briefcase size={16} />, label: "Brand Architecture" },
+      { icon: <ShieldCheck size={16} />, label: "ISO Credibility" },
       { icon: <Sparkles size={16} />, label: "Thought Leadership" },
       { icon: <Compass size={16} />, label: "Positioning" },
       { icon: <PenTool size={16} />, label: "Messaging" },
@@ -184,25 +186,56 @@ const projects: Project[] = [
     title: "Ghana Cocoa Marketing Company (UK & Ghana)",
     logoFallbackText: "GCMC",
     hook:
-      "Moving cocoa beyond commodity language into a richer global story of sustainability, heritage, and diaspora engagement.",
-    tagline: "Reframing a national industry through global storytelling.",
+      "Positioning Ghana’s cocoa story as a premium narrative of heritage, sustainability, and global relevance.",
+    tagline: "Global value-chain positioning for a flagship national sector.",
     challenge:
       "The cocoa narrative needed to communicate more than trade value, connecting industry relevance to sustainability, identity, and international audience engagement.",
     approach:
-      "We reframed the story around global influence, diaspora resonance, and sustainable industry positioning to create stronger emotional and strategic relevance.",
+      "We reframed the sector around heritage, sustainability, diaspora resonance, and premium global positioning to create stronger strategic and commercial relevance.",
     solution: [
-      "Global storytelling platform",
+      "Global narrative platform",
       "Sustainability narrative framing",
       "Diaspora engagement messaging",
       "Cross-market communication support",
     ],
     impact:
-      "Reframing Ghana’s cocoa industry through global storytelling, sustainability narratives, and diaspora engagement.",
+      "Repositioned Ghana’s cocoa sector as a premium global narrative with stronger sustainability, heritage, and diaspora relevance.",
     deliverables: [
       { icon: <Leaf size={16} />, label: "Sustainability" },
       { icon: <Globe size={16} />, label: "Diaspora Reach" },
-      { icon: <Megaphone size={16} />, label: "Storytelling" },
+      { icon: <Megaphone size={16} />, label: "Global Narrative" },
       { icon: <Target size={16} />, label: "Industry Positioning" },
+    ],
+    relatedImages: [],
+  },
+  {
+    id: "ethiopia-financial-sector",
+    cardMode: "full",
+    primaryCategory: "Branding & Strategy",
+    filters: ["Branding & Strategy", "Research & Policy"],
+    tag: "Current Focus",
+    title: "Financial Sector Engagement (Ethiopia)",
+    logoFallbackText: "FSE",
+    hook:
+      "Positioning banking reform, Islamic finance, and capital-market ambition as credible national investment narratives.",
+    tagline: "Sector positioning for financial reform, investor confidence, and institutional trust.",
+    challenge:
+      "Ethiopia’s financial transformation required clearer communication that could connect reform, innovation, and sector opportunity to investor, regulatory, and public audiences.",
+    approach:
+      "We structured the narrative around reform credibility, market readiness, and institutional confidence so the sector’s momentum could be communicated with clarity and authority.",
+    solution: [
+      "Financial sector narrative architecture",
+      "Investor-facing message development",
+      "Reform communication framework",
+      "Sector visibility support",
+    ],
+    impact:
+      "Strengthened the clarity and investment relevance of Ethiopia’s banking, Islamic finance, and capital-market conversations.",
+    deliverables: [
+      { icon: <BarChart3 size={16} />, label: "Sector Narrative" },
+      { icon: <Compass size={16} />, label: "Positioning" },
+      { icon: <ShieldCheck size={16} />, label: "Reform Credibility" },
+      { icon: <Globe size={16} />, label: "Investor Relevance" },
     ],
     relatedImages: [],
   },
@@ -231,7 +264,7 @@ const projects: Project[] = [
     challenge:
       "African opportunities needed stronger visibility within premium global business forums where investors, founders, and ecosystem leaders gather.",
     approach:
-      "We positioned the platform as a bridge between African opportunity and global capital conversations through strategic framing, event storytelling, and partnership messaging.",
+      "We positioned the platform as a bridge between African opportunity and global capital conversations through strategic framing, platform architecture, and partnership messaging.",
     solution: [
       "Platform narrative architecture",
       "Event communication strategy",
@@ -329,15 +362,15 @@ const projects: Project[] = [
     challenge:
       "EWLA’s work required communication that could translate legal services and advocacy into clear public narratives without losing institutional depth or credibility.",
     approach:
-      "We humanized access-to-justice work through strategic narrative framing, public-facing storytelling, and visibility tools that strengthened trust in the institution’s role.",
+      "We translated access-to-justice work into a stronger public-interest narrative, building visibility tools that strengthened trust in the institution’s role.",
     solution: [
       "Access-to-justice messaging",
       "Institutional visibility support",
-      "Human-centered story framing",
+      "Public-interest narrative framing",
       "Stakeholder communication tools",
     ],
     impact:
-      "Transforming legal services into compelling narratives that expand access to justice and strengthen institutional visibility.",
+      "Strengthened institutional visibility and public understanding around access to justice through clearer, more trusted communication.",
     deliverables: [
       { icon: <Scale size={16} />, label: "Justice Narrative" },
       { icon: <ShieldCheck size={16} />, label: "Credibility" },
@@ -356,25 +389,25 @@ const projects: Project[] = [
     logoUrl: brandMarks.awib,
     logoFallbackText: "AWI",
     hook:
-      "Profiling women leaders at scale to build narratives that inspire belief, visibility, and investment in leadership.",
-    tagline: "Shaping a movement around women’s leadership.",
+      "Profiling women leaders at scale to strengthen visibility, credibility, and investment in leadership.",
+    tagline: "Turning leadership visibility into a stronger institutional signal.",
     challenge:
       "The campaign needed to elevate many voices without losing narrative quality, emotional resonance, or strategic coherence across the platform.",
     approach:
-      "We used profile-led storytelling, campaign narrative consistency, and visibility strategy to turn leadership stories into a stronger collective signal.",
+      "We used profile-led positioning, campaign consistency, and visibility strategy to turn leadership stories into a stronger collective signal.",
     solution: [
-      "Leadership profile storytelling",
+      "Leadership profile positioning",
       "Campaign narrative system",
       "Audience engagement strategy",
       "Visibility and amplification support",
     ],
     impact:
-      "Profiling over 60 women leaders and shaping narratives that inspire investment in women’s leadership.",
+      "Strengthened the visibility of more than 60 women leaders and helped frame women’s leadership as an investable institutional priority.",
     deliverables: [
       { icon: <Sparkles size={16} />, label: "Campaign Narrative" },
       { icon: <Users size={16} />, label: "Leadership Profiles" },
       { icon: <BarChart3 size={16} />, label: "Engagement" },
-      { icon: <PenTool size={16} />, label: "Story Development" },
+      { icon: <PenTool size={16} />, label: "Profile Development" },
     ],
     previewImage: ourWorkImages.caseStudies.awib[0],
     relatedImages: [...ourWorkImages.caseStudies.awib],
@@ -389,20 +422,20 @@ const projects: Project[] = [
     logoUrl: brandMarks.iwmi,
     logoFallbackText: "IWM",
     hook:
-      "Turning technical climate research into human-centered stories that move policy and public understanding.",
-    tagline: "Making climate evidence resonate beyond research circles.",
+      "Turning technical climate research into accessible narratives that move policy and public understanding.",
+    tagline: "Making climate evidence relevant beyond research circles.",
     challenge:
       "The project required communication that could preserve the credibility of climate research while making it legible and urgent for broader public and policy audiences.",
     approach:
-      "We grounded complex findings in lived experience, shaping human-centered stories that connected research to policy influence and sustainability action.",
+      "We grounded complex findings in lived experience, shaping accessible narratives that connected research to policy influence and sustainability action.",
     solution: [
       "Climate narrative framing",
       "Research translation support",
-      "Human-centered storytelling",
+      "Audience-centered communication",
       "Policy-facing communication tools",
     ],
     impact:
-      "Transforming climate research into human-centered stories that influence policy and sustainability action.",
+      "Strengthened the policy relevance and public legibility of climate research through clearer narrative framing.",
     deliverables: [
       { icon: <Leaf size={16} />, label: "Climate Strategy" },
       { icon: <BarChart3 size={16} />, label: "Research Translation" },
@@ -418,27 +451,27 @@ const projects: Project[] = [
     primaryCategory: "Development",
     filters: ["Development", "Campaigns"],
     tag: "Completed Project",
-    title: "Dereja (Mastercard Foundation)",
+    title: "Dereja – Reframing Youth Employability as Economic Infrastructure",
     logoFallbackText: "DE",
     hook:
-      "Creating youth-centered narratives that build confidence, readiness, and employability.",
-    tagline: "Helping young people see possibility in their own stories.",
+      "Positioning youth employability not as a social issue, but as critical economic infrastructure.",
+    tagline: "Making employability relevant to policymakers, funders, and employers.",
     challenge:
-      "The project needed communication that could resonate with young audiences while framing employability in a motivating, human, and confidence-building way.",
+      "The work needed communication that could resonate with young audiences while also presenting employability as an issue of economic transformation, workforce readiness, and institutional relevance.",
     approach:
-      "We shaped the narrative around aspiration, self-belief, and opportunity so that employability messaging felt personal, practical, and energizing.",
+      "We reframed the narrative around economic participation, workforce readiness, and national opportunity so employability messaging could connect with youth, employers, and decision-makers at once.",
     solution: [
-      "Youth storytelling framework",
-      "Employability message development",
-      "Confidence-building campaign support",
+      "Youth narrative framework",
+      "Employability positioning system",
+      "Audience-specific message development",
       "Audience-centered communication tools",
     ],
     impact:
-      "Empowering youth through storytelling that builds confidence and employability narratives.",
+      "Positioned youth employability as a stronger economic and institutional priority, with messaging that resonated across youth, funder, and employer audiences.",
     deliverables: [
       { icon: <GraduationCap size={16} />, label: "Employability" },
       { icon: <Zap size={16} />, label: "Youth Activation" },
-      { icon: <PenTool size={16} />, label: "Storytelling" },
+      { icon: <PenTool size={16} />, label: "Narrative System" },
       { icon: <MessageSquare size={16} />, label: "Audience Messaging" },
     ],
     relatedImages: [],
@@ -556,14 +589,14 @@ const ProjectPreview = ({ project }: { project: FullProject }) => {
   return (
     <div className="relative flex h-full w-full items-center justify-center overflow-hidden bg-[linear-gradient(135deg,#f4ede6_0%,#fff8f3_48%,#f6f1ea_100%)] px-5">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(241,90,41,0.22),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(10,10,10,0.08),transparent_35%)]" />
-      <div className="relative z-10 flex flex-col items-center gap-4 text-center">
+      <div className="relative z-10 flex flex-col items-center gap-3 text-center">
         <ProjectLogoBadge
           fallbackText={project.logoFallbackText}
           logoUrl={project.logoUrl}
           size="poster"
           title={project.title}
         />
-        <span className="font-sans text-[10px] font-bold uppercase tracking-[0.26em] text-prestige-text">
+        <span className="font-sans text-[9px] font-bold uppercase tracking-[0.2em] text-prestige-text">
           {project.primaryCategory}
         </span>
       </div>
@@ -596,17 +629,17 @@ const CaseStudyCard = ({
         }`}
         onClick={() => setIsExpanded((current) => !current)}
       >
-        <div className="aspect-[4/3] overflow-hidden md:w-[29%]">
+        <div className="aspect-[4/3] overflow-hidden md:w-[26%]">
           <ProjectPreview project={project} />
         </div>
-        <div className="relative flex flex-col justify-center p-5 sm:p-6 md:w-[71%] md:p-8 lg:p-9">
-          <div className="absolute right-4 top-4 rounded-full bg-prestige-gray px-2.5 py-1 sm:px-3">
-            <span className="font-sans text-[9px] font-bold uppercase tracking-widest text-primary sm:text-[10px]">
+        <div className="relative flex flex-col justify-center p-4 sm:p-5 md:w-[74%] md:p-6 lg:p-7">
+          <div className="absolute right-3 top-3 rounded-full bg-prestige-gray px-2.5 py-1">
+            <span className="font-sans text-[8px] sm:text-[9px] font-bold uppercase tracking-[0.16em] text-primary">
               {project.tag}
             </span>
           </div>
 
-          <div className="mb-4">
+          <div className="mb-3">
             <ProjectLogoBadge
               fallbackText={project.logoFallbackText}
               logoUrl={project.logoUrl}
@@ -615,16 +648,16 @@ const CaseStudyCard = ({
             />
           </div>
 
-          <h3 className="max-w-3xl pr-14 text-lg font-bold text-prestige-black sm:pr-20 sm:text-[1.55rem] md:text-[1.85rem]">
+          <h3 className="max-w-3xl pr-12 text-base font-bold text-prestige-black sm:pr-16 sm:text-[1.35rem] md:text-[1.65rem]">
             {project.title}
           </h3>
-          <p className="mb-5 mt-3 max-w-3xl font-sans text-sm italic leading-relaxed text-prestige-text sm:text-[15px]">
+          <p className="mb-4 mt-2.5 max-w-3xl font-sans text-xs italic leading-relaxed text-prestige-text sm:text-sm">
             "{project.hook}"
           </p>
-          <div className="flex items-center gap-2 font-sans text-[10px] font-bold uppercase tracking-[0.24em] text-primary sm:text-[11px]">
+          <div className="flex items-center gap-2 font-sans text-[9px] font-bold uppercase tracking-[0.18em] text-primary sm:text-[10px]">
             {isExpanded ? "Close Project" : "View Project"}
             <ChevronDown
-              size={15}
+              size={14}
               className={`transition-transform duration-300 ${
                 isExpanded ? "rotate-180" : ""
               }`}
@@ -641,59 +674,59 @@ const CaseStudyCard = ({
             exit={{ height: 0, opacity: 0 }}
             className="overflow-hidden border-t border-prestige-gray"
           >
-            <div className="bg-prestige-cream/30 p-5 sm:p-7 lg:p-9 xl:p-10">
-              <div className="mb-8 sm:mb-10">
-                <div className="mb-5 flex flex-wrap items-center justify-between gap-4">
+            <div className="bg-prestige-cream/30 p-4 sm:p-5 lg:p-6 xl:p-7">
+              <div className="mb-6 sm:mb-7">
+                <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
                   <ProjectLogoBadge
                     fallbackText={project.logoFallbackText}
                     logoUrl={project.logoUrl}
                     title={project.title}
                   />
-                  <span className="rounded-full bg-white px-3 py-1 font-sans text-[10px] font-bold uppercase tracking-[0.22em] text-primary shadow-sm">
+                  <span className="rounded-full bg-white px-2.5 py-1 font-sans text-[9px] font-bold uppercase tracking-[0.16em] text-primary shadow-sm">
                     {project.tag}
                   </span>
                 </div>
-                <h4 className="mb-3 font-sans text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
+                <h4 className="mb-2 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
                   Project Detail
                 </h4>
-                <h2 className="mb-3 text-2xl font-bold text-prestige-black sm:text-3xl lg:text-[2.2rem]">
+                <h2 className="mb-2 text-xl font-bold text-prestige-black sm:text-2xl lg:text-[2rem]">
                   {project.title}
                 </h2>
-                <p className="text-base text-prestige-text opacity-75 sm:text-lg">
+                <p className="text-sm text-prestige-text opacity-75 sm:text-base">
                   {project.tagline}
                 </p>
-                <div className="mt-5 h-1 w-16 bg-primary sm:mt-6 sm:w-20" />
+                <div className="mt-4 h-1 w-14 bg-primary sm:mt-5 sm:w-16" />
               </div>
 
-              <div className="mb-8 grid gap-8 sm:mb-10 sm:gap-10 lg:grid-cols-2 lg:gap-12">
-                <div className="space-y-7 sm:space-y-8">
+              <div className="mb-6 grid gap-6 sm:mb-7 sm:gap-7 lg:grid-cols-2 lg:gap-8">
+                <div className="space-y-5 sm:space-y-6">
                   <div>
-                    <h5 className="mb-3 font-sans text-[11px] font-bold uppercase tracking-[0.24em] text-primary">
+                    <h5 className="mb-2 font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
                       The Challenge
                     </h5>
-                    <p className="font-sans text-sm leading-relaxed text-prestige-text sm:text-[15px]">
+                    <p className="font-sans text-xs leading-relaxed text-prestige-text sm:text-sm">
                       {project.challenge}
                     </p>
                   </div>
                   <div>
-                    <h5 className="mb-3 font-sans text-[11px] font-bold uppercase tracking-[0.24em] text-primary">
+                    <h5 className="mb-2 font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
                       Our Approach
                     </h5>
-                    <p className="font-sans text-sm leading-relaxed text-prestige-text sm:text-[15px]">
+                    <p className="font-sans text-xs leading-relaxed text-prestige-text sm:text-sm">
                       {project.approach}
                     </p>
                   </div>
                 </div>
-                <div className="space-y-7 sm:space-y-8">
+                <div className="space-y-5 sm:space-y-6">
                   <div>
-                    <h5 className="mb-3 font-sans text-[11px] font-bold uppercase tracking-[0.24em] text-primary">
+                    <h5 className="mb-2 font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
                       What We Delivered
                     </h5>
-                    <ul className="space-y-3">
+                    <ul className="space-y-2">
                       {project.solution.map((item) => (
                         <li
                           key={item}
-                          className="flex items-center gap-3 font-sans text-sm text-prestige-text sm:text-[15px]"
+                          className="flex items-center gap-2.5 font-sans text-xs text-prestige-text sm:text-sm"
                         >
                           <div className="h-1.5 w-1.5 rounded-full bg-primary" />
                           {item}
@@ -702,30 +735,30 @@ const CaseStudyCard = ({
                     </ul>
                   </div>
                   <div>
-                    <h5 className="mb-3 font-sans text-[11px] font-bold uppercase tracking-[0.24em] text-primary">
+                    <h5 className="mb-2 font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
                       Impact
                     </h5>
-                    <p className="font-sans text-sm font-medium leading-relaxed text-prestige-text sm:text-[15px]">
+                    <p className="font-sans text-xs font-medium leading-relaxed text-prestige-text sm:text-sm">
                       {project.impact}
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="mb-8 sm:mb-10">
-                <h5 className="mb-5 text-center font-sans text-[11px] font-bold uppercase tracking-[0.24em] text-primary">
+              <div className="mb-6 sm:mb-7">
+                <h5 className="mb-4 text-center font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
                   Deliverables
                 </h5>
-                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 xl:grid-cols-6">
+                <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3 lg:grid-cols-4 xl:grid-cols-6">
                   {project.deliverables.map((item) => (
                     <div
                       key={item.label}
-                      className="group flex flex-col items-center border border-prestige-gray bg-white p-4 text-center transition-colors hover:border-primary"
+                      className="group flex flex-col items-center border border-prestige-gray bg-white p-3 text-center transition-colors hover:border-primary"
                     >
-                      <div className="mb-3 text-primary transition-transform duration-300 group-hover:scale-110">
+                      <div className="mb-2 text-primary transition-transform duration-300 group-hover:scale-110">
                         {item.icon}
                       </div>
-                      <span className="font-sans text-[10px] font-bold uppercase tracking-widest text-prestige-black">
+                      <span className="font-sans text-[9px] font-bold uppercase tracking-[0.16em] text-prestige-black">
                         {item.label}
                       </span>
                     </div>
@@ -734,11 +767,11 @@ const CaseStudyCard = ({
               </div>
 
               {project.relatedImages.length > 0 && (
-                <div className="scrollbar-hide flex gap-4 overflow-x-auto pb-2 sm:gap-5">
+                <div className="scrollbar-hide flex gap-3 overflow-x-auto pb-1 sm:gap-4">
                   {project.relatedImages.map((image, imageIndex) => (
                     <div
                       key={`${project.id}-${imageIndex}`}
-                      className="group aspect-video min-w-[220px] overflow-hidden rounded-xl shadow-lg sm:min-w-[280px] lg:min-w-[360px]"
+                      className="group aspect-video min-w-[180px] overflow-hidden rounded-xl shadow-lg sm:min-w-[220px] lg:min-w-[280px]"
                     >
                       <img
                         src={image}
@@ -765,21 +798,21 @@ const CompactProjectCard = ({ project }: { project: CompactProject }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       whileHover={{ y: -4 }}
-      className="border border-prestige-gray bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-lg sm:p-6"
+      className="border border-prestige-gray bg-white p-4 shadow-sm transition-all duration-300 hover:shadow-lg sm:p-5"
     >
-      <div className="mb-4 flex items-start justify-between gap-4">
+      <div className="mb-3 flex items-start justify-between gap-3">
         <ProjectLogoBadge
           fallbackText={project.logoFallbackText}
           logoUrl={project.logoUrl}
           size="small"
           title={project.title}
         />
-        <span className="rounded-full bg-prestige-gray px-2.5 py-1 font-sans text-[9px] font-bold uppercase tracking-widest text-primary sm:px-3 sm:text-[10px]">
+        <span className="rounded-full bg-prestige-gray px-2.5 py-1 font-sans text-[8px] sm:text-[9px] font-bold uppercase tracking-[0.16em] text-primary sm:px-3">
           {project.tag}
         </span>
       </div>
-      <h3 className="text-lg font-bold text-prestige-black">{project.title}</h3>
-      <p className="mt-3 font-sans text-sm leading-relaxed text-prestige-text">
+      <h3 className="text-base font-bold text-prestige-black">{project.title}</h3>
+      <p className="mt-2.5 font-sans text-xs sm:text-sm leading-relaxed text-prestige-text">
         {project.summary}
       </p>
     </motion.div>
@@ -818,25 +851,23 @@ const OurWork = () => {
   return (
     <div className="bg-prestige-white">
       <section className="relative page-hero-space section-shell overflow-hidden bg-white">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-14">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="mb-6 block font-sans text-xs font-bold uppercase tracking-[0.3em] text-primary">
+            <span className="mb-4 block font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.22em] text-primary">
               Our Work
             </span>
-            <h1 className="mb-6 text-4xl font-bold leading-tight text-prestige-black sm:mb-8 sm:text-5xl lg:text-7xl">
-              We turn communication into measurable impact
+            <h1 className="mb-4 text-3xl font-bold leading-tight text-prestige-black sm:mb-6 sm:text-4xl lg:text-5xl">
+              Strategic interventions that strengthen markets, institutions, and public trust
             </h1>
-            <p className="mb-8 max-w-xl font-sans text-base leading-relaxed text-prestige-text sm:mb-12 sm:text-lg md:text-xl">
-              Our work translates complex institutional, economic, and social
-              realities into strategic narratives that influence perception,
-              engagement, and decision-making.
+            <p className="mb-6 max-w-xl font-sans text-sm leading-relaxed text-prestige-text sm:mb-8 sm:text-base md:text-lg">
+              Our work translates complex institutional, economic, and sector realities into positioning frameworks that influence perception, strengthen credibility, and support higher-stakes decision-making.
             </p>
 
-            <div className="grid max-w-xl grid-cols-2 gap-3 border-t border-prestige-gray pt-6 sm:grid-cols-3 sm:gap-4 sm:pt-8">
+            <div className="grid max-w-xl grid-cols-2 gap-2.5 border-t border-prestige-gray pt-5 sm:grid-cols-3 sm:gap-3 sm:pt-6">
               {[
                 { val: "12+", label: "Years" },
                 { val: "100+", label: "Projects" },
@@ -848,12 +879,12 @@ const OurWork = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 + index * 0.08, duration: 0.35 }}
                   whileHover={{ y: -4, scale: 1.02 }}
-                  className="rounded-2xl border border-prestige-gray bg-white px-4 py-4 shadow-sm transition-all duration-300 hover:border-primary/40 hover:shadow-[0_14px_30px_rgba(0,0,0,0.07)]"
+                  className="rounded-2xl border border-prestige-gray bg-white px-3.5 py-3.5 shadow-sm transition-all duration-300 hover:border-primary/40 hover:shadow-[0_14px_30px_rgba(0,0,0,0.07)]"
                 >
-                  <span className="text-2xl sm:text-3xl font-bold text-primary">
+                  <span className="text-xl sm:text-2xl font-bold text-primary">
                     {stat.val}
                   </span>
-                  <span className="mt-1 block font-sans text-[10px] font-bold uppercase tracking-[0.22em] text-prestige-text opacity-70">
+                  <span className="mt-1 block font-sans text-[9px] font-bold uppercase tracking-[0.18em] text-prestige-text opacity-70">
                     {stat.label}
                   </span>
                 </motion.div>
@@ -861,13 +892,13 @@ const OurWork = () => {
             </div>
           </motion.div>
 
-          <div className="relative hidden h-[560px] lg:block">
-            <div className="grid h-full grid-cols-2 gap-4">
-              <div className="space-y-4 pt-12">
+          <div className="relative hidden h-[460px] lg:block">
+            <div className="grid h-full grid-cols-2 gap-3">
+              <div className="space-y-3 pt-8">
                 <motion.div
                   animate={{ y: [0, -20, 0] }}
                   transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  className="h-60 overflow-hidden rounded-[2rem] bg-prestige-cream shadow-2xl"
+                  className="h-48 overflow-hidden rounded-[1.6rem] bg-prestige-cream shadow-2xl"
                 >
                   <img
                     src={ourWorkImages.heroMosaic[0]}
@@ -884,7 +915,7 @@ const OurWork = () => {
                     ease: "easeInOut",
                     delay: 1,
                   }}
-                  className="h-44 overflow-hidden rounded-[2rem] bg-primary/10 shadow-xl"
+                  className="h-36 overflow-hidden rounded-[1.6rem] bg-primary/10 shadow-xl"
                 >
                   <img
                     src={ourWorkImages.heroMosaic[1]}
@@ -894,7 +925,7 @@ const OurWork = () => {
                   />
                 </motion.div>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <motion.div
                   animate={{ y: [0, 15, 0] }}
                   transition={{
@@ -903,7 +934,7 @@ const OurWork = () => {
                     ease: "easeInOut",
                     delay: 0.5,
                   }}
-                  className="h-44 overflow-hidden rounded-[2rem] bg-prestige-cream shadow-xl"
+                  className="h-36 overflow-hidden rounded-[1.6rem] bg-prestige-cream shadow-xl"
                 >
                   <img
                     src={ourWorkImages.heroMosaic[2]}
@@ -920,7 +951,7 @@ const OurWork = () => {
                     ease: "easeInOut",
                     delay: 1.5,
                   }}
-                  className="h-60 overflow-hidden rounded-[2rem] bg-prestige-cream shadow-2xl"
+                  className="h-48 overflow-hidden rounded-[1.6rem] bg-prestige-cream shadow-2xl"
                 >
                   <img
                     src={ourWorkImages.heroMosaic[3]}
@@ -935,14 +966,14 @@ const OurWork = () => {
         </div>
       </section>
 
-      <div className="sticky top-[60px] z-40 border-y border-prestige-gray bg-white/82 backdrop-blur-md sm:top-[72px]">
-        <div className="scrollbar-hide mx-auto max-w-7xl overflow-x-auto px-4 sm:px-6">
-          <div className="flex min-w-max items-center gap-4 py-3 sm:gap-6 sm:py-4 lg:gap-8">
+      <div className="sticky top-[52px] z-40 border-y border-prestige-gray bg-white/82 backdrop-blur-md sm:top-[62px]">
+        <div className="scrollbar-hide mx-auto max-w-7xl overflow-x-auto px-4 sm:px-5 lg:px-6">
+          <div className="flex min-w-max items-center gap-3 py-2.5 sm:gap-4 sm:py-3 lg:gap-6">
             {FILTERS.map((filter) => (
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`relative py-2 font-sans text-[10px] font-bold uppercase tracking-widest transition-all sm:text-xs ${
+                className={`relative py-1.5 font-sans text-[9px] font-bold uppercase tracking-[0.16em] transition-all sm:text-[10px] ${
                   activeFilter === filter
                     ? "text-primary"
                     : "text-prestige-text hover:text-prestige-black"
@@ -961,22 +992,22 @@ const OurWork = () => {
         </div>
       </div>
 
-      <section className="section-shell py-16 sm:py-20 lg:py-24">
-        <div className="mx-auto max-w-7xl space-y-16 sm:space-y-24 lg:space-y-28">
+      <section className="section-shell py-10 sm:py-14 lg:py-16">
+        <div className="mx-auto max-w-7xl space-y-10 sm:space-y-14 lg:space-y-16">
           {groupedProjects.map((group) => (
             <div key={group.category}>
-              <div className="mb-10 sm:mb-12">
-                <h2 className="mb-2 text-2xl font-bold text-prestige-black sm:text-3xl">
+              <div className="mb-6 sm:mb-8">
+                <h2 className="mb-2 text-xl font-bold text-prestige-black sm:text-2xl">
                   {group.category}
                 </h2>
-                <div className="mb-4 h-0.5 w-16 bg-primary" />
-                <p className="font-sans text-sm uppercase tracking-widest text-prestige-text opacity-60">
-                  Selected Projects
+                <div className="mb-3 h-0.5 w-14 bg-primary" />
+                <p className="font-sans text-[10px] uppercase tracking-[0.16em] text-prestige-text opacity-60">
+                  Strategic Interventions
                 </p>
               </div>
 
               {group.fullProjects.length > 0 && (
-                <div className="space-y-8 sm:space-y-10">
+                <div className="space-y-5 sm:space-y-6">
                   {group.fullProjects.map((project, index) => (
                     <div key={project.id}>
                       <CaseStudyCard project={project} index={index} />
@@ -988,7 +1019,7 @@ const OurWork = () => {
               {group.compactProjects.length > 0 && (
                 <div
                   className={`grid gap-4 sm:grid-cols-2 ${
-                    group.fullProjects.length > 0 ? "mt-8 sm:mt-10" : ""
+                    group.fullProjects.length > 0 ? "mt-5 sm:mt-6" : ""
                   }`}
                 >
                   {group.compactProjects.map((project) => (
