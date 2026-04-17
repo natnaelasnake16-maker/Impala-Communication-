@@ -81,18 +81,20 @@ const Navbar = () => {
   return (
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        isScrolled ? "bg-white/90 backdrop-blur-md py-4 shadow-sm" : "bg-transparent py-8"
+        isScrolled
+          ? "bg-white/90 backdrop-blur-md py-3 sm:py-4 shadow-sm"
+          : "bg-white/60 backdrop-blur-lg border-b border-white/40 py-4 sm:py-6 lg:py-8 shadow-sm"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center gap-4">
         <Link to="/" className="flex items-center gap-2">
-          <span className="font-display text-2xl font-bold tracking-tighter text-prestige-black">
+          <span className="font-display text-lg sm:text-xl lg:text-2xl font-bold tracking-tight sm:tracking-tighter leading-tight text-prestige-black">
             IMPALA <span className="text-primary">COMMUNICATION</span>
           </span>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
           {navLinks.map((link) => (
             <Link 
               key={link.name} 
@@ -103,14 +105,14 @@ const Navbar = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
-          <Link to="/get-in-touch" className="border-2 border-primary text-primary px-6 py-2 font-display text-sm font-semibold uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300">
+          <Link to="/get-in-touch" className="border-2 border-primary text-primary px-5 lg:px-6 py-2 font-display text-sm font-semibold uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300">
             Get In Touch
           </Link>
         </div>
 
         {/* Mobile Toggle */}
         <button 
-          className="md:hidden text-prestige-black"
+          className="md:hidden text-prestige-black shrink-0"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -122,13 +124,13 @@ const Navbar = () => {
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute top-full left-0 w-full bg-white shadow-xl py-8 px-6 md:hidden flex flex-col gap-6"
+          className="absolute top-full left-0 w-full bg-white shadow-xl py-6 sm:py-8 px-4 sm:px-6 md:hidden flex flex-col gap-5 sm:gap-6"
         >
           {navLinks.map((link) => (
             <Link 
               key={link.name} 
               to={link.href}
-              className="font-display text-xl font-medium uppercase tracking-widest text-prestige-black"
+              className="font-display text-lg sm:text-xl font-medium uppercase tracking-widest text-prestige-black"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
@@ -136,7 +138,7 @@ const Navbar = () => {
           ))}
           <Link 
             to="/get-in-touch" 
-            className="bg-primary text-white px-6 py-4 font-display text-lg font-semibold uppercase tracking-widest text-center"
+            className="bg-primary text-white px-6 py-3.5 sm:py-4 font-display text-base sm:text-lg font-semibold uppercase tracking-widest text-center"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Get In Touch
@@ -149,7 +151,7 @@ const Navbar = () => {
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
       {/* Full Width Background Image */}
       <div className="absolute inset-0 z-0">
         <motion.img 
@@ -161,37 +163,37 @@ const Hero = () => {
           className="w-full h-full object-cover"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-prestige-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-prestige-black/45 via-prestige-black/28 to-prestige-black/12" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center text-white">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center text-white">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="w-12 h-0.5 bg-primary" />
-            <span className="font-sans text-xs font-semibold uppercase tracking-[0.2em]">
+          <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 flex-wrap">
+            <div className="w-6 sm:w-12 h-0.5 bg-primary" />
+            <span className="font-sans text-[10px] sm:text-xs font-semibold uppercase tracking-[0.16em] sm:tracking-[0.2em]">
               Strategic Communication & Institutional Positioning
             </span>
-            <div className="w-12 h-0.5 bg-primary" />
+            <div className="w-6 sm:w-12 h-0.5 bg-primary" />
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8 text-balance uppercase tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold leading-tight mb-6 sm:mb-8 text-balance uppercase tracking-tight">
             Shaping Africa’s <br />
             <span className="text-primary italic font-light">Investment Narrative</span>
           </h1>
-          <p className="font-sans text-lg md:text-xl opacity-90 mb-10 leading-relaxed max-w-2xl mx-auto">
+          <p className="font-sans text-base sm:text-lg md:text-xl opacity-90 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto">
             Strategic Communication. Institutional Positioning. Narratives That Drive Investment and Influence.
           </p>
-          <p className="font-sans text-sm opacity-70 mb-10 leading-relaxed max-w-xl mx-auto italic">
+          <p className="font-sans text-sm opacity-70 mb-8 sm:mb-10 leading-relaxed max-w-xl mx-auto italic">
             We work with institutions, governments, and market leaders to position Africa’s transformation with clarity, credibility, and strategic intent.
           </p>
-          <div className="flex flex-wrap justify-center gap-6 items-center">
-            <button className="bg-primary text-white px-8 py-4 font-display text-base font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300 shadow-xl">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 items-center">
+            <button className="w-full sm:w-auto bg-primary text-white px-6 sm:px-8 py-3.5 sm:py-4 font-display text-sm sm:text-base font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300 shadow-xl">
               View Our Work
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 font-display text-base font-bold uppercase tracking-widest hover:bg-white hover:text-prestige-black transition-all duration-300">
+            <button className="w-full sm:w-auto border-2 border-white text-white px-6 sm:px-8 py-3.5 sm:py-4 font-display text-sm sm:text-base font-bold uppercase tracking-widest hover:bg-white hover:text-prestige-black transition-all duration-300">
               Who We Are
             </button>
           </div>
@@ -203,8 +205,8 @@ const Hero = () => {
 
 const ClientTicker = () => {
   return (
-    <div className="bg-white border-y border-prestige-gray py-12 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 mb-8 text-center">
+    <div className="bg-white border-y border-prestige-gray py-8 sm:py-10 lg:py-12 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-6 sm:mb-8 text-center">
         <h3 className="font-sans text-xs font-bold uppercase tracking-[0.3em] text-prestige-text opacity-60">
           Trusted by institutions shaping economies and communities
         </h3>
@@ -213,12 +215,12 @@ const ClientTicker = () => {
         {[...homeTickerClients, ...homeTickerClients].map((client, i) => (
           <div
             key={`${client.slug}-${i}`}
-            className="mx-6 flex min-w-[180px] items-center justify-center rounded-2xl border border-prestige-gray bg-prestige-cream px-8 py-5 shadow-sm"
+            className="mx-3 sm:mx-4 lg:mx-6 flex min-w-[140px] sm:min-w-[160px] lg:min-w-[180px] items-center justify-center rounded-2xl border border-prestige-gray bg-prestige-cream px-5 sm:px-6 lg:px-8 py-4 sm:py-5 shadow-sm"
           >
             <img
               src={client.logoUrl}
               alt={client.alt}
-              className="h-10 w-full object-contain"
+              className="h-8 sm:h-10 w-full object-contain"
               loading="lazy"
               referrerPolicy="no-referrer"
             />
@@ -249,35 +251,35 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="bg-white py-32 px-6">
+    <section id="services" className="bg-white section-space section-shell">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">
             What We Do
           </span>
-          <h2 className="text-4xl md:text-6xl font-bold text-prestige-black mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-prestige-black mb-6">
             What We Do
           </h2>
-          <p className="font-sans text-lg text-prestige-text max-w-3xl mx-auto leading-relaxed">
+          <p className="font-sans text-base sm:text-lg text-prestige-text max-w-3xl mx-auto leading-relaxed">
             We work at the intersection of communication, investment, and institutional strategy — helping organizations position themselves with clarity, credibility, and relevance in evolving markets.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
           {services.map((s, i) => (
             <motion.div 
               key={i}
               whileHover={{ y: -10 }}
-              className="bg-prestige-cream p-10 shadow-sm hover:shadow-xl transition-all duration-500 border-t-4 border-transparent hover:border-primary group flex flex-col h-full"
+              className="bg-prestige-cream p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl transition-all duration-500 border-t-4 border-transparent hover:border-primary group flex flex-col h-full"
             >
-              <div className="mb-8 group-hover:scale-110 transition-transform duration-500">
+              <div className="mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-500">
                 {s.icon}
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-prestige-black">{s.title}</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-prestige-black">{s.title}</h3>
               <p className="font-sans text-prestige-text leading-relaxed mb-8 flex-grow">
                 {s.desc}
               </p>
-              <button className="flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-widest group/btn">
+              <button className="flex items-center gap-2 text-primary font-bold text-xs sm:text-sm uppercase tracking-widest group/btn">
                 More Info <ChevronRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
               </button>
             </motion.div>
@@ -337,13 +339,13 @@ const SDGSection = () => {
   ];
 
   return (
-    <section className="bg-prestige-cream py-24 px-6">
+    <section className="bg-prestige-cream py-16 sm:py-20 lg:py-24 section-shell">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">
             Global Impact
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-prestige-black mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-prestige-black mb-6">
             Global Development Sustainability Goals (SDGs)
           </h2>
           <p className="font-sans text-base text-prestige-text max-w-3xl mx-auto leading-relaxed">
@@ -351,7 +353,7 @@ const SDGSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {sdgs.map((sdg, i) => (
             <motion.div 
               key={i}
@@ -359,9 +361,9 @@ const SDGSection = () => {
             >
               <button 
                 onClick={() => setExpandedId(expandedId === sdg.id ? null : sdg.id)}
-                className="w-full p-6 flex items-center justify-between text-left hover:bg-prestige-gray/30 transition-colors"
+                className="w-full p-4 sm:p-6 flex items-center justify-between text-left hover:bg-prestige-gray/30 transition-colors gap-4"
               >
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3 sm:gap-4">
                   {sdg.icon}
                   <div>
                     <span className="block text-[10px] font-bold text-primary uppercase tracking-widest">{sdg.id}</span>
@@ -379,7 +381,7 @@ const SDGSection = () => {
                 animate={{ height: expandedId === sdg.id ? 'auto' : 0, opacity: expandedId === sdg.id ? 1 : 0 }}
                 className="overflow-hidden"
               >
-                <div className="p-6 pt-0 font-sans text-xs text-prestige-text leading-relaxed border-t border-prestige-gray/50">
+                <div className="p-4 sm:p-6 pt-0 font-sans text-xs sm:text-sm text-prestige-text leading-relaxed border-t border-prestige-gray/50">
                   {sdg.desc}
                   <button className="mt-4 flex items-center gap-1 text-primary font-bold uppercase tracking-widest text-[10px]">
                     More Info <ChevronRight size={12} />
@@ -431,13 +433,13 @@ const WhyImpala = () => {
   ];
 
   return (
-    <section className="bg-white py-24 px-6">
+    <section className="bg-white py-16 sm:py-20 lg:py-24 section-shell">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">
             Why Impala
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-prestige-black mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-prestige-black mb-6">
             Why Impala
           </h2>
           <p className="font-sans text-base text-prestige-text max-w-3xl mx-auto leading-relaxed">
@@ -449,7 +451,7 @@ const WhyImpala = () => {
           {values.map((v, i) => (
             <motion.div 
               key={i}
-              className="relative h-64 overflow-hidden group cursor-pointer"
+              className="relative h-72 sm:h-80 lg:h-64 overflow-hidden group cursor-pointer"
             >
               {/* Background Image */}
               <div className="absolute inset-0 z-0">
@@ -459,19 +461,19 @@ const WhyImpala = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-prestige-black/70 group-hover:bg-primary/80 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-prestige-black/45 via-prestige-black/22 to-transparent group-hover:bg-primary/55 transition-colors duration-500" />
               </div>
 
               {/* Content */}
-              <div className="relative z-10 h-full p-8 flex flex-col justify-end text-white">
-                <h3 className="text-lg font-bold mb-2 leading-tight uppercase tracking-wide">{v.title}</h3>
+              <div className="relative z-10 h-full p-6 sm:p-8 flex flex-col justify-end text-white">
+                <h3 className="text-base sm:text-lg font-bold mb-2 leading-tight uppercase tracking-wide">{v.title}</h3>
                 
                 <motion.div
                   initial={false}
                   animate={{ height: expandedIndex === i ? 'auto' : 0, opacity: expandedIndex === i ? 1 : 0 }}
                   className="overflow-hidden"
                 >
-                  <p className="font-sans text-xs opacity-90 leading-relaxed mb-4">
+                  <p className="font-sans text-xs sm:text-sm opacity-90 leading-relaxed mb-4">
                     {v.desc}
                   </p>
                 </motion.div>
@@ -503,20 +505,20 @@ const ImpactStats = () => {
   ];
 
   return (
-    <section className="bg-prestige-black py-32 px-6 text-white text-center">
+    <section className="bg-prestige-black section-space section-shell text-white text-center">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-20">
+        <div className="mb-12 sm:mb-16 lg:mb-20">
           <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">
             Our Reach
           </span>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Amplifying Your Impact
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
           {stats.map((s, i) => (
-            <div key={i} className="bg-white/5 p-12 border border-white/10 hover:border-primary transition-colors duration-500">
-              <div className="text-5xl md:text-7xl font-display font-bold text-primary mb-4">
+            <div key={i} className="bg-white/5 p-8 sm:p-10 lg:p-12 border border-white/10 hover:border-primary transition-colors duration-500">
+              <div className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-primary mb-4">
                 {s.value}
               </div>
               <div className="font-sans text-sm font-semibold uppercase tracking-widest opacity-60">
@@ -565,13 +567,13 @@ const PrioritiesSection = () => {
   ];
 
   return (
-    <section className="bg-prestige-cream py-24 px-6">
+    <section className="bg-prestige-cream py-16 sm:py-20 lg:py-24 section-shell">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">
             Focus Areas
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-prestige-black mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-prestige-black mb-6">
             Our Priorities
           </h2>
           <p className="font-sans text-base text-prestige-text max-w-3xl mx-auto leading-relaxed">
@@ -579,12 +581,12 @@ const PrioritiesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {priorities.map((p, i) => (
             <motion.div 
               key={i}
               whileHover={{ y: -10 }}
-              className="relative h-96 overflow-hidden group cursor-pointer shadow-xl"
+              className="relative h-[340px] sm:h-80 lg:h-96 overflow-hidden group cursor-pointer shadow-xl"
             >
               {/* Background Image */}
               <div className="absolute inset-0 z-0">
@@ -594,15 +596,15 @@ const PrioritiesSection = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-prestige-black/80 group-hover:bg-primary/90 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-prestige-black/50 via-prestige-black/22 to-transparent group-hover:bg-primary/60 transition-colors duration-500" />
               </div>
 
               {/* Content */}
-              <div className="relative z-10 h-full p-10 flex flex-col justify-center text-white text-center items-center">
+              <div className="relative z-10 h-full p-6 sm:p-8 lg:p-10 flex flex-col justify-center text-white text-center items-center">
                 <div className="mb-6 text-primary group-hover:text-white transition-colors duration-300">
                   {p.icon}
                 </div>
-                <h3 className="text-2xl font-bold mb-4 uppercase tracking-wider">{p.title}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 uppercase tracking-wider">{p.title}</h3>
                 <p className="font-sans text-sm opacity-80 leading-relaxed max-w-xs">
                   {p.desc}
                 </p>
@@ -640,14 +642,14 @@ const FeaturedWork = () => {
   ];
 
   return (
-    <section className="py-32 px-6 bg-white">
+    <section className="section-space section-shell bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 sm:mb-16 gap-4 sm:gap-6">
           <div>
             <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">
               Selected Work
             </span>
-            <h2 className="text-4xl md:text-6xl font-bold text-prestige-black">
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-prestige-black">
               Impact, Across Sectors
             </h2>
           </div>
@@ -656,7 +658,7 @@ const FeaturedWork = () => {
           </button>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {projects.map((p, i) => (
             <motion.div 
               key={i}
@@ -676,7 +678,7 @@ const FeaturedWork = () => {
               <span className="font-sans text-xs font-bold uppercase tracking-widest text-primary mb-2 block">
                 {p.category}
               </span>
-              <h3 className="text-2xl font-bold mb-3 text-prestige-black group-hover:text-primary transition-colors">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 text-prestige-black group-hover:text-primary transition-colors">
                 {p.title}
               </h3>
               <p className="font-sans text-prestige-text leading-relaxed mb-4">
@@ -695,14 +697,14 @@ const FeaturedWork = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-prestige-black text-white pt-32 pb-12 px-6">
+    <footer className="bg-prestige-black text-white pt-16 sm:pt-20 lg:pt-32 pb-8 sm:pb-10 lg:pb-12 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-16 mb-20">
+        <div className="grid md:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 mb-12 sm:mb-16 lg:mb-20">
           <div className="col-span-1 md:col-span-2">
-            <span className="font-display text-3xl font-bold tracking-tighter mb-6 block">
+            <span className="font-display text-2xl sm:text-3xl font-bold tracking-tight sm:tracking-tighter mb-6 block">
               IMPALA <span className="text-primary">COMMUNICATION</span>
             </span>
-            <p className="font-sans text-lg opacity-60 max-w-md leading-relaxed mb-8">
+            <p className="font-sans text-base sm:text-lg opacity-60 max-w-md leading-relaxed mb-8">
               For when communication can change lives. Strategic narratives grounded in truth, culture, and impact.
             </p>
             <div className="flex gap-6">
@@ -715,7 +717,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-display text-lg font-bold uppercase tracking-widest mb-8">Quick Links</h4>
+            <h4 className="font-display text-lg font-bold uppercase tracking-widest mb-6 sm:mb-8">Quick Links</h4>
             <ul className="flex flex-col gap-4 opacity-60 font-sans text-sm">
               <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
               <li><Link to="/who-we-are" className="hover:text-primary transition-colors">Who We Are</Link></li>
@@ -727,7 +729,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-display text-lg font-bold uppercase tracking-widest mb-8">Contact</h4>
+            <h4 className="font-display text-lg font-bold uppercase tracking-widest mb-6 sm:mb-8">Contact</h4>
             <ul className="flex flex-col gap-4 opacity-60 font-sans text-sm">
               <li>info@impalacommunication.com</li>
               <li>Addis Ababa, Ethiopia</li>
@@ -736,10 +738,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-12 flex flex-col md:flex-row justify-between items-center gap-6 opacity-40 font-sans text-xs uppercase tracking-widest">
+        <div className="border-t border-white/10 pt-8 sm:pt-10 lg:pt-12 flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 opacity-40 font-sans text-[10px] sm:text-xs uppercase tracking-widest">
           <span>© 2026 Impala Communication. All rights reserved.</span>
           <p className="text-center md:text-left">Leveraging over 12 years of experience, shaping narratives that influence impact, investment, and institutional growth.</p>
-          <div className="flex gap-8">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
@@ -768,24 +770,24 @@ const HomeContent = () => {
       </div>
       
       {/* CTA Section */}
-      <section id="contact" className="bg-primary py-32 px-6 text-center text-white">
+      <section id="contact" className="bg-primary section-space section-shell text-center text-white">
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 leading-tight">
             Ready to Change <br /> the Conversation?
           </h2>
-          <p className="font-sans text-xl opacity-90 mb-12 max-w-2xl mx-auto">
+          <p className="font-sans text-base sm:text-lg md:text-xl opacity-90 mb-8 sm:mb-12 max-w-2xl mx-auto">
             Let's build something that matters. Our team is ready to partner with you to shift narratives and drive real impact.
           </p>
-          <div className="flex flex-wrap justify-center gap-6">
-            <Link to="/get-in-touch" className="bg-white text-primary px-10 py-5 font-display text-lg font-bold uppercase tracking-widest hover:bg-prestige-black hover:text-white transition-all duration-300 shadow-2xl">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+            <Link to="/get-in-touch" className="w-full sm:w-auto bg-white text-primary px-8 sm:px-10 py-4 sm:py-5 font-display text-base sm:text-lg font-bold uppercase tracking-widest hover:bg-prestige-black hover:text-white transition-all duration-300 shadow-2xl">
               Get In Touch
             </Link>
-            <button className="border-2 border-white text-white px-10 py-5 font-display text-lg font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300">
+            <button className="w-full sm:w-auto border-2 border-white text-white px-8 sm:px-10 py-4 sm:py-5 font-display text-base sm:text-lg font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300">
               View Our Work
             </button>
           </div>
@@ -801,7 +803,7 @@ export default function App() {
       <ScrollToTop />
       <div className="selection:bg-primary selection:text-white">
         <Navbar />
-        <main>
+        <main className="overflow-x-hidden">
           <Routes>
             <Route path="/" element={<HomeContent />} />
             <Route path="/who-we-are" element={<WhoWeAre />} />

@@ -17,14 +17,15 @@ const GetInTouch = () => {
   return (
     <div className="bg-prestige-white min-h-screen">
       {/* 1. Hero Section */}
-      <section className="relative pt-48 pb-24 px-6 bg-prestige-black text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
+      <section className="relative page-hero-space section-shell bg-prestige-black text-white overflow-hidden">
+        <div className="absolute inset-0">
           <img 
             src={getInTouchImages.hero}
             className="w-full h-full object-cover"
             alt="Contact background"
             referrerPolicy="no-referrer"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-prestige-black/46 via-prestige-black/26 to-prestige-black/12" />
         </div>
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
@@ -36,10 +37,10 @@ const GetInTouch = () => {
             <span className="font-sans text-xs font-bold uppercase tracking-[0.4em] text-primary mb-6 block">
               Contact Us
             </span>
-            <h1 className="text-5xl md:text-8xl font-bold mb-8 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-bold mb-6 sm:mb-8 leading-tight">
               Let's build something <span className="text-primary italic">meaningful</span> together.
             </h1>
-            <p className="font-sans text-xl md:text-2xl text-white/70 leading-relaxed">
+            <p className="font-sans text-lg sm:text-xl lg:text-2xl text-white/70 leading-relaxed">
               Whether you have a project in mind or just want to say hello, we're ready to listen and collaborate.
             </p>
           </motion.div>
@@ -47,49 +48,49 @@ const GetInTouch = () => {
       </section>
 
       {/* 2. Contact Content */}
-      <section className="py-24 px-6">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20">
+      <section className="section-space section-shell">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-20">
           {/* Left: Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-16"
+            className="space-y-12 sm:space-y-14 lg:space-y-16"
           >
             <div>
-              <h2 className="text-3xl font-bold text-prestige-black mb-12">Reach out directly</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-prestige-black mb-8 sm:mb-12">Reach out directly</h2>
               <div className="space-y-8">
                 <div className="flex items-start gap-6 group">
-                  <div className="w-14 h-14 bg-prestige-cream flex items-center justify-center rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-prestige-cream flex items-center justify-center rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
                     <Mail size={24} />
                   </div>
                   <div>
                     <p className="font-sans text-xs font-bold uppercase tracking-widest text-prestige-text opacity-60 mb-1">Email Us</p>
-                    <a href="mailto:info@impalacommunication.com" className="text-xl font-bold text-prestige-black hover:text-primary transition-colors">
+                    <a href="mailto:info@impalacommunication.com" className="text-lg sm:text-xl font-bold text-prestige-black hover:text-primary transition-colors break-all sm:break-normal">
                       info@impalacommunication.com
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-6 group">
-                  <div className="w-14 h-14 bg-prestige-cream flex items-center justify-center rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-prestige-cream flex items-center justify-center rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
                     <Phone size={24} />
                   </div>
                   <div>
                     <p className="font-sans text-xs font-bold uppercase tracking-widest text-prestige-text opacity-60 mb-1">Call Us</p>
-                    <a href="tel:+251911000000" className="text-xl font-bold text-prestige-black hover:text-primary transition-colors">
+                    <a href="tel:+251911000000" className="text-lg sm:text-xl font-bold text-prestige-black hover:text-primary transition-colors">
                       +251 911 000 000
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-6 group">
-                  <div className="w-14 h-14 bg-prestige-cream flex items-center justify-center rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-prestige-cream flex items-center justify-center rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
                     <MapPin size={24} />
                   </div>
                   <div>
                     <p className="font-sans text-xs font-bold uppercase tracking-widest text-prestige-text opacity-60 mb-1">Visit Us</p>
-                    <p className="text-xl font-bold text-prestige-black">
+                    <p className="text-lg sm:text-xl font-bold text-prestige-black">
                       Addis Ababa, Ethiopia<br />
                       Bole Sub-city, Ward 03
                     </p>
@@ -123,10 +124,10 @@ const GetInTouch = () => {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white p-8 md:p-12 shadow-2xl border border-prestige-gray rounded-3xl"
+            className="bg-white p-6 sm:p-8 lg:p-12 shadow-2xl border border-prestige-gray rounded-3xl"
           >
             <form className="space-y-8">
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
                 <div className="space-y-2">
                   <label className="font-sans text-[10px] font-bold uppercase tracking-widest text-prestige-text opacity-60">Full Name</label>
                   <input 
@@ -174,18 +175,18 @@ const GetInTouch = () => {
       </section>
 
       {/* 3. Inspirational Quote/Image Section */}
-      <section className="py-24 px-6 bg-prestige-cream/30">
+      <section className="py-16 sm:py-20 lg:py-24 section-shell bg-prestige-cream/30">
         <div className="max-w-7xl mx-auto">
-          <div className="relative rounded-[3rem] overflow-hidden aspect-[21/9] group">
+          <div className="relative rounded-[1.75rem] sm:rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden aspect-[4/5] sm:aspect-[16/10] lg:aspect-[21/9] group">
             <img 
               src={getInTouchImages.quote}
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               alt="Team collaboration"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-prestige-black/80 via-transparent to-transparent flex items-end p-12 md:p-20">
+            <div className="absolute inset-0 bg-gradient-to-t from-prestige-black/55 via-prestige-black/18 to-transparent flex items-end p-6 sm:p-10 lg:p-20">
               <div className="max-w-2xl">
-                <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
                   "Communication is the bridge between confusion and clarity."
                 </h2>
                 <p className="font-sans text-white/60 uppercase tracking-widest text-sm">— Nat Turner</p>

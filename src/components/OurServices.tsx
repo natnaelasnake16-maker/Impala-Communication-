@@ -97,9 +97,9 @@ const OurServices = () => {
   return (
     <div className="bg-prestige-white">
       {/* 1. Hero Section */}
-      <section className="relative pt-48 pb-32 px-6 bg-white overflow-hidden">
+      <section className="relative page-hero-space section-shell bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -108,17 +108,17 @@ const OurServices = () => {
               <span className="font-sans text-xs font-bold uppercase tracking-[0.3em] text-primary mb-6 block">
                 Our Services
               </span>
-              <h1 className="text-4xl md:text-6xl font-bold text-prestige-black mb-8 leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-prestige-black mb-6 sm:mb-8 leading-tight">
                 Innovative positioning solutions that move people and drive impact
               </h1>
-              <p className="font-sans text-lg md:text-xl text-prestige-text mb-12 leading-relaxed max-w-xl">
+              <p className="font-sans text-base sm:text-lg md:text-xl text-prestige-text mb-8 sm:mb-12 leading-relaxed max-w-xl">
                 We provide strategic communication and positioning advisory tailored to your organization’s role within evolving economic, institutional, and investment landscapes.
               </p>
-              <div className="flex flex-wrap gap-6">
-                <Link to="/our-services" className="bg-primary text-white px-10 py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-prestige-black transition-all duration-300 shadow-xl">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                <Link to="/our-services" className="w-full sm:w-auto text-center bg-primary text-white px-8 sm:px-10 py-4 sm:py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-prestige-black transition-all duration-300 shadow-xl">
                   Explore Services
                 </Link>
-                <Link to="/get-in-touch" className="border-2 border-prestige-black text-prestige-black px-10 py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-prestige-black hover:text-white transition-all duration-300">
+                <Link to="/get-in-touch" className="w-full sm:w-auto text-center border-2 border-prestige-black text-prestige-black px-8 sm:px-10 py-4 sm:py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-prestige-black hover:text-white transition-all duration-300">
                   Start a Conversation
                 </Link>
               </div>
@@ -162,9 +162,9 @@ const OurServices = () => {
       </section>
 
       {/* 2. Intro Services Overview */}
-      <section className="py-24 px-6 bg-prestige-cream">
+      <section className="py-16 sm:py-20 lg:py-24 section-shell bg-prestige-cream">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {introCards.map((card, i) => (
               <motion.div
                 key={i}
@@ -172,7 +172,7 @@ const OurServices = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white p-10 border border-prestige-gray hover:border-primary transition-all duration-300"
+                className="bg-white p-6 sm:p-8 lg:p-10 border border-prestige-gray hover:border-primary transition-all duration-300"
               >
                 <h3 className="text-xl font-bold text-prestige-black mb-4">{card.title}</h3>
                 <p className="font-sans text-sm text-prestige-text leading-relaxed">
@@ -185,9 +185,9 @@ const OurServices = () => {
       </section>
 
       {/* 3. Core Service Spotlight */}
-      <section className="py-32 px-6 bg-white">
+      <section className="section-space section-shell bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-20 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -196,10 +196,10 @@ const OurServices = () => {
               <span className="font-sans text-xs font-bold uppercase tracking-widest text-primary mb-4 block">
                 Featured Service
               </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-prestige-black mb-8 leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-prestige-black mb-6 sm:mb-8 leading-tight">
                 Strategic Communication
               </h2>
-              <p className="font-sans text-lg text-prestige-text leading-relaxed mb-8">
+              <p className="font-sans text-base sm:text-lg text-prestige-text leading-relaxed mb-8">
                 We provide strategic communication consulting services tailored to your organization’s unique needs and objectives. From developing comprehensive communication plans to advising on messaging and audience engagement strategies, we help organizations achieve their communication goals effectively.
               </p>
               <div className="flex flex-wrap gap-3 mb-10">
@@ -218,13 +218,13 @@ const OurServices = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="bg-prestige-cream p-12 rounded-3xl border border-prestige-gray relative overflow-hidden"
+              className="bg-prestige-cream p-6 sm:p-8 lg:p-12 rounded-3xl border border-prestige-gray relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 p-8 text-primary/10">
                 <Target size={120} />
               </div>
               <div className="relative z-10">
-                <div className="w-20 h-20 bg-white flex items-center justify-center rounded-2xl shadow-xl text-primary mb-8">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white flex items-center justify-center rounded-2xl shadow-xl text-primary mb-6 sm:mb-8">
                   <Compass size={40} />
                 </div>
                 <div className="h-px w-24 bg-primary mb-8" />
@@ -249,17 +249,17 @@ const OurServices = () => {
       </section>
 
       {/* 4. Services Grid */}
-      <section className="py-32 px-6 bg-prestige-gray">
+      <section className="section-space section-shell bg-prestige-gray">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
             <span className="font-sans text-xs font-bold uppercase tracking-widest text-primary mb-4 block">
               What We Offer
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-prestige-black">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-prestige-black">
               Our Full Suite of Services
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {services.map((service, i) => (
               <motion.div
                 key={i}
@@ -268,12 +268,12 @@ const OurServices = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
                 whileHover={{ y: -10 }}
-                className="bg-white p-10 border border-transparent hover:border-primary hover:shadow-2xl transition-all duration-500 group flex flex-col h-full"
+                className="bg-white p-6 sm:p-8 lg:p-10 border border-transparent hover:border-primary hover:shadow-2xl transition-all duration-500 group flex flex-col h-full"
               >
                 <div className="text-primary mb-8 group-hover:scale-110 transition-transform duration-500">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold text-prestige-black mb-4 group-hover:text-primary transition-colors">
+                <h3 className="text-lg sm:text-xl font-bold text-prestige-black mb-4 group-hover:text-primary transition-colors">
                   {service.title}
                 </h3>
                 <p className="font-sans text-sm text-prestige-text leading-relaxed flex-grow">
@@ -287,10 +287,10 @@ const OurServices = () => {
       </section>
 
       {/* 5. Community Engagement Highlight Section */}
-      <section className="py-32 px-6 bg-white">
+      <section className="section-space section-shell bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div className="order-2 lg:order-1 grid grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-20 items-center">
+            <div className="order-2 lg:order-1 grid grid-cols-2 gap-3 sm:gap-4">
               <div className="space-y-4">
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
                   <img 
@@ -309,7 +309,7 @@ const OurServices = () => {
                   />
                 </div>
               </div>
-              <div className="pt-12 space-y-4">
+              <div className="pt-6 sm:pt-8 lg:pt-12 space-y-4">
                 <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
                   <img 
                     src={ourServicesImages.communityCollage[2]}
@@ -338,13 +338,13 @@ const OurServices = () => {
               <span className="font-sans text-xs font-bold uppercase tracking-widest text-primary mb-4 block">
                 Specialization
               </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-prestige-black mb-8 leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-prestige-black mb-6 sm:mb-8 leading-tight">
                 Community Engagement
               </h2>
-              <p className="font-sans text-lg text-prestige-text leading-relaxed mb-10">
+              <p className="font-sans text-base sm:text-lg text-prestige-text leading-relaxed mb-8 sm:mb-10">
                 We specialize in community engagement and stakeholder relations, helping organizations build meaningful relationships with their stakeholders and communities. From organizing events and community outreach programs to facilitating dialogue and collaboration, we help organizations foster trust and mutual understanding.
               </p>
-              <button className="bg-prestige-black text-white px-8 py-4 font-display text-sm font-bold uppercase tracking-widest hover:bg-primary transition-all duration-300">
+              <button className="w-full sm:w-auto bg-prestige-black text-white px-8 py-4 font-display text-sm font-bold uppercase tracking-widest hover:bg-primary transition-all duration-300">
                 Learn More About Our Approach
               </button>
             </motion.div>
@@ -353,14 +353,14 @@ const OurServices = () => {
       </section>
 
       {/* 6. Why Our Services Work */}
-      <section className="py-32 px-6 bg-prestige-cream">
+      <section className="section-space section-shell bg-prestige-cream">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-prestige-black">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-prestige-black">
               Why organizations choose Impala
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {whyUs.map((item, i) => (
               <motion.div
                 key={i}
@@ -368,7 +368,7 @@ const OurServices = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white p-10 shadow-sm hover:shadow-xl transition-all duration-500 text-center flex flex-col items-center"
+                className="bg-white p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-xl transition-all duration-500 text-center flex flex-col items-center"
               >
                 <div className="w-16 h-16 bg-prestige-gray flex items-center justify-center rounded-full mb-8 group-hover:bg-primary/10 transition-colors">
                   {item.icon}
@@ -384,24 +384,24 @@ const OurServices = () => {
       </section>
 
       {/* 7. Closing Conversion Section */}
-      <section className="py-32 px-6 bg-primary text-white text-center">
+      <section className="section-space section-shell bg-primary text-white text-center">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight">
               Let your communication do more than inform — let it inspire action
             </h2>
-            <p className="font-sans text-xl opacity-90 mb-12 max-w-2xl mx-auto">
+            <p className="font-sans text-base sm:text-lg md:text-xl opacity-90 mb-8 sm:mb-12 max-w-2xl mx-auto">
               With over 12 years of experience, we help organizations communicate with purpose, clarity, and impact.
             </p>
-            <div className="flex flex-wrap justify-center gap-6">
-              <Link to="/get-in-touch" className="bg-white text-primary px-10 py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-prestige-black hover:text-white transition-all duration-300 shadow-2xl">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+              <Link to="/get-in-touch" className="w-full sm:w-auto bg-white text-primary px-8 sm:px-10 py-4 sm:py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-prestige-black hover:text-white transition-all duration-300 shadow-2xl">
                 Work With Us
               </Link>
-              <Link to="/get-in-touch" className="border-2 border-white text-white px-10 py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300">
+              <Link to="/get-in-touch" className="w-full sm:w-auto border-2 border-white text-white px-8 sm:px-10 py-4 sm:py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300">
                 Contact Us
               </Link>
             </div>

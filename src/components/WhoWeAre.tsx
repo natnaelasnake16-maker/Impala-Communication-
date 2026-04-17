@@ -69,14 +69,15 @@ const WhoWeAre = () => {
   return (
     <div className="bg-prestige-white">
       {/* 1. Hero Section */}
-      <section className="relative pt-48 pb-32 px-6 bg-prestige-black text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+      <section className="relative page-hero-space section-shell bg-prestige-black text-white overflow-hidden">
+        <div className="absolute inset-0">
           <img 
             src={whoWeAreImages.hero}
             className="w-full h-full object-cover"
             alt="Office background"
             referrerPolicy="no-referrer"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-prestige-black/48 via-prestige-black/28 to-prestige-black/12" />
         </div>
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
@@ -88,17 +89,17 @@ const WhoWeAre = () => {
             <span className="font-sans text-xs font-bold uppercase tracking-[0.3em] text-primary mb-6 block">
               Who We Are
             </span>
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 leading-tight">
               A dedicated team of communication experts driving meaningful social change.
             </h1>
-            <p className="font-sans text-xl md:text-2xl text-white/70 mb-12 leading-relaxed max-w-2xl">
+            <p className="font-sans text-lg sm:text-xl lg:text-2xl text-white/70 mb-8 sm:mb-12 leading-relaxed max-w-2xl">
               Impala Communication operates at the intersection of communication, investment, and institutional strategy — shaping how Africa’s transformation is positioned, understood, and engaged with.
             </p>
-            <div className="flex flex-wrap gap-6">
-              <Link to="/our-work" className="bg-primary text-white px-10 py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+              <Link to="/our-work" className="w-full sm:w-auto text-center bg-primary text-white px-8 sm:px-10 py-4 sm:py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300">
                 Explore Our Work
               </Link>
-              <Link to="/get-in-touch" className="border-2 border-white text-white px-10 py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-prestige-black transition-all duration-300">
+              <Link to="/get-in-touch" className="w-full sm:w-auto text-center border-2 border-white text-white px-8 sm:px-10 py-4 sm:py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-prestige-black transition-all duration-300">
                 Contact Us
               </Link>
             </div>
@@ -107,9 +108,9 @@ const WhoWeAre = () => {
       </section>
 
       {/* 2. About Impala - Story Section */}
-      <section className="py-32 px-6">
+      <section className="section-space section-shell">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-20 items-center">
+          <div className="grid md:grid-cols-2 gap-10 sm:gap-12 lg:gap-20 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -124,7 +125,7 @@ const WhoWeAre = () => {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 -z-10 rounded-lg" />
+              <div className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 w-20 h-20 sm:w-32 sm:h-32 bg-primary/10 -z-10 rounded-lg" />
             </motion.div>
 
             <motion.div
@@ -135,10 +136,10 @@ const WhoWeAre = () => {
               <span className="font-sans text-xs font-bold uppercase tracking-widest text-primary mb-4 block">
                 About Impala Communication
               </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-prestige-black mb-8 leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-prestige-black mb-6 sm:mb-8 leading-tight">
                 More Than a Company — <br />A Purpose-Driven Journey
               </h2>
-              <div className="font-sans text-prestige-text space-y-6 leading-relaxed text-lg">
+              <div className="font-sans text-prestige-text space-y-5 sm:space-y-6 leading-relaxed text-base sm:text-lg">
                 <p>
                   Impala Communication is not just a company; it is a passion project born from a deep-rooted desire to rewrite the narrative of Ethiopia and Africa.
                 </p>
@@ -158,11 +159,11 @@ const WhoWeAre = () => {
       </section>
 
       {/* 3. Our Story + Our Commitment */}
-      <section className="bg-prestige-gray py-32 px-6">
-        <div className="max-w-7xl mx-auto space-y-24">
-          <div className="grid md:grid-cols-2 gap-16 items-start">
-            <div className="flex gap-8">
-              <div className="w-16 h-16 bg-white flex items-center justify-center rounded-full shadow-sm shrink-0 text-primary">
+      <section className="bg-prestige-gray section-space section-shell">
+        <div className="max-w-7xl mx-auto space-y-12 sm:space-y-16 lg:space-y-24">
+          <div className="grid md:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-start">
+            <div className="flex gap-4 sm:gap-6 lg:gap-8">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white flex items-center justify-center rounded-full shadow-sm shrink-0 text-primary">
                 <PenTool size={28} />
               </div>
               <div>
@@ -173,8 +174,8 @@ const WhoWeAre = () => {
               </div>
             </div>
 
-            <div className="flex gap-8">
-              <div className="w-16 h-16 bg-white flex items-center justify-center rounded-full shadow-sm shrink-0 text-primary">
+            <div className="flex gap-4 sm:gap-6 lg:gap-8">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white flex items-center justify-center rounded-full shadow-sm shrink-0 text-primary">
                 <Globe size={28} />
               </div>
               <div>
@@ -185,8 +186,8 @@ const WhoWeAre = () => {
               </div>
             </div>
           </div>
-          <div className="text-center pt-12 border-t border-prestige-black/5">
-            <p className="text-3xl font-bold text-primary italic">
+          <div className="text-center pt-8 sm:pt-10 lg:pt-12 border-t border-prestige-black/5">
+            <p className="text-2xl sm:text-3xl font-bold text-primary italic">
               Together, let’s create a better future for all.
             </p>
           </div>
@@ -194,12 +195,12 @@ const WhoWeAre = () => {
       </section>
 
       {/* 4. Impact Stats Section */}
-      <section className="py-32 px-6 bg-prestige-black text-white">
+      <section className="section-space section-shell bg-prestige-black text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-12 sm:mb-16 lg:mb-20">
             This Year, We Are Going Bigger Than Ever
           </h2>
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
             {[
               { val: "12+", label: "Years", sub: "Experience" },
               { val: "100+", label: "Projects", sub: "Delivered" },
@@ -210,9 +211,9 @@ const WhoWeAre = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm p-12 border border-white/10 hover:border-primary transition-all duration-500"
+                className="bg-white/5 backdrop-blur-sm p-8 sm:p-10 lg:p-12 border border-white/10 hover:border-primary transition-all duration-500"
               >
-                <div className="text-6xl md:text-8xl font-bold text-primary mb-4">{stat.val}</div>
+                <div className="text-5xl sm:text-6xl lg:text-8xl font-bold text-primary mb-4">{stat.val}</div>
                 <div className="text-xl font-bold uppercase tracking-widest mb-2">{stat.label}</div>
                 <div className="font-sans text-sm text-white/40 uppercase tracking-widest">{stat.sub}</div>
               </motion.div>
@@ -222,17 +223,17 @@ const WhoWeAre = () => {
       </section>
 
       {/* 5. Where We Are Currently Working */}
-      <section className="py-24 px-6 bg-prestige-cream/30">
+      <section className="py-16 sm:py-20 lg:py-24 section-shell bg-prestige-cream/30">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-16">
             <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">
               Our Current Focus
             </span>
-            <h2 className="text-3xl md:text-5xl font-bold text-prestige-black mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-prestige-black mb-6">
               Where We Are Currently Working
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[
               "Financial sector transformation and banking positioning",
               "Investment and capital market narratives",
@@ -241,7 +242,7 @@ const WhoWeAre = () => {
               "Global value chain narratives",
               "High-growth African enterprise positioning"
             ].map((item, i) => (
-              <div key={i} className="bg-white p-8 border border-prestige-gray flex items-center gap-4">
+              <div key={i} className="bg-white p-6 sm:p-8 border border-prestige-gray flex items-center gap-4">
                 <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
                 <p className="font-sans text-prestige-black font-medium">{item}</p>
               </div>
@@ -251,25 +252,25 @@ const WhoWeAre = () => {
       </section>
 
       {/* 6. Our Values */}
-      <section className="py-32 px-6 bg-white">
+      <section className="section-space section-shell bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
             <span className="font-sans text-xs font-bold uppercase tracking-widest text-primary mb-4 block">
               Our Values
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-prestige-black">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-prestige-black">
               What Drives Us
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {values.map((v, i) => (
               <motion.div 
                 key={i}
                 whileHover={{ y: -10 }}
-                className="p-10 bg-prestige-cream border border-prestige-gray hover:border-primary transition-all duration-300"
+                className="p-6 sm:p-8 lg:p-10 bg-prestige-cream border border-prestige-gray hover:border-primary transition-all duration-300"
               >
                 <div className="text-primary mb-6">{v.icon}</div>
-                <h3 className="text-2xl font-bold text-prestige-black mb-4">{v.title}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-prestige-black mb-4">{v.title}</h3>
                 <p className="font-sans text-prestige-text leading-relaxed">
                   {v.desc}
                 </p>
@@ -280,7 +281,7 @@ const WhoWeAre = () => {
       </section>
 
       {/* 6. Visual Story Strip */}
-      <section className="flex overflow-hidden h-[400px]">
+      <section className="flex overflow-hidden h-[220px] sm:h-[280px] lg:h-[400px]">
         {whoWeAreImages.visualStrip.map((img, i) => (
           <div key={i} className="flex-1 relative group cursor-pointer overflow-hidden">
             <img 
@@ -295,15 +296,15 @@ const WhoWeAre = () => {
       </section>
 
       {/* 7. Impact Statement */}
-      <section className="py-32 px-6 bg-prestige-white">
+      <section className="section-space section-shell bg-prestige-white">
         <div className="max-w-5xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
-            <span className="text-primary text-6xl font-display block mb-8">“</span>
-            <h2 className="text-3xl md:text-5xl font-bold text-prestige-black leading-tight italic">
+            <span className="text-primary text-5xl sm:text-6xl font-display block mb-6 sm:mb-8">“</span>
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-prestige-black leading-tight italic">
               Empowering Communities: Leveraging over 12 years of experience, we have impacted the lives of thousands across Ethiopia and Sub-Saharan Africa, catalysing change through effective communication strategies.
             </h2>
           </motion.div>
@@ -311,16 +312,16 @@ const WhoWeAre = () => {
       </section>
 
       {/* 8. Social Impact Initiatives */}
-      <section className="py-32 px-6 bg-prestige-gray">
+      <section className="section-space section-shell bg-prestige-gray">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-prestige-black mb-6">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-prestige-black mb-6">
               Our Focus on Social Impact Initiatives
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {initiatives.map((item, i) => (
-              <div key={i} className="bg-white p-6 flex items-center gap-4 shadow-sm hover:shadow-md transition-all">
+              <div key={i} className="bg-white p-5 sm:p-6 flex items-center gap-4 shadow-sm hover:shadow-md transition-all">
                 <div className="text-primary shrink-0">{item.icon}</div>
                 <span className="font-sans text-sm font-bold text-prestige-black uppercase tracking-wide">
                   {item.title}
@@ -332,7 +333,7 @@ const WhoWeAre = () => {
       </section>
 
       {/* 9. Final Brand Block */}
-      <section className="py-24 px-6 bg-prestige-white text-center">
+      <section className="py-16 sm:py-20 lg:py-24 section-shell bg-prestige-white text-center">
         <div className="max-w-4xl mx-auto">
           <p className="font-sans text-lg text-prestige-text opacity-60 italic">
             Leveraging over 12 years of experience, catalysing change through effective communication strategies.

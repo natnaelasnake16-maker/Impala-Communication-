@@ -1,12 +1,41 @@
-const IMAGE_REPO_BASE_URL =
+const REMOTE_IMAGE_REPO_BASE_URL =
+  import.meta.env.VITE_IMAGE_REPO_BASE_URL ??
   "https://raw.githubusercontent.com/natnaelasnake16-maker/impala-communication-images/main";
 
-const asset = (path: string) => `${IMAGE_REPO_BASE_URL}/${path}`;
+const localAssetModules = import.meta.glob(
+  "../../impala-communication-images/**/*.{png,jpg,jpeg,webp,avif,gif,svg}",
+  { eager: true, import: "default" },
+) as Record<string, string>;
+
+const LOCAL_ASSET_PREFIX = "../../impala-communication-images/";
+
+const localAssetUrls = Object.fromEntries(
+  Object.entries(localAssetModules).map(([filePath, assetUrl]) => [
+    filePath.replace(LOCAL_ASSET_PREFIX, ""),
+    assetUrl,
+  ]),
+) as Record<string, string>;
+
+const isLocalAssetRuntime = () => {
+  if (typeof window === "undefined") {
+    return false;
+  }
+
+  return ["localhost", "127.0.0.1", "0.0.0.0"].includes(window.location.hostname);
+};
+
+const asset = (path: string) => {
+  if (isLocalAssetRuntime()) {
+    return localAssetUrls[path] ?? `${REMOTE_IMAGE_REPO_BASE_URL}/${path}`;
+  }
+
+  return `${REMOTE_IMAGE_REPO_BASE_URL}/${path}`;
+};
 const archive = (path: string) => asset(`archive/${path}`);
-const clientLogo = (slug: string, name: string) => ({
+const clientLogo = (slug: string, name: string, fileName = `${slug}.png`) => ({
   slug,
   name,
-  logoUrl: asset(`site/clients/${slug}.png`),
+  logoUrl: asset(`site/clients/${fileName}`),
   alt: `${name} logo`,
 });
 
@@ -17,7 +46,7 @@ export interface ClientLogo {
   slug: string;
 }
 
-export const imageRepoBaseUrl = IMAGE_REPO_BASE_URL;
+export const imageRepoBaseUrl = REMOTE_IMAGE_REPO_BASE_URL;
 
 export const clientLogos = {
   amref: clientLogo("amref", "AMREF"),
@@ -25,25 +54,31 @@ export const clientLogos = {
   "bill-and-melinda-gates-foundation": clientLogo(
     "bill-and-melinda-gates-foundation",
     "Bill & Melinda Gates Foundation",
+    "bill-and-melinda-gates-foundation.jpeg",
   ),
   cirht: clientLogo("cirht", "CIRHT"),
-  dkt: clientLogo("dkt", "DKT"),
-  ecx: clientLogo("ecx", "ECX"),
+  dkt: clientLogo("dkt", "DKT", "dkt.jpg"),
+  ecx: clientLogo("ecx", "ECX", "ecx.jpg"),
   entro: clientLogo("entro", "ENTRO"),
   "ethiopian-airlines": clientLogo("ethiopian-airlines", "Ethiopian Airlines"),
-  "european-union": clientLogo("european-union", "European Union"),
-  ilo: clientLogo("ilo", "ILO"),
+  "european-union": clientLogo(
+    "european-union",
+    "European Union",
+    "european-union.jpeg",
+  ),
+  ilo: clientLogo("ilo", "ILO", "ilo.webp"),
   lonadd: clientLogo("lonadd", "LonAdd"),
   "nile-basin-initiative": clientLogo(
     "nile-basin-initiative",
     "Nile Basin Initiative",
+    "nile-basin-initiative.svg",
   ),
   "save-the-children": clientLogo("save-the-children", "Save the Children"),
   technoserve: clientLogo("technoserve", "TechnoServe"),
-  unicef: clientLogo("unicef", "UNICEF"),
+  unicef: clientLogo("unicef", "UNICEF", "unicef.jpeg"),
   who: clientLogo("who", "WHO"),
   "world-bank": clientLogo("world-bank", "World Bank"),
-  "zemen-bank": clientLogo("zemen-bank", "Zemen Bank"),
+  "zemen-bank": clientLogo("zemen-bank", "Zemen Bank", "zemen-bank.jpeg"),
 } satisfies Record<string, ClientLogo>;
 
 type ClientSlug = keyof typeof clientLogos;
@@ -111,8 +146,29 @@ export const clientGroups = [
   },
 ];
 
+export const clientWallClients = pickClients([
+  "world-bank",
+  "who",
+  "european-union",
+  "bill-and-melinda-gates-foundation",
+  "ilo",
+  "unicef",
+  "african-union",
+  "nile-basin-initiative",
+  "ecx",
+  "ethiopian-airlines",
+  "entro",
+  "amref",
+  "save-the-children",
+  "dkt",
+  "technoserve",
+  "cirht",
+  "zemen-bank",
+  "lonadd",
+]);
+
 export const homeImages = {
-  hero: archive("home-page/colaborate.jpg"),
+  hero: archive("gender-social-impact/colorff.png"),
   whyImpala: {
     collaborativePartnerships: archive("home-page/women.jpg"),
     culturalSensitivity: archive("home-page/23309275930-5dc32a26db-o-scaled.jpg"),

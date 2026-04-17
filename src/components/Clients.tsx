@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import {
-  clientGroups,
+  clientWallClients,
   featuredClientStrip,
   type ClientLogo,
 } from "../lib/images";
@@ -12,12 +12,12 @@ const ClientBadge = ({ client }: { client: ClientLogo }) => {
       initial={{ opacity: 0, scale: 0.9 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-      whileHover={{ 
-        y: -10,
-        scale: 1.05,
+      whileHover={{
+        y: -4,
+        scale: 1.02,
         transition: { duration: 0.3 }
       }}
-      className="group relative bg-[#F9F6F2] aspect-square flex items-center justify-center p-8 shadow-[inset_0_2px_4px_rgba(0,0,0,0.05),0_10px_20px_rgba(0,0,0,0.05)] border border-prestige-gray hover:border-primary/30 transition-all duration-500 rounded-2xl overflow-hidden"
+      className="group relative flex h-24 sm:h-28 items-center justify-center rounded-xl border border-prestige-gray bg-[#F9F6F2] px-4 py-3 sm:px-5 sm:py-4 shadow-[inset_0_1px_2px_rgba(0,0,0,0.04),0_6px_14px_rgba(0,0,0,0.05)] transition-all duration-500 hover:border-primary/30 overflow-hidden"
     >
       {/* Shine Sweep Animation */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shine_1.5s_ease-in-out_infinite]" />
@@ -25,19 +25,14 @@ const ClientBadge = ({ client }: { client: ClientLogo }) => {
       {/* Glow Effect */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[0_0_30px_rgba(241,90,41,0.1)]" />
 
-      <div className="text-center relative z-10">
-        <div className="mb-6 flex min-h-16 items-center justify-center">
-          <img
-            src={client.logoUrl}
-            alt={client.alt}
-            className="h-14 w-full object-contain"
-            loading="lazy"
-            referrerPolicy="no-referrer"
-          />
-        </div>
-        <span className="font-display text-sm md:text-base font-bold uppercase tracking-widest text-prestige-black group-hover:text-primary transition-colors duration-300">
-          {client.name}
-        </span>
+      <div className="relative z-10 flex h-full w-full items-center justify-center">
+        <img
+          src={client.logoUrl}
+          alt={client.alt}
+          className="h-10 sm:h-11 lg:h-12 w-full max-w-[140px] object-contain"
+          loading="lazy"
+          referrerPolicy="no-referrer"
+        />
       </div>
     </motion.div>
   );
@@ -47,7 +42,7 @@ const Clients = () => {
   return (
     <div className="bg-prestige-white">
       {/* 1. Hero Section */}
-      <section className="relative pt-48 pb-32 px-6 bg-gradient-to-br from-[#C2410C] to-[#7C2D12] text-white overflow-hidden">
+      <section className="relative page-hero-space section-shell bg-gradient-to-br from-[#E26B39] via-[#D15C2E] to-[#A8451F] text-white overflow-hidden">
         {/* Texture Overlay */}
         <div className="absolute inset-0 opacity-15 pointer-events-none noise-overlay" />
         
@@ -67,7 +62,7 @@ const Clients = () => {
                 ease: "easeInOut",
                 delay: i * 1.5
               }}
-              className="absolute text-white/5 blur-sm font-display text-6xl font-bold uppercase tracking-tighter"
+              className="absolute text-white/5 blur-sm font-display text-4xl lg:text-6xl font-bold uppercase tracking-tighter"
               style={{ 
                 top: `${15 + i * 15}%`, 
                 left: `${10 + i * 15}%` 
@@ -87,10 +82,10 @@ const Clients = () => {
             <span className="font-sans text-xs font-bold uppercase tracking-[0.4em] text-white/60 mb-6 block">
               Trusted By
             </span>
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 sm:mb-8 leading-tight">
               Organizations shaping Africa and the world
             </h1>
-            <p className="font-sans text-lg md:text-xl text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="font-sans text-base sm:text-lg md:text-xl text-white/70 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
               We collaborate with institutions, governments, and global organizations to drive meaningful impact.
             </p>
           </motion.div>
@@ -98,19 +93,19 @@ const Clients = () => {
       </section>
 
       {/* 2. Featured Client Strip */}
-      <section className="py-12 bg-prestige-gray overflow-hidden border-b border-prestige-gray">
-        <div className="max-w-7xl mx-auto px-6 mb-8">
+      <section className="py-8 sm:py-10 lg:py-12 bg-prestige-gray overflow-hidden border-b border-prestige-gray">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-6 sm:mb-8">
           <h4 className="font-sans text-[10px] font-bold uppercase tracking-[0.3em] text-prestige-text text-center">Strategic Partnerships</h4>
         </div>
         <div className="flex gap-8 animate-marquee whitespace-nowrap">
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-8 items-center">
               {featuredClientStrip.map((client) => (
-                <div key={client.slug} className="bg-white px-12 py-6 rounded-xl shadow-sm border border-prestige-gray flex items-center justify-center min-w-[250px]">
+                <div key={client.slug} className="bg-white px-6 sm:px-8 lg:px-12 py-4 sm:py-5 lg:py-6 rounded-xl shadow-sm border border-prestige-gray flex items-center justify-center min-w-[160px] sm:min-w-[200px] lg:min-w-[250px]">
                   <img
                     src={client.logoUrl}
                     alt={client.alt}
-                    className="h-12 w-full object-contain"
+                    className="h-10 sm:h-12 w-full object-contain"
                     loading="lazy"
                     referrerPolicy="no-referrer"
                   />
@@ -121,49 +116,35 @@ const Clients = () => {
         </div>
       </section>
 
-      {/* 3. Badge Grid System */}
-      <section className="py-32 px-6">
-        <div className="max-w-7xl mx-auto">
-          {clientGroups.map((group, groupIndex) => (
-            <div key={group.title} className="mb-32 last:mb-0">
-              <div className="flex items-center gap-8 mb-16">
-                <div className="h-px flex-grow bg-prestige-gray" />
-                <h2 className="font-sans text-xs font-bold uppercase tracking-[0.4em] text-primary whitespace-nowrap">
-                  {group.title}
-                </h2>
-                <div className="h-px flex-grow bg-prestige-gray" />
-              </div>
-              
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                {group.clients.map((client) => (
-                  <div key={client.slug}>
-                    <ClientBadge client={client} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+      {/* 3. Compact Logo Grid */}
+      <section className="section-space section-shell">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-5">
+            {clientWallClients.map((client) => (
+              <ClientBadge key={client.slug} client={client} />
+            ))}
+          </div>
         </div>
       </section>
 
       {/* 4. Trust Signal Section */}
-      <section className="py-32 px-6 bg-prestige-cream border-y border-prestige-gray">
+      <section className="section-space section-shell bg-prestige-cream border-y border-prestige-gray">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-prestige-black mb-8">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-prestige-black mb-6 sm:mb-8">
             Over 12 years of trusted partnerships
           </h2>
-          <p className="font-sans text-lg text-prestige-text mb-16 leading-relaxed">
+          <p className="font-sans text-base sm:text-lg text-prestige-text mb-10 sm:mb-16 leading-relaxed">
             Working across sectors, regions, and communities to deliver communication that creates real impact.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
             {[
               { val: "100+", label: "Projects Delivered" },
               { val: "1M+", label: "People Reached" },
               { val: "Multi-sector", label: "Collaboration" }
             ].map((stat, i) => (
               <div key={i} className="flex flex-col items-center">
-                <span className="text-4xl font-bold text-primary mb-2">{stat.val}</span>
+                <span className="text-3xl sm:text-4xl font-bold text-primary mb-2">{stat.val}</span>
                 <span className="font-sans text-[10px] font-bold uppercase tracking-widest text-prestige-text opacity-60">{stat.label}</span>
               </div>
             ))}
@@ -172,19 +153,19 @@ const Clients = () => {
       </section>
 
       {/* 5. Final CTA */}
-      <section className="py-32 px-6 text-center">
+      <section className="section-space section-shell text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           className="max-w-3xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-prestige-black mb-12">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-prestige-black mb-8 sm:mb-12">
             Join a network of organizations driving impact
           </h2>
           <Link 
             to="/get-in-touch" 
-            className="inline-block bg-primary text-white px-12 py-6 font-display text-sm font-bold uppercase tracking-widest hover:bg-prestige-black transition-all duration-300 shadow-xl"
+            className="inline-block w-full sm:w-auto bg-primary text-white px-8 sm:px-12 py-4 sm:py-6 font-display text-sm font-bold uppercase tracking-widest hover:bg-prestige-black transition-all duration-300 shadow-xl"
           >
             Contact Us
           </Link>

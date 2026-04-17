@@ -176,12 +176,12 @@ const CaseStudyCard = ({ project, index }: { project: Project; index: number }) 
             referrerPolicy="no-referrer"
           />
         </div>
-        <div className="md:w-2/3 p-8 md:p-12 flex flex-col justify-center relative">
-          <div className="absolute top-8 right-8 bg-prestige-gray px-3 py-1 rounded-full">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-primary">{project.filterCategory}</span>
+        <div className="md:w-2/3 p-6 sm:p-8 md:p-12 flex flex-col justify-center relative">
+          <div className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 bg-prestige-gray px-2.5 sm:px-3 py-1 rounded-full">
+            <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-primary">{project.filterCategory}</span>
           </div>
-          <h3 className="text-2xl md:text-3xl font-bold text-prestige-black mb-4">{project.title}</h3>
-          <p className="font-sans text-lg text-prestige-text italic mb-6">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-prestige-black mb-4 pr-14 sm:pr-20">{project.title}</h3>
+          <p className="font-sans text-base sm:text-lg text-prestige-text italic mb-6">
             "{project.hook}"
           </p>
           <div className="flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-xs">
@@ -200,28 +200,28 @@ const CaseStudyCard = ({ project, index }: { project: Project; index: number }) 
             exit={{ height: 0, opacity: 0 }}
             className="overflow-hidden border-t border-prestige-gray"
           >
-            <div className="p-8 md:p-20 bg-prestige-cream/30">
+            <div className="p-6 sm:p-10 lg:p-16 xl:p-20 bg-prestige-cream/30">
               {/* Header */}
-              <div className="mb-16">
+              <div className="mb-10 sm:mb-12 lg:mb-16">
                 <h4 className="text-primary font-sans text-xs font-bold uppercase tracking-[0.3em] mb-4">Case Study</h4>
-                <h2 className="text-4xl md:text-5xl font-bold text-prestige-black mb-4">{project.title}</h2>
-                <p className="text-xl text-prestige-text opacity-70">{project.tagline}</p>
-                <div className="h-1 w-24 bg-primary mt-8" />
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-prestige-black mb-4">{project.title}</h2>
+                <p className="text-lg sm:text-xl text-prestige-text opacity-70">{project.tagline}</p>
+                <div className="h-1 w-20 sm:w-24 bg-primary mt-6 sm:mt-8" />
               </div>
 
               {/* Grid Content */}
-              <div className="grid md:grid-cols-2 gap-16 mb-20">
-                <div className="space-y-12">
+              <div className="grid md:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 mb-12 sm:mb-16 lg:mb-20">
+                <div className="space-y-8 sm:space-y-10 lg:space-y-12">
                   <div>
                     <h5 className="font-sans text-xs font-bold uppercase tracking-widest text-primary mb-4">The Challenge</h5>
-                    <p className="font-sans text-lg text-prestige-text leading-relaxed">{project.challenge}</p>
+                    <p className="font-sans text-base sm:text-lg text-prestige-text leading-relaxed">{project.challenge}</p>
                   </div>
                   <div>
                     <h5 className="font-sans text-xs font-bold uppercase tracking-widest text-primary mb-4">Our Approach</h5>
-                    <p className="font-sans text-lg text-prestige-text leading-relaxed">{project.approach}</p>
+                    <p className="font-sans text-base sm:text-lg text-prestige-text leading-relaxed">{project.approach}</p>
                   </div>
                 </div>
-                <div className="space-y-12">
+                <div className="space-y-8 sm:space-y-10 lg:space-y-12">
                   <div>
                     <h5 className="font-sans text-xs font-bold uppercase tracking-widest text-primary mb-4">What We Delivered</h5>
                     <ul className="space-y-4">
@@ -235,17 +235,17 @@ const CaseStudyCard = ({ project, index }: { project: Project; index: number }) 
                   </div>
                   <div>
                     <h5 className="font-sans text-xs font-bold uppercase tracking-widest text-primary mb-4">Impact</h5>
-                    <p className="font-sans text-lg text-prestige-text leading-relaxed font-medium">{project.impact}</p>
+                    <p className="font-sans text-base sm:text-lg text-prestige-text leading-relaxed font-medium">{project.impact}</p>
                   </div>
                 </div>
               </div>
 
               {/* Deliverables Icon Grid */}
-              <div className="mb-20">
-                <h5 className="font-sans text-xs font-bold uppercase tracking-widest text-primary mb-8 text-center">Deliverables</h5>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              <div className="mb-12 sm:mb-16 lg:mb-20">
+                <h5 className="font-sans text-xs font-bold uppercase tracking-widest text-primary mb-6 sm:mb-8 text-center">Deliverables</h5>
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
                   {project.deliverables.map((d, i) => (
-                    <div key={i} className="bg-white p-6 border border-prestige-gray flex flex-col items-center text-center group hover:border-primary transition-colors">
+                    <div key={i} className="bg-white p-4 sm:p-6 border border-prestige-gray flex flex-col items-center text-center group hover:border-primary transition-colors">
                       <div className="text-primary mb-4 group-hover:scale-110 transition-transform">{d.icon}</div>
                       <span className="font-sans text-[10px] font-bold uppercase tracking-widest text-prestige-black">{d.label}</span>
                     </div>
@@ -254,9 +254,9 @@ const CaseStudyCard = ({ project, index }: { project: Project; index: number }) 
               </div>
 
               {/* Visuals Horizontal Scroll */}
-              <div className="flex gap-6 overflow-x-auto pb-8 scrollbar-hide">
+              <div className="flex gap-4 sm:gap-6 overflow-x-auto pb-6 sm:pb-8 scrollbar-hide">
                 {project.images.map((img, i) => (
-                  <div key={i} className="min-w-[300px] md:min-w-[500px] aspect-video rounded-xl overflow-hidden shadow-lg group">
+                  <div key={i} className="min-w-[260px] sm:min-w-[320px] lg:min-w-[500px] aspect-video rounded-xl overflow-hidden shadow-lg group">
                     <img 
                       src={img} 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
@@ -305,8 +305,8 @@ const OurWork = () => {
   return (
     <div className="bg-prestige-white">
       {/* 1. Hero Section */}
-      <section className="relative pt-48 pb-32 px-6 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+      <section className="relative page-hero-space section-shell bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-20 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -315,15 +315,15 @@ const OurWork = () => {
             <span className="font-sans text-xs font-bold uppercase tracking-[0.3em] text-primary mb-6 block">
               Our Work
             </span>
-            <h1 className="text-5xl md:text-7xl font-bold text-prestige-black mb-8 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-prestige-black mb-6 sm:mb-8 leading-tight">
               We turn communication into measurable impact
             </h1>
-            <p className="font-sans text-xl text-prestige-text mb-12 leading-relaxed max-w-xl">
+            <p className="font-sans text-base sm:text-lg md:text-xl text-prestige-text mb-8 sm:mb-12 leading-relaxed max-w-xl">
               Our work translates complex institutional, economic, and social realities into strategic narratives that influence perception, engagement, and decision-making.
             </p>
             
             {/* Inline Stats */}
-            <div className="flex flex-wrap gap-12 pt-8 border-t border-prestige-gray">
+            <div className="flex flex-wrap gap-8 sm:gap-10 lg:gap-12 pt-6 sm:pt-8 border-t border-prestige-gray">
               {[
                 { val: "12+", label: "Years" },
                 { val: "100+", label: "Projects" },
@@ -378,14 +378,14 @@ const OurWork = () => {
       </section>
 
       {/* 2. Sticky Filter Bar */}
-      <div className="sticky top-[72px] z-40 bg-white/80 backdrop-blur-md border-y border-prestige-gray">
-        <div className="max-w-7xl mx-auto px-6 overflow-x-auto scrollbar-hide">
-          <div className="flex items-center gap-8 py-4 min-w-max">
+      <div className="sticky top-[60px] sm:top-[72px] z-40 bg-white/80 backdrop-blur-md border-y border-prestige-gray">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 overflow-x-auto scrollbar-hide">
+          <div className="flex items-center gap-4 sm:gap-6 lg:gap-8 py-3 sm:py-4 min-w-max">
             {filters.map(f => (
               <button
                 key={f}
                 onClick={() => setActiveFilter(f)}
-                className={`font-sans text-xs font-bold uppercase tracking-widest transition-all relative py-2 ${activeFilter === f ? 'text-primary' : 'text-prestige-text hover:text-prestige-black'}`}
+                className={`font-sans text-[10px] sm:text-xs font-bold uppercase tracking-widest transition-all relative py-2 ${activeFilter === f ? 'text-primary' : 'text-prestige-text hover:text-prestige-black'}`}
               >
                 {f}
                 {activeFilter === f && (
@@ -398,12 +398,12 @@ const OurWork = () => {
       </div>
 
       {/* 3. Case Study Sections */}
-      <section className="py-24 px-6">
-        <div className="max-w-7xl mx-auto space-y-32">
+      <section className="py-16 sm:py-20 lg:py-24 section-shell">
+        <div className="max-w-7xl mx-auto space-y-16 sm:space-y-24 lg:space-y-32">
           {Object.entries(categories).map(([catName, catProjects]) => (
             <div key={catName}>
               <div className="mb-12">
-                <h2 className="text-3xl font-bold text-prestige-black mb-2">{catName}</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-prestige-black mb-2">{catName}</h2>
                 <div className="h-0.5 w-16 bg-primary mb-4" />
                 <p className="font-sans text-sm text-prestige-text opacity-60 uppercase tracking-widest">Selected Case Studies</p>
               </div>
@@ -420,24 +420,24 @@ const OurWork = () => {
       </section>
 
       {/* 4. CTA Section */}
-      <section className="py-32 px-6 bg-primary text-white text-center">
+      <section className="section-space section-shell bg-primary text-white text-center">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight">
               Ready to make a difference?
             </h2>
-            <p className="font-sans text-xl opacity-90 mb-12 max-w-2xl mx-auto">
+            <p className="font-sans text-base sm:text-lg md:text-xl opacity-90 mb-8 sm:mb-12 max-w-2xl mx-auto">
               Let’s collaborate to create communication that drives real change.
             </p>
-            <div className="flex flex-wrap justify-center gap-6">
-              <Link to="/get-in-touch" className="bg-white text-primary px-10 py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-prestige-black hover:text-white transition-all duration-300 shadow-2xl">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+              <Link to="/get-in-touch" className="w-full sm:w-auto bg-white text-primary px-8 sm:px-10 py-4 sm:py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-prestige-black hover:text-white transition-all duration-300 shadow-2xl">
                 Contact Us
               </Link>
-              <button className="border-2 border-white text-white px-10 py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300">
+              <button className="w-full sm:w-auto border-2 border-white text-white px-8 sm:px-10 py-4 sm:py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300">
                 Start a Project
               </button>
             </div>

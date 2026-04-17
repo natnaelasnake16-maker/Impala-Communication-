@@ -1,20 +1,12 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Impala Communication Website
 
-# Run and deploy your AI Studio app
+Marketing site for Impala Communication built with React, Vite, and Tailwind CSS.
 
-This contains everything you need to run your app locally.
+## Run locally
 
-View your app in AI Studio: https://ai.studio/apps/c644cc1a-8b23-4cc6-9cce-4d7762acc5d9
+Prerequisite: Node.js
 
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. Install dependencies with `npm install`
+2. Start the dev server with `npm run dev`
+3. Type-check with `npm run lint`
+4. Build for production with `npm run build`
