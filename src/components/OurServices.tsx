@@ -21,7 +21,6 @@ import {
   MessageSquare
 } from "lucide-react";
 import { ourServicesImages } from "../lib/images";
-import BrandStoryForge from "./BrandStoryForge";
 import FinalCallToAction from "./FinalCallToAction";
 
 const OurServices = () => {
@@ -148,7 +147,6 @@ const OurServices = () => {
         </div>
       </section>
 
-      <BrandStoryForge />
 
       {/* 3. Core Service Spotlight */}
       <section className="section-space section-shell bg-white">

@@ -26,6 +26,7 @@ import {
 import { whoWeAreImages } from "../lib/images";
 import FinalCallToAction from "./FinalCallToAction";
 import RoadAhead from "./RoadAhead";
+import SDGSection from "./SDGSection";
 
 const WhoWeAre = () => {
   const values = [
@@ -396,7 +397,7 @@ const WhoWeAre = () => {
           </div>
         </div>
       </section>
-
+      <SDGSection />
       <RoadAhead />
       <FinalCallToAction />
     </div>
