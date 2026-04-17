@@ -5,6 +5,7 @@ import {
   featuredClientStrip,
   type ClientLogo,
 } from "../lib/images";
+import FinalCallToAction from "./FinalCallToAction";
 
 const ClientBadge = ({ client }: { client: ClientLogo }) => {
   return (
@@ -152,25 +153,7 @@ const Clients = () => {
         </div>
       </section>
 
-      {/* 5. Final CTA */}
-      <section className="section-space section-shell text-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="max-w-3xl mx-auto"
-        >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-prestige-black mb-8 sm:mb-12">
-            Join a network of organizations driving impact
-          </h2>
-          <Link 
-            to="/get-in-touch" 
-            className="inline-block w-full sm:w-auto bg-primary text-white px-8 sm:px-12 py-4 sm:py-6 font-display text-sm font-bold uppercase tracking-widest hover:bg-prestige-black transition-all duration-300 shadow-xl"
-          >
-            Contact Us
-          </Link>
-        </motion.div>
-      </section>
+      <FinalCallToAction />
 
       <style>{`
         @keyframes shine {
