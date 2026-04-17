@@ -21,6 +21,8 @@ import {
   MessageSquare
 } from "lucide-react";
 import { ourServicesImages } from "../lib/images";
+import BrandStoryForge from "./BrandStoryForge";
+import FinalCallToAction from "./FinalCallToAction";
 
 const OurServices = () => {
   const introCards = [
@@ -286,6 +288,8 @@ const OurServices = () => {
         </div>
       </section>
 
+      <BrandStoryForge />
+
       {/* 5. Community Engagement Highlight Section */}
       <section className="section-space section-shell bg-white">
         <div className="max-w-7xl mx-auto">
@@ -383,31 +387,7 @@ const OurServices = () => {
         </div>
       </section>
 
-      {/* 7. Closing Conversion Section */}
-      <section className="section-space section-shell bg-primary text-white text-center">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight">
-              Let your communication do more than inform — let it inspire action
-            </h2>
-            <p className="font-sans text-base sm:text-lg md:text-xl opacity-90 mb-8 sm:mb-12 max-w-2xl mx-auto">
-              With over 12 years of experience, we help organizations communicate with purpose, clarity, and impact.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-              <Link to="/get-in-touch" className="w-full sm:w-auto bg-white text-primary px-8 sm:px-10 py-4 sm:py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-prestige-black hover:text-white transition-all duration-300 shadow-2xl">
-                Work With Us
-              </Link>
-              <Link to="/get-in-touch" className="w-full sm:w-auto border-2 border-white text-white px-8 sm:px-10 py-4 sm:py-5 font-display text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300">
-                Contact Us
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <FinalCallToAction />
     </div>
   );
 };

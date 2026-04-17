@@ -10,6 +10,8 @@ import OurServices from "./components/OurServices";
 import OurWork from "./components/OurWork";
 import Clients from "./components/Clients";
 import GetInTouch from "./components/GetInTouch";
+import FinalCallToAction from "./components/FinalCallToAction";
+import RoadAhead from "./components/RoadAhead";
 import { useState, useEffect } from "react";
 import { homeImages, homeTickerClients } from "./lib/images";
 import { 
@@ -768,31 +770,8 @@ const HomeContent = () => {
       <div id="work">
         <FeaturedWork />
       </div>
-      
-      {/* CTA Section */}
-      <section id="contact" className="bg-primary section-space section-shell text-center text-white">
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="max-w-4xl mx-auto"
-        >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 leading-tight">
-            Ready to Change <br /> the Conversation?
-          </h2>
-          <p className="font-sans text-base sm:text-lg md:text-xl opacity-90 mb-8 sm:mb-12 max-w-2xl mx-auto">
-            Let's build something that matters. Our team is ready to partner with you to shift narratives and drive real impact.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-            <Link to="/get-in-touch" className="w-full sm:w-auto bg-white text-primary px-8 sm:px-10 py-4 sm:py-5 font-display text-base sm:text-lg font-bold uppercase tracking-widest hover:bg-prestige-black hover:text-white transition-all duration-300 shadow-2xl">
-              Get In Touch
-            </Link>
-            <button className="w-full sm:w-auto border-2 border-white text-white px-8 sm:px-10 py-4 sm:py-5 font-display text-base sm:text-lg font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300">
-              View Our Work
-            </button>
-          </div>
-        </motion.div>
-      </section>
+      <RoadAhead />
+      <FinalCallToAction />
     </>
   );
 };

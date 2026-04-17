@@ -24,6 +24,8 @@ import {
   Smartphone
 } from "lucide-react";
 import { whoWeAreImages } from "../lib/images";
+import FinalCallToAction from "./FinalCallToAction";
+import RoadAhead from "./RoadAhead";
 
 const WhoWeAre = () => {
   const values = [
@@ -155,6 +157,67 @@ const WhoWeAre = () => {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* 3. Our Story + Our Commitment */}
+      <section className="py-14 sm:py-16 lg:py-20 section-shell bg-prestige-black text-white">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-[1.15fr_0.85fr] gap-8 lg:gap-12 items-start">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.35 }}
+            transition={{ duration: 0.5 }}
+          >
+            <span className="font-sans text-xs font-bold uppercase tracking-[0.28em] text-primary mb-4 block">
+              How We Work
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-5 sm:mb-6">
+              Turning positioning into momentum
+            </h2>
+            <p className="font-sans text-base sm:text-lg text-white/74 leading-relaxed max-w-3xl">
+              Through our proprietary BrandStory Forge™ model, we transform complex social, economic, and investment narratives into movements that build trust, inspire collaboration, and unlock opportunity.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.35 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="grid gap-3"
+          >
+            {[
+              {
+                icon: ShieldCheck,
+                text: "Build trust and credibility with local and global audiences",
+              },
+              {
+                icon: Globe,
+                text: "Position institutions as leaders in Africa’s transformation",
+              },
+              {
+                icon: Users,
+                text: "Inspire collaboration across public, private, and diaspora sectors",
+              },
+            ].map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <div
+                  key={item.text}
+                  className="rounded-[1.35rem] border border-white/10 bg-white/6 px-4 py-4 sm:px-5 sm:py-5 flex items-start gap-4"
+                >
+                  <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-primary/40 bg-primary/10 text-primary shadow-[0_0_18px_rgba(241,90,41,0.25)]">
+                    <Icon size={18} strokeWidth={1.9} />
+                  </div>
+                  <p className="font-sans text-sm sm:text-[15px] leading-relaxed text-white/78">
+                    {item.text}
+                  </p>
+                </div>
+              );
+            })}
+          </motion.div>
         </div>
       </section>
 
@@ -332,14 +395,8 @@ const WhoWeAre = () => {
         </div>
       </section>
 
-      {/* 9. Final Brand Block */}
-      <section className="py-16 sm:py-20 lg:py-24 section-shell bg-prestige-white text-center">
-        <div className="max-w-4xl mx-auto">
-          <p className="font-sans text-lg text-prestige-text opacity-60 italic">
-            Leveraging over 12 years of experience, catalysing change through effective communication strategies.
-          </p>
-        </div>
-      </section>
+      <RoadAhead />
+      <FinalCallToAction />
     </div>
   );
 };
