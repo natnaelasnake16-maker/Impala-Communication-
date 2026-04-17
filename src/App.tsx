@@ -13,7 +13,7 @@ import GetInTouch from "./components/GetInTouch";
 import FinalCallToAction from "./components/FinalCallToAction";
 import RoadAhead from "./components/RoadAhead";
 import { useState, useEffect } from "react";
-import { homeImages, homeTickerClients } from "./lib/images";
+import { brandAssets, homeImages, homeTickerClients } from "./lib/images";
 import { 
   ArrowRight, 
   Menu, 
@@ -62,6 +62,25 @@ const ScrollToTop = () => {
   return null;
 };
 
+const BrandLogo = ({
+  className,
+  imageClassName,
+}: {
+  className?: string;
+  imageClassName?: string;
+}) => {
+  return (
+    <span className={className}>
+      <img
+        src={brandAssets.impalaLogo}
+        alt="Impala Communication logo"
+        className={imageClassName}
+        referrerPolicy="no-referrer"
+      />
+    </span>
+  );
+};
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -90,9 +109,10 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center gap-4">
         <Link to="/" className="flex items-center gap-2">
-          <span className="font-display text-lg sm:text-xl lg:text-2xl font-bold tracking-tight sm:tracking-tighter leading-tight text-prestige-black">
-            IMPALA <span className="text-primary">COMMUNICATION</span>
-          </span>
+          <BrandLogo
+            className="inline-flex rounded-xl bg-prestige-black/95 p-2 shadow-lg ring-1 ring-white/10"
+            imageClassName="h-10 sm:h-12 lg:h-14 w-auto"
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -703,9 +723,10 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 mb-12 sm:mb-16 lg:mb-20">
           <div className="col-span-1 md:col-span-2">
-            <span className="font-display text-2xl sm:text-3xl font-bold tracking-tight sm:tracking-tighter mb-6 block">
-              IMPALA <span className="text-primary">COMMUNICATION</span>
-            </span>
+            <BrandLogo
+              className="mb-6 inline-flex"
+              imageClassName="h-16 sm:h-20 w-auto"
+            />
             <p className="font-sans text-base sm:text-lg opacity-60 max-w-md leading-relaxed mb-8">
               For when communication can change lives. Strategic narratives grounded in truth, culture, and impact.
             </p>

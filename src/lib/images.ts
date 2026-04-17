@@ -48,6 +48,10 @@ export interface ClientLogo {
 
 export const imageRepoBaseUrl = REMOTE_IMAGE_REPO_BASE_URL;
 
+export const brandAssets = {
+  impalaLogo: asset("site/branding/impala-logo.png"),
+};
+
 export const clientLogos = {
   amref: clientLogo("amref", "AMREF"),
   "african-union": clientLogo("african-union", "African Union"),
@@ -231,6 +235,11 @@ export const ourWorkImages = {
       archive("our-works/iwmi.jpg"),
       archive("our-works/field-project.jpg"),
     ],
+    michu: [
+      archive("our-works/michu.jpg"),
+      archive("our-works/20190411-michu-training-001-web-1-scaled.jpg"),
+      archive("our-works/20180126-michu-029-scaled.jpg"),
+    ],
     roha: [
       archive("our-works/roha-image.webp"),
       archive("who-we-are/img-1445-scaled.jpg"),
@@ -245,9 +254,13 @@ export const ourWorkImages = {
 };
 
 export const brandMarks = {
+  acsis: archive("clients-logo/acsis-logo.png"),
   awib: archive("clients-logo/awib-logo.png"),
+  cirht: archive("clients-logo/cirht.png"),
+  esdp: archive("clients-logo/esdp-logo-1.png"),
   ewla: archive("clients-logo/ewla-logo.jpg"),
   iwmi: archive("clients-logo/iwmi.png"),
+  roha: archive("clients-logo/roha-medical-campus-plc.webp"),
 };
 
 export const getInTouchImages = {
