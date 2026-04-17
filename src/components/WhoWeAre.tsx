@@ -27,6 +27,7 @@ import { whoWeAreImages } from "../lib/images";
 import FinalCallToAction from "./FinalCallToAction";
 import RoadAhead from "./RoadAhead";
 import SDGSection from "./SDGSection";
+import WhoWeWorkWithStrip from "./WhoWeWorkWithStrip";
 
 const WhoWeAre = () => {
   const values = [
@@ -288,34 +289,7 @@ const WhoWeAre = () => {
         </div>
       </section>
 
-      {/* 5. Where We Are Currently Working */}
-      <section className="py-10 sm:py-14 lg:py-16 section-shell bg-prestige-cream/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-8 sm:mb-10">
-            <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
-              Current Focus Areas
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-prestige-black mb-4">
-              Where We Are Currently Working
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
-            {[
-              "Financial sector transformation and banking positioning",
-              "Investment and capital market narratives",
-              "Strategic institutional profiling and thought leadership",
-              "Industrialisation and sector positioning",
-              "Global value chain repositioning",
-              "High-growth African enterprise visibility"
-            ].map((item, i) => (
-              <div key={i} className="bg-white p-4 sm:p-5 border border-prestige-gray flex items-center gap-3">
-                <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
-                <p className="font-sans text-sm text-prestige-black font-medium">{item}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WhoWeWorkWithStrip />
 
       {/* 6. Our Values */}
       <section className="section-space section-shell bg-white">

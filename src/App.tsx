@@ -13,6 +13,8 @@ import GetInTouch from "./components/GetInTouch";
 import FinalCallToAction from "./components/FinalCallToAction";
 import RoadAhead from "./components/RoadAhead";
 import BrandStoryForge from "./components/BrandStoryForge";
+import PrioritiesSection from "./components/PrioritiesSection";
+import WhoWeWorkWithStrip from "./components/WhoWeWorkWithStrip";
 import { useState, useEffect } from "react";
 import { brandAssets, homeImages, homeTickerClients } from "./lib/images";
 import { 
@@ -23,24 +25,17 @@ import {
   Radio, 
   Globe, 
   Users, 
-  BarChart3, 
   MessageSquare,
   ChevronRight,
   ChevronDown,
   HeartPulse,
   GraduationCap,
-  Scale,
   CloudRain,
   Handshake,
   TrendingUp,
   Lightbulb,
   ShieldCheck,
   Sparkles,
-  Wind,
-  Briefcase,
-  Home,
-  Layers,
-  UserPlus
 } from "lucide-react";
 // --- Components ---
 
@@ -312,82 +307,6 @@ const Services = () => {
   );
 };
 
-const WhoWeWorkWithStrip = () => {
-  const audienceGroups = [
-    {
-      label: "Financial institutions and banks",
-      icon: <BarChart3 size={22} />,
-    },
-    {
-      label: "Investment and capital market actors",
-      icon: <TrendingUp size={22} />,
-    },
-    {
-      label: "Governments and regulatory bodies",
-      icon: <Scale size={22} />,
-    },
-    {
-      label: "Development and multilateral institutions",
-      icon: <Handshake size={22} />,
-    },
-    {
-      label: "High-growth African enterprises",
-      icon: <Briefcase size={22} />,
-    },
-  ];
-
-  return (
-    <section className="bg-white px-4 py-4 sm:px-6 sm:py-6">
-      <div className="mx-auto max-w-7xl">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.35 }}
-          transition={{ duration: 0.55 }}
-          className="relative overflow-hidden rounded-[1.6rem] border border-primary/20 bg-[linear-gradient(135deg,#b9471f_0%,#ff8d52_44%,#f15a29_100%)] px-4 py-6 shadow-[0_22px_56px_rgba(241,90,41,0.2)] sm:px-6 sm:py-8 lg:px-8 lg:py-9"
-        >
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.36),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(15,15,15,0.22),transparent_36%)]" />
-          <div className="absolute inset-y-5 right-6 hidden w-40 rounded-full bg-white/12 blur-3xl lg:block" />
-
-          <div className="relative z-10">
-            <div className="mb-5 max-w-3xl">
-              <span className="mb-2 block font-sans text-[10px] font-bold uppercase tracking-[0.22em] text-white/78">
-                Who We Work With
-              </span>
-              <h2 className="text-xl font-bold leading-tight text-white sm:text-2xl lg:text-[2rem]">
-                We partner with institutions shaping markets, regulation, and growth across Africa.
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3 lg:grid-cols-5">
-              {audienceGroups.map((item, index) => (
-                <motion.div
-                  key={item.label}
-                  initial={{ opacity: 0, y: 18 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.35 }}
-                  transition={{ delay: index * 0.05, duration: 0.4 }}
-                  whileHover={{ y: -4, scale: 1.01 }}
-                  className="flex min-h-[104px] flex-col justify-between rounded-[1.1rem] border border-white/18 bg-white/12 px-3.5 py-3.5 text-white backdrop-blur-sm transition-all duration-300 hover:border-white/35 hover:bg-white/16 hover:shadow-[0_16px_28px_rgba(0,0,0,0.12)] sm:min-h-[116px] sm:px-4"
-                >
-                  <div className="flex h-9 w-9 items-center justify-center rounded-[1rem] border border-white/22 bg-white/14 text-white shadow-[0_0_18px_rgba(255,255,255,0.08)] sm:h-10 sm:w-10">
-                    {item.icon}
-                  </div>
-                  <p className="font-sans text-xs sm:text-sm font-semibold leading-snug text-white/92">
-                    {item.label}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-
-
 const WhyImpala = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
@@ -523,91 +442,6 @@ const ImpactStats = () => {
               </div>
               <div className="font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70">
                 {s.label}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-const PrioritiesSection = () => {
-  const priorities = [
-    {
-      title: "Empowering Women",
-      icon: <UserPlus size={32} />,
-      image: homeImages.priorities.empoweringWomen,
-      desc: "We amplify her voice, harness her power, and highlight her leadership and resilience. Through strategic narrative development and media advocacy, we ensure that women’s contributions to families, communities, and society are recognized and celebrated on a global stage."
-    },
-    {
-      title: "Climate Change",
-      icon: <Wind size={32} />,
-      image: homeImages.priorities.climateChange,
-      desc: "We address climate change through innovative communication campaigns and advocacy efforts that promote environmental sustainability and resilience. By leveraging PR and media engagement, we raise awareness, mobilize action, and influence policies that drive lasting change."
-    },
-    {
-      title: "Youth Employment",
-      icon: <Briefcase size={32} />,
-      image: homeImages.priorities.youthEmployment,
-      desc: "We focus on projects that empower young individuals with the skills and opportunities they need to succeed in the workforce and contribute to economic growth. Through public engagement and thought leadership, we help shape narratives that inspire investment in youth potential."
-    },
-    {
-      title: "Community Development",
-      icon: <Home size={32} />,
-      image: homeImages.priorities.communityDevelopment,
-      desc: "We foster sustainable development initiatives that uplift communities, improve livelihoods, and create positive social change. By crafting compelling narratives and building strategic partnerships, we amplify grassroots voices and drive real impact."
-    },
-    {
-      title: "Gender Equality",
-      icon: <Layers size={32} />,
-      image: homeImages.priorities.genderEquality,
-      desc: "We champion gender equality by amplifying women’s voices, advancing their rights, and promoting inclusivity. Through media advocacy and thought leadership, we challenge stereotypes, spark conversations, and influence systemic change."
-    }
-  ];
-
-  return (
-    <section className="bg-prestige-cream py-10 sm:py-14 lg:py-16 section-shell">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-8 sm:mb-10">
-          <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
-            Focus Areas
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-prestige-black mb-4">
-            Our Priorities
-          </h2>
-          <p className="font-sans text-sm sm:text-base text-prestige-text max-w-3xl mx-auto leading-relaxed">
-            Empowering communities through impactful communication.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
-          {priorities.map((p, i) => (
-            <motion.div 
-              key={i}
-              whileHover={{ y: -8 }}
-              className="relative h-[280px] sm:h-[300px] lg:h-[320px] overflow-hidden group cursor-pointer shadow-xl"
-            >
-              {/* Background Image */}
-              <div className="absolute inset-0 z-0">
-                <img 
-                  src={p.image} 
-                  alt={p.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-prestige-black/50 via-prestige-black/22 to-transparent group-hover:bg-primary/60 transition-colors duration-500" />
-              </div>
-
-              {/* Content */}
-              <div className="relative z-10 h-full p-5 sm:p-6 lg:p-7 flex flex-col justify-center text-white text-center items-center">
-                <div className="mb-4 text-primary group-hover:text-white transition-colors duration-300">
-                  {p.icon}
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold mb-3 uppercase tracking-[0.12em]">{p.title}</h3>
-                <p className="max-w-xs font-sans text-xs sm:text-sm opacity-80 leading-relaxed">
-                  {p.desc}
-                </p>
               </div>
             </motion.div>
           ))}
