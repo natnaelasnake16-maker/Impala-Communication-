@@ -244,6 +244,12 @@ export const ourWorkImages = {
   ],
 };
 
+export const brandMarks = {
+  awib: archive("clients-logo/awib-logo.png"),
+  ewla: archive("clients-logo/ewla-logo.jpg"),
+  iwmi: archive("clients-logo/iwmi.png"),
+};
+
 export const getInTouchImages = {
   hero: archive("who-we-are/camera-hold.jpg"),
   quote: archive("home-page/colaborate.jpg"),
