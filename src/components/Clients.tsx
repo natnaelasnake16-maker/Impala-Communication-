@@ -122,7 +122,9 @@ const Clients = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-5">
             {clientWallClients.map((client) => (
-              <ClientBadge key={client.slug} client={client} />
+              <div key={client.slug}>
+                <ClientBadge client={client} />
+              </div>
             ))}
           </div>
         </div>
@@ -138,16 +140,24 @@ const Clients = () => {
             Working across sectors, regions, and communities to deliver communication that creates real impact.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
+          <div className="mx-auto max-w-4xl grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
             {[
               { val: "100+", label: "Projects Delivered" },
               { val: "1M+", label: "People Reached" },
               { val: "Multi-sector", label: "Collaboration" }
             ].map((stat, i) => (
-              <div key={i} className="flex flex-col items-center">
-                <span className="text-3xl sm:text-4xl font-bold text-primary mb-2">{stat.val}</span>
-                <span className="font-sans text-[10px] font-bold uppercase tracking-widest text-prestige-text opacity-60">{stat.label}</span>
-              </div>
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.4 }}
+                whileHover={{ y: -4, scale: 1.02 }}
+                className="rounded-2xl border border-prestige-gray bg-white px-5 py-6 sm:px-6 sm:py-7 shadow-[0_14px_30px_rgba(0,0,0,0.05)] transition-all duration-300 hover:border-primary/40 hover:shadow-[0_18px_36px_rgba(0,0,0,0.08)]"
+              >
+                <span className="block text-2xl sm:text-3xl font-bold text-primary mb-2">{stat.val}</span>
+                <span className="block font-sans text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.22em] text-prestige-text opacity-70">{stat.label}</span>
+              </motion.div>
             ))}
           </div>
         </div>

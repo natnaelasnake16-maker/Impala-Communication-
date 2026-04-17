@@ -17,11 +17,7 @@ const localAssetUrls = Object.fromEntries(
 ) as Record<string, string>;
 
 const isLocalAssetRuntime = () => {
-  if (typeof window === "undefined") {
-    return false;
-  }
-
-  return ["localhost", "127.0.0.1", "0.0.0.0"].includes(window.location.hostname);
+  return import.meta.env.DEV;
 };
 
 const asset = (path: string) => {
@@ -260,7 +256,9 @@ export const brandMarks = {
   esdp: archive("clients-logo/esdp-logo-1.png"),
   ewla: archive("clients-logo/ewla-logo.jpg"),
   iwmi: archive("clients-logo/iwmi.png"),
+  lonadd: archive("clients-logo/LonAdd.png"),
   roha: archive("clients-logo/roha-medical-campus-plc.webp"),
+  worldBank: archive("clients-logo/worldbank.png"),
 };
 
 export const getInTouchImages = {

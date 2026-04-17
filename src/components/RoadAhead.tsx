@@ -52,7 +52,8 @@ export default function RoadAhead() {
           </p>
         </div>
 
-        <div className="grid gap-4 sm:gap-5 lg:grid-cols-2">
+        <div className="overflow-hidden border border-prestige-gray/20 bg-prestige-gray/20 shadow-[0_22px_60px_rgba(20,20,20,0.12)]">
+          <div className="grid gap-px sm:grid-cols-2">
           {initiatives.map((initiative, index) => {
             const Icon = initiative.icon;
 
@@ -62,7 +63,7 @@ export default function RoadAhead() {
                 initial={{ opacity: 0, y: 26 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.35 }}
-                whileHover={{ y: -8, rotate: index % 2 === 0 ? -1 : 1 }}
+                whileHover={{ scale: 1.015, rotate: index % 2 === 0 ? -0.75 : 0.75 }}
                 animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
                 transition={{
                   backgroundPosition: {
@@ -72,13 +73,14 @@ export default function RoadAhead() {
                   },
                   opacity: { delay: index * 0.08, duration: 0.55 },
                   y: { delay: index * 0.08, duration: 0.55 },
+                  scale: { duration: 0.25 },
                   rotate: { duration: 0.25 },
                 }}
                 style={{
                   background: initiative.gradient,
                   backgroundSize: "200% 200%",
                 }}
-                className="relative overflow-hidden rounded-[2rem] p-5 sm:p-6 lg:p-8 text-white shadow-[0_24px_70px_rgba(20,20,20,0.18)]"
+                className="relative min-h-[260px] overflow-hidden p-5 text-white sm:min-h-[280px] sm:p-6 lg:min-h-[320px] lg:p-8"
               >
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.22),transparent_36%)]" />
                 <div className="relative z-10">
@@ -100,6 +102,7 @@ export default function RoadAhead() {
               </motion.article>
             );
           })}
+          </div>
         </div>
       </div>
     </section>

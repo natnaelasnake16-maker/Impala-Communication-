@@ -110,7 +110,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center gap-4">
         <Link to="/" className="flex items-center gap-2">
           <BrandLogo
-            className="inline-flex rounded-xl bg-prestige-black/95 p-2 shadow-lg ring-1 ring-white/10"
+            className="inline-flex"
             imageClassName="h-10 sm:h-12 lg:h-14 w-auto"
           />
         </Link>
@@ -523,30 +523,38 @@ const ImpactStats = () => {
   const stats = [
     { value: "20+", label: "Years of Experience" },
     { value: "50+", label: "Projects Delivered" },
-    { value: "30M+", label: "People Reached" }
+    { value: "1M+", label: "People Reached" }
   ];
 
   return (
     <section className="bg-prestige-black section-space section-shell text-white text-center">
-      <div className="max-w-7xl mx-auto">
-        <div className="mb-12 sm:mb-16 lg:mb-20">
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-10 sm:mb-12 lg:mb-16">
           <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">
             Our Reach
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
             Amplifying Your Impact
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
           {stats.map((s, i) => (
-            <div key={i} className="bg-white/5 p-8 sm:p-10 lg:p-12 border border-white/10 hover:border-primary transition-colors duration-500">
-              <div className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-primary mb-4">
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08, duration: 0.45 }}
+              whileHover={{ y: -6, scale: 1.02 }}
+              className="rounded-2xl border border-white/10 bg-white/5 px-5 py-6 sm:px-6 sm:py-7 lg:px-7 lg:py-8 shadow-[0_18px_40px_rgba(0,0,0,0.18)] transition-all duration-300 hover:border-primary/70 hover:bg-white/8 hover:shadow-[0_24px_45px_rgba(0,0,0,0.24)]"
+            >
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-primary mb-3">
                 {s.value}
               </div>
-              <div className="font-sans text-sm font-semibold uppercase tracking-widest opacity-60">
+              <div className="font-sans text-[11px] sm:text-xs font-semibold uppercase tracking-[0.24em] text-white/70">
                 {s.label}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

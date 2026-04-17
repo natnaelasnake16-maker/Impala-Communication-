@@ -260,10 +260,10 @@ const WhoWeAre = () => {
       {/* 4. Impact Stats Section */}
       <section className="section-space section-shell bg-prestige-black text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-12 sm:mb-16 lg:mb-20">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-10 sm:mb-12 lg:mb-16">
             This Year, We Are Going Bigger Than Ever
           </h2>
-          <div className="grid md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
+          <div className="mx-auto max-w-5xl grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
             {[
               { val: "12+", label: "Years", sub: "Experience" },
               { val: "100+", label: "Projects", sub: "Delivered" },
@@ -271,14 +271,16 @@ const WhoWeAre = () => {
             ].map((stat, i) => (
               <motion.div 
                 key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm p-8 sm:p-10 lg:p-12 border border-white/10 hover:border-primary transition-all duration-500"
+                transition={{ delay: i * 0.08, duration: 0.45 }}
+                whileHover={{ y: -6, scale: 1.02 }}
+                className="rounded-2xl border border-white/10 bg-white/5 px-5 py-6 sm:px-6 sm:py-7 lg:px-7 lg:py-8 backdrop-blur-sm shadow-[0_18px_40px_rgba(0,0,0,0.18)] transition-all duration-300 hover:border-primary/70 hover:bg-white/8 hover:shadow-[0_24px_45px_rgba(0,0,0,0.24)]"
               >
-                <div className="text-5xl sm:text-6xl lg:text-8xl font-bold text-primary mb-4">{stat.val}</div>
-                <div className="text-xl font-bold uppercase tracking-widest mb-2">{stat.label}</div>
-                <div className="font-sans text-sm text-white/40 uppercase tracking-widest">{stat.sub}</div>
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-3">{stat.val}</div>
+                <div className="text-sm sm:text-base font-bold uppercase tracking-[0.22em] mb-1.5">{stat.label}</div>
+                <div className="font-sans text-[11px] sm:text-xs text-white/45 uppercase tracking-[0.22em]">{stat.sub}</div>
               </motion.div>
             ))}
           </div>

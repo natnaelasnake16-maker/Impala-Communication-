@@ -25,21 +25,6 @@ import BrandStoryForge from "./BrandStoryForge";
 import FinalCallToAction from "./FinalCallToAction";
 
 const OurServices = () => {
-  const introCards = [
-    {
-      title: "Strategic Thinking",
-      desc: "Tailored communication and positioning advisory aligned with your goals and audiences."
-    },
-    {
-      title: "Strategic Execution",
-      desc: "Narratives, campaigns, and content that connect with people in meaningful ways."
-    },
-    {
-      title: "Real Engagement",
-      desc: "Institutional and stakeholder relations built on trust, clarity, and participation."
-    }
-  ];
-
   const services = [
     {
       title: "Strategic Communication Consulting",
@@ -163,28 +148,7 @@ const OurServices = () => {
         </div>
       </section>
 
-      {/* 2. Intro Services Overview */}
-      <section className="py-16 sm:py-20 lg:py-24 section-shell bg-prestige-cream">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-            {introCards.map((card, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white p-6 sm:p-8 lg:p-10 border border-prestige-gray hover:border-primary transition-all duration-300"
-              >
-                <h3 className="text-xl font-bold text-prestige-black mb-4">{card.title}</h3>
-                <p className="font-sans text-sm text-prestige-text leading-relaxed">
-                  {card.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <BrandStoryForge />
 
       {/* 3. Core Service Spotlight */}
       <section className="section-space section-shell bg-white">
@@ -287,8 +251,6 @@ const OurServices = () => {
           </div>
         </div>
       </section>
-
-      <BrandStoryForge />
 
       {/* 5. Community Engagement Highlight Section */}
       <section className="section-space section-shell bg-white">
