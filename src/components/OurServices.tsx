@@ -26,51 +26,51 @@ import FinalCallToAction from "./FinalCallToAction";
 const OurServices = () => {
   const services = [
     {
-      title: "Strategic Narrative & Positioning",
+      title: "Narrative Strategy",
       icon: <Compass size={32} />,
-      desc: "We define how institutions articulate their role within Africa’s transformation and global relevance, creating the narrative architecture that anchors trust and strategic direction.",
-      proofRefs: ["LonAdd", "African Business", "Ghana Cocoa"],
+      desc: "Define your positioning, develop clear messaging frameworks, and map stakeholders to strengthen alignment and influence.",
+      proofRefs: ["Positioning", "Messaging", "Stakeholders"],
     },
     {
-      title: "Investment & Sector Positioning",
+      title: "Strategic Communication",
       icon: <BarChart3 size={32} />,
-      desc: "We translate complex economic, financial, and sector developments into compelling narratives that attract investors, partners, and high-level attention.",
-      proofRefs: ["Ethiopia financial sector", "Capital markets", "EAITE"],
+      desc: "Design and execute communication strategies that engage key stakeholders and audiences, including investors, policymakers, and communities.",
+      proofRefs: ["Strategy", "Engagement", "Influence"],
     },
     {
-      title: "Institutional Profiling & Thought Leadership",
+      title: "Content & Campaigns",
       icon: <Radio size={32} />,
-      desc: "We position organisations and leaders within continental and global conversations through editorial visibility, media positioning, and executive profiling.",
-      proofRefs: ["African Business Magazine", "Executive visibility"],
+      desc: "Create high-impact storytelling, multimedia content, and campaigns that translate complex ideas into compelling narratives.",
+      proofRefs: ["Storytelling", "Campaigns", "Content"],
     },
     {
-      title: "Strategic Communications Systems",
+      title: "Institutional Positioning",
       icon: <Flag size={32} />,
-      desc: "We design internal and external communication structures that strengthen governance, align leadership messaging, and build long-term institutional credibility.",
-      proofRefs: ["LonAdd ISO", "Governance", "Stakeholder alignment"],
+      desc: "Support organisations in positioning themselves within Africa’s evolving economic and investment landscape.",
+      proofRefs: ["Markets", "Credibility", "Leadership"],
     },
     {
-      title: "Content & Narrative Activation",
+      title: "Measurement & Refinement",
       icon: <Film size={32} />,
-      desc: "From flagship films to executive messaging and digital platforms, we activate narratives across channels to influence audiences at scale.",
-      proofRefs: ["Films", "Digital platforms", "Campaign rollouts"],
+      desc: "Track communication performance, refine messaging, and continuously strengthen impact over time.",
+      proofRefs: ["Measurement", "Learning", "Improvement"],
     },
   ];
 
   const whyUs = [
     {
-      title: "Insight-Led",
-      desc: "We ground communication in context, audience intelligence, and institutional priorities.",
+      title: "Context-Led",
+      desc: "We ground communication in institutional priorities, market dynamics, and stakeholder perspectives.",
       icon: <Zap size={24} className="text-primary" />
     },
     {
-      title: "Culturally Grounded",
-      desc: "We design communication that respects people, place, and context.",
+      title: "Strategically Clear",
+      desc: "We connect insight, narrative, systems, activation, and measurement into one clear approach.",
       icon: <Globe size={24} className="text-primary" />
     },
     {
-      title: "Impact-Focused",
-      desc: "We align communication with credibility, market perception, and long-term institutional outcomes.",
+      title: "Audience-Focused",
+      desc: "We help institutions engage key stakeholders and audiences with clarity and credibility.",
       icon: <ShieldCheck size={24} className="text-primary" />
     }
   ];
@@ -90,10 +90,10 @@ const OurServices = () => {
                 Our Services
               </span>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-prestige-black mb-4 sm:mb-6 leading-tight">
-                Strategic positioning for institutions shaping markets, sectors, and public trust
+                What We Do
               </h1>
               <p className="font-sans text-sm sm:text-base lg:text-lg text-prestige-text mb-6 sm:mb-8 leading-relaxed max-w-xl">
-                We provide strategic communication advisory that strengthens institutional credibility, sharpens market perception, and aligns organizations with evolving economic and investment landscapes.
+                We provide strategic communication and narrative advisory to help institutions define positioning, align messaging, and engage key stakeholders and audiences effectively.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link to="/our-services" className="w-full sm:w-auto text-center bg-primary text-white px-6 sm:px-8 py-3 sm:py-3.5 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-prestige-black transition-all duration-300 shadow-xl">
@@ -155,10 +155,10 @@ const OurServices = () => {
                 Featured Capability
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black mb-4 sm:mb-5 leading-tight">
-                Strategic Narrative & Positioning
+                Narrative Strategy
               </h2>
               <p className="font-sans text-sm sm:text-base text-prestige-text leading-relaxed mb-6">
-                We define how institutions articulate their relevance within Africa’s transformation, ensuring that leadership, sector role, and public value are communicated with clarity, strategic alignment, and institutional weight.
+                Define your positioning, develop clear messaging frameworks, and map stakeholders to strengthen alignment and influence.
               </p>
               <div className="flex flex-wrap gap-2.5 mb-7">
                 {["Positioning", "Narrative Architecture", "Credibility", "Market Relevance"].map(chip => (
@@ -189,15 +189,15 @@ const OurServices = () => {
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full" />
-                    <span className="font-sans text-xs font-bold text-prestige-black uppercase tracking-[0.16em]">Institutional Positioning</span>
+                    <span className="font-sans text-xs font-bold text-prestige-black uppercase tracking-[0.16em]">Insight & Context</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full" />
-                    <span className="font-sans text-xs font-bold text-prestige-black uppercase tracking-[0.16em]">Stakeholder Alignment</span>
+                    <span className="font-sans text-xs font-bold text-prestige-black uppercase tracking-[0.16em]">Narrative Development</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full" />
-                    <span className="font-sans text-xs font-bold text-prestige-black uppercase tracking-[0.16em]">Market Relevance</span>
+                    <span className="font-sans text-xs font-bold text-prestige-black uppercase tracking-[0.16em]">Activation & Engagement</span>
                   </div>
                 </div>
               </div>
@@ -214,7 +214,7 @@ const OurServices = () => {
               What We Offer
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black">
-              Five Strategic Service Areas
+              Strategic Service Areas
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
@@ -300,10 +300,10 @@ const OurServices = () => {
                 Specialization
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black mb-4 sm:mb-5 leading-tight">
-                Strategic Stakeholder Engagement
+                Our Approach: BrandStory Forge™ Model
               </h2>
               <p className="font-sans text-sm sm:text-base text-prestige-text leading-relaxed mb-6 sm:mb-7">
-                We help institutions build trust through structured stakeholder engagement, participation frameworks, and communication processes that keep communities, partners, and leadership aligned around a shared direction.
+                Our work is guided by a structured approach that transforms insight into clear narrative and measurable impact.
               </p>
               <button className="w-full sm:w-auto bg-prestige-black text-white px-6 py-3 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-primary transition-all duration-300">
                 Explore Our Approach
@@ -318,7 +318,7 @@ const OurServices = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 sm:mb-10 lg:mb-12">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black">
-              Why organizations choose Impala
+            Why this approach works
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">

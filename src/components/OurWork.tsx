@@ -451,7 +451,7 @@ const projects: Project[] = [
     primaryCategory: "Development",
     filters: ["Development", "Campaigns"],
     tag: "Completed Project",
-    title: "Dereja – Reframing Youth Employability as Economic Infrastructure",
+    title: "Dereja (Mastercard Foundation)",
     logoFallbackText: "DE",
     hook:
       "Positioning youth employability not as a social issue, but as critical economic infrastructure.",
@@ -861,10 +861,10 @@ const OurWork = () => {
               Our Work
             </span>
             <h1 className="mb-4 text-3xl font-bold leading-tight text-prestige-black sm:mb-6 sm:text-4xl lg:text-5xl">
-              Strategic interventions that strengthen markets, institutions, and public trust
+              Selected Work
             </h1>
             <p className="mb-6 max-w-xl font-sans text-sm leading-relaxed text-prestige-text sm:mb-8 sm:text-base md:text-lg">
-              Our work translates complex institutional, economic, and sector realities into positioning frameworks that influence perception, strengthen credibility, and support higher-stakes decision-making.
+              We work across sectors and geographies, supporting institutions to communicate complex ideas with clarity and strategic direction.
             </p>
 
             <div className="grid max-w-xl grid-cols-2 gap-2.5 border-t border-prestige-gray pt-5 sm:grid-cols-3 sm:gap-3 sm:pt-6">
@@ -1002,7 +1002,7 @@ const OurWork = () => {
                 </h2>
                 <div className="mb-3 h-0.5 w-14 bg-primary" />
                 <p className="font-sans text-[10px] uppercase tracking-[0.16em] text-prestige-text opacity-60">
-                  Strategic Interventions
+                  Case Studies
                 </p>
               </div>
 

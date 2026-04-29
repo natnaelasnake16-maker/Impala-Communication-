@@ -35,13 +35,13 @@ const GetInTouch = () => {
             className="max-w-3xl"
           >
             <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.24em] text-primary mb-4 block">
-              Contact Us
+              Contact
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-              Let's build something <span className="text-primary italic">meaningful</span> together.
+              Work With <span className="text-primary italic">Us</span>
             </h1>
             <p className="font-sans text-sm sm:text-base lg:text-lg text-white/70 leading-relaxed">
-              Whether you have a project in mind or just want to say hello, we're ready to listen and collaborate.
+              If you are looking to define your narrative, strengthen your positioning, or engage key stakeholders and audiences—we would be glad to connect.
             </p>
           </motion.div>
         </div>
@@ -58,7 +58,7 @@ const GetInTouch = () => {
             className="space-y-8 sm:space-y-10 lg:space-y-12"
           >
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-prestige-black mb-6 sm:mb-8">Reach out directly</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-prestige-black mb-6 sm:mb-8">Contact Options</h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4 group">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-prestige-cream flex items-center justify-center rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
@@ -149,10 +149,10 @@ const GetInTouch = () => {
               <div className="space-y-2">
                 <label className="font-sans text-[9px] font-bold uppercase tracking-[0.18em] text-prestige-text opacity-60">Subject</label>
                 <select className="w-full border-b border-prestige-gray py-2.5 text-sm focus:border-primary outline-none transition-colors font-sans bg-transparent">
-                  <option>General Inquiry</option>
-                  <option>Project Proposal</option>
+                  <option>Strategic Communication</option>
+                  <option>Narrative Advisory</option>
                   <option>Partnership</option>
-                  <option>Media Request</option>
+                  <option>Schedule a Conversation</option>
                 </select>
               </div>
 
@@ -160,7 +160,7 @@ const GetInTouch = () => {
                 <label className="font-sans text-[9px] font-bold uppercase tracking-[0.18em] text-prestige-text opacity-60">Message</label>
                 <textarea 
                   rows={4}
-                  placeholder="Tell us about your vision..."
+                  placeholder="Tell us about your goals, audiences, or project."
                   className="w-full border-b border-prestige-gray py-2.5 text-sm focus:border-primary outline-none transition-colors font-sans resize-none"
                 />
               </div>
@@ -187,7 +187,7 @@ const GetInTouch = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-prestige-black/55 via-prestige-black/18 to-transparent flex items-end p-4 sm:p-8 lg:p-12">
               <div className="max-w-2xl">
                 <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white mb-3 sm:mb-4">
-                  "Communication is the bridge between confusion and clarity."
+                  "Communication is the bridge between complexity and clarity."
                 </h2>
                 <p className="font-sans text-white/60 uppercase tracking-[0.16em] text-xs sm:text-sm">— Nat Turner</p>
               </div>

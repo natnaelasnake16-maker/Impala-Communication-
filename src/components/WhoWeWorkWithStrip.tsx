@@ -4,23 +4,23 @@ import { BarChart3, Briefcase, Handshake, Scale, TrendingUp } from "lucide-react
 export default function WhoWeWorkWithStrip() {
   const audienceGroups = [
     {
-      label: "Financial institutions and banks",
+      label: "Governments & Public Institutions",
       icon: <BarChart3 size={22} />,
     },
     {
-      label: "Investment and capital market actors",
+      label: "Development & Multilateral Organisations",
       icon: <TrendingUp size={22} />,
     },
     {
-      label: "Governments and regulatory bodies",
+      label: "Financial Institutions & Investors",
       icon: <Scale size={22} />,
     },
     {
-      label: "Development and multilateral institutions",
+      label: "Private Sector & Growth Enterprises",
       icon: <Handshake size={22} />,
     },
     {
-      label: "High-growth African enterprises",
+      label: "Strategic Partners & Sector Leaders",
       icon: <Briefcase size={22} />,
     },
   ];
@@ -44,7 +44,7 @@ export default function WhoWeWorkWithStrip() {
                 Who We Work With
               </span>
               <h2 className="text-xl font-bold leading-tight text-white sm:text-2xl lg:text-[2rem]">
-                We partner with institutions shaping markets, regulation, and growth across Africa.
+                We partner with the institutions, investors, and enterprises shaping Africa’s next chapter.
               </h2>
             </div>
 

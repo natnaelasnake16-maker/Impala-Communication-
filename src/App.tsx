@@ -192,26 +192,26 @@ const Hero = () => {
           <div className="mb-4 flex flex-wrap items-center justify-center gap-2 sm:mb-5 sm:gap-3">
             <div className="h-0.5 w-5 sm:w-8 bg-primary" />
             <span className="font-sans text-[9px] sm:text-[11px] md:text-xs font-semibold uppercase tracking-[0.14em] sm:tracking-[0.18em]">
-              Strategic Communication & Institutional Positioning
+              Strategic Communication & Narrative Advisory
             </span>
             <div className="h-0.5 w-5 sm:w-8 bg-primary" />
           </div>
           <h1 className="mb-4 text-[2.1rem] font-bold leading-[1.01] text-balance uppercase tracking-tight sm:mb-5 sm:text-[2.85rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4.7rem]">
-            Shaping Africa’s <br />
-            <span className="text-primary italic font-light">Investment Narrative</span>
+            Shaping How Africa Is <br />
+            <span className="text-primary italic font-light">Seen and Understood</span>
           </h1>
           <p className="mx-auto mb-4 max-w-3xl font-sans text-sm leading-relaxed opacity-90 sm:mb-5 sm:text-base md:text-lg lg:text-[1.15rem]">
-            Strategic Communication. Institutional Positioning. Narratives That Drive Investment and Influence.
+            We partner with institutions, governments, and businesses to define their positioning, craft strategic narratives, and engage key stakeholders and audiences across Africa and global markets.
           </p>
           <p className="mx-auto mb-6 max-w-2xl font-sans text-xs leading-relaxed opacity-70 italic sm:mb-7 sm:text-sm md:text-base">
-            We work with institutions, governments, and market leaders to position Africa’s transformation with clarity, credibility, and strategic intent.
+            Clear strategy, focused messaging, and communication built for the audiences that matter.
           </p>
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
             <button className="w-full sm:w-auto bg-primary text-white px-5 sm:px-7 py-3 sm:py-3.5 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-white hover:text-primary transition-all duration-300 shadow-xl">
-              View Our Work
+              Work With Us
             </button>
             <button className="w-full sm:w-auto border-2 border-white text-white px-5 sm:px-7 py-3 sm:py-3.5 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-white hover:text-prestige-black transition-all duration-300">
-              Who We Are
+              Explore Our Work
             </button>
           </div>
         </motion.div>
@@ -251,19 +251,19 @@ const ClientTicker = () => {
 const Services = () => {
   const services = [
     {
-      title: "Strategic Narrative & Positioning",
+      title: "Narrative Strategy",
       icon: <Compass className="text-primary" size={32} />,
-      desc: "We define how institutions articulate their role, relevance, and strategic value within Africa’s transformation and wider global conversations."
+      desc: "Define your positioning, develop clear messaging, and map stakeholders to strengthen alignment and influence."
     },
     {
-      title: "Investment & Sector Positioning",
+      title: "Strategic Communication",
       icon: <TrendingUp className="text-primary" size={32} />,
-      desc: "We translate complex market, financial, and sector developments into clear positioning that attracts investors, partners, and institutional confidence."
+      desc: "Design and execute communication strategies that engage key stakeholders and audiences, including investors, policymakers, and communities."
     },
     {
-      title: "Institutional Credibility & Engagement",
+      title: "Content & Campaigns",
       icon: <Handshake className="text-primary" size={32} />,
-      desc: "We build communication systems that strengthen trust, align stakeholders, and position institutions with clarity, authority, and long-term relevance."
+      desc: "Create high-impact content and campaigns that translate complex ideas into compelling narratives."
     }
   ];
 
@@ -278,7 +278,7 @@ const Services = () => {
             What We Do
           </h2>
           <p className="font-sans text-sm sm:text-base text-prestige-text max-w-3xl mx-auto leading-relaxed">
-            We work at the intersection of communication, investment, and institutional strategy — helping organizations position themselves with clarity, credibility, and relevance in evolving markets.
+            We translate complexity into clarity—helping organisations define their role, articulate their value, and engage the audiences that matter.
           </p>
         </div>
 
@@ -312,33 +312,33 @@ const WhyImpala = () => {
 
   const values = [
     {
-      title: "Driving Social Change",
-      desc: "As a leading social and behavioral change agency, we create data-driven strategies that inspire action and deliver real results.",
+      title: "Context",
+      desc: "We begin with deep understanding of market dynamics, institutional priorities, and stakeholder expectations.",
       image: homeImages.whyImpala.drivingSocialChange
     },
     {
-      title: "Innovative Approach",
-      desc: "Utilizing cutting-edge techniques and technologies, we create impactful campaigns that drive behaviour change and resonate with audiences.",
+      title: "Strategy",
+      desc: "We define clear positioning and messaging systems that help organisations communicate with discipline.",
       image: homeImages.whyImpala.innovativeApproach
     },
     {
-      title: "PR Strategy",
-      desc: "Helping organizations build, strengthen, and protect their reputation through strategic public relations and brand positioning.",
+      title: "Influence",
+      desc: "We build communication that strengthens trust, relevance, and engagement with the audiences that matter.",
       image: homeImages.whyImpala.prStrategy
     },
     {
-      title: "Collaborative Partnerships",
-      desc: "Working closely with clients and partners to co-create solutions and maximize the reach and impact of campaigns.",
+      title: "Alignment",
+      desc: "We help leadership, teams, and partners speak from one clear narrative foundation.",
       image: homeImages.whyImpala.collaborativePartnerships
     },
     {
-      title: "Cultural Sensitivity",
-      desc: "Navigating diverse cultural contexts to ensure communication strategies are relevant and sensitive to the communities they serve.",
+      title: "Execution",
+      desc: "We turn strategy into content, campaigns, and engagement designed for real-world delivery.",
       image: homeImages.whyImpala.culturalSensitivity
     },
     {
-      title: "Message Development",
-      desc: "Crafting inspiring, compelling messages that resonate with target audiences, promote desired behaviour change, and address misconceptions.",
+      title: "Clarity",
+      desc: "We translate complex ideas into narratives that are structured, credible, and easy to act on.",
       image: homeImages.whyImpala.messageDevelopment
     }
   ];
@@ -348,13 +348,13 @@ const WhyImpala = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8 sm:mb-10">
           <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
-            Why Impala
+            Our Approach
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-prestige-black mb-4">
-            Why Impala
+            Our Approach
           </h2>
           <p className="font-sans text-sm sm:text-base text-prestige-text max-w-3xl mx-auto leading-relaxed">
-            We understand the audience you aim to reach and the change you want to create.
+            Our work is grounded in deep contextual understanding across African markets, combined with global standards of strategy and delivery.
           </p>
         </div>
 
@@ -457,20 +457,20 @@ const FeaturedWork = () => {
   const projects = [
     {
       title: "Roha Medical Campus",
-      category: "Health · Branding",
-      desc: "Brand positioning and narrative development for Ethiopia's premier medical hub.",
+      category: "Health · Positioning",
+      desc: "Strategic communication and brand-aligned storytelling for a healthcare platform with regional significance.",
       image: homeImages.featuredWork.rohaMedicalCampus
     },
     {
       title: "MICHU / CIRHT",
-      category: "Reproductive Health",
-      desc: "Brand transformation for University of Michigan's clinic culture initiative.",
+      category: "Health · Campaigns",
+      desc: "Campaign messaging and audience-facing content for reproductive health education and service awareness.",
       image: homeImages.featuredWork.michuCirht
     },
     {
       title: "World Bank",
-      category: "Development · Finance",
-      desc: "Translating complex economic data into accessible public-facing narratives.",
+      category: "Development · Policy",
+      desc: "Translating complex economic data into accessible narratives that support policy engagement.",
       image: homeImages.featuredWork.worldBank
     }
   ];
@@ -484,7 +484,7 @@ const FeaturedWork = () => {
               Selected Work
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black">
-              Impact, Across Sectors
+              Selected Work
             </h2>
           </div>
           <button className="font-sans font-bold text-sm text-prestige-black hover:text-primary transition-colors flex items-center gap-2 group border-b-2 border-prestige-black hover:border-primary pb-1">

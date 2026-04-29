@@ -4,24 +4,24 @@ import { useState } from "react";
 
 const steps = [
   {
-    title: "Discover",
+    title: "Insight & Context",
     icon: Search,
-    text: "Uncover deep audience insights, cultural context, and opportunity drivers that shape authentic communication.",
+    text: "Understand institutional priorities, market dynamics, and stakeholder perspectives.",
   },
   {
-    title: "Design",
+    title: "Narrative Development",
     icon: PenTool,
-    text: "Craft authentic narratives rooted in culture and purpose.",
+    text: "Define positioning, build clear messaging, and align communication structure.",
   },
   {
-    title: "Deliver",
+    title: "Activation & Engagement",
     icon: Megaphone,
-    text: "Activate stories through media, events, and digital strategy.",
+    text: "Deliver strategies, content, and engagement across key audiences.",
   },
   {
-    title: "Deepen",
+    title: "Measurement & Refinement",
     icon: BarChart3,
-    text: "Measure, refine, and sustain engagement.",
+    text: "Track performance and continuously strengthen impact.",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function BrandStoryForge() {
 
             <div className="lg:border-l lg:border-white/24 lg:pl-6">
               <p className="font-sans text-xs leading-relaxed text-white/88 sm:text-sm">
-                At the heart of every project is our proprietary model — a system that transforms communication into measurable impact.
+                Guided by our BrandStory Forge™ Model, we move from insight to narrative to activation with clarity and structure.
               </p>
             </div>
           </div>

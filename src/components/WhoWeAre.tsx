@@ -32,29 +32,29 @@ import WhoWeWorkWithStrip from "./WhoWeWorkWithStrip";
 const WhoWeAre = () => {
   const values = [
     {
-      title: "Insight",
+      title: "Context",
       icon: <Eye size={32} />,
-      desc: "We take the time to understand every challenge deeply. No communication begins without clarity on strategy, audience, and the desired outcome."
+      desc: "We ground communication in local insight, institutional priorities, and the realities shaping each audience."
     },
     {
-      title: "Partnership",
+      title: "Strategy",
       icon: <Handshake size={32} />,
-      desc: "We build long-term partnerships with our clients, enabling deeper understanding and sustainable impact over time."
+      desc: "We define positioning, messaging, and stakeholder priorities before communication moves into delivery."
     },
     {
-      title: "Integration",
+      title: "Influence",
       icon: <Network size={32} />,
-      desc: "Effective communication requires synergy. We bring together multidisciplinary expertise to ensure consistent and impactful messaging."
+      desc: "We help institutions communicate in ways that build trust, credibility, and relevance across markets."
     },
     {
-      title: "Proof",
+      title: "Alignment",
       icon: <BarChart3 size={32} />,
-      desc: "Measurement is essential. From the start, we define outcomes and track impact to ensure our work creates real, measurable change."
+      desc: "We create consistency across leadership, teams, partners, and public-facing communication."
     },
     {
-      title: "Passion",
+      title: "Delivery",
       icon: <Flame size={32} />,
-      desc: "We are driven by purpose. The belief that communication can change lives is what motivates everything we do."
+      desc: "We turn strategy into content, campaigns, and engagement that can be executed with confidence."
     }
   ];
 
@@ -94,10 +94,10 @@ const WhoWeAre = () => {
               Who We Are
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-              Positioning institutions, markets, and ideas that shape Africa’s future.
+              Who We Are
             </h1>
             <p className="font-sans text-sm sm:text-base lg:text-lg text-white/70 mb-6 sm:mb-8 leading-relaxed max-w-2xl">
-              Impala Communication operates at the intersection of communication, investment, and institutional strategy. Our work goes beyond storytelling — we shape how Africa’s transformation is understood, positioned, and engaged with by global and local audiences alike.
+              Impala Communication is a strategic communication and narrative advisory firm working across Africa and internationally. We support institutions, governments, and businesses to define how they are positioned, understood, and engaged.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/our-work" className="w-full sm:w-auto text-center bg-primary text-white px-6 sm:px-8 py-3 sm:py-3.5 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-white hover:text-primary transition-all duration-300">
@@ -141,20 +141,20 @@ const WhoWeAre = () => {
                 About Impala Communication
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black mb-4 sm:mb-5 leading-tight">
-                Repositioning Africa Through <br />Strategic Narrative
+                Our Position
               </h2>
               <div className="font-sans text-prestige-text space-y-4 sm:space-y-5 leading-relaxed text-sm sm:text-base">
                 <p>
-                  Africa’s challenge is not only performance — it is perception, structure, and articulation. We work with institutions to ensure that Africa’s growth, reform, and innovation are communicated with the clarity and credibility required to unlock investment and global engagement.
+                  Our work sits at the intersection of context, strategy, and influence—bridging deep local insight with global standards of communication and delivery.
                 </p>
                 <p>
-                  Impala Communication operates where communication, investment, and institutional strategy meet. We help organisations define how they are understood within national, continental, and international conversations.
+                  Africa’s growth story is complex and evolving. We translate this complexity into clear, structured narratives that connect with stakeholders across markets.
                 </p>
                 <p>
-                  Founded by Meron and Terusew, Impala began as a response to incomplete narratives about Ethiopia and Africa. What started as a personal commitment has evolved into a strategic advisory practice shaping market perception, institutional credibility, and public relevance.
+                  Our approach combines insight, narrative development, and strategic execution—ensuring communication is aligned, consistent, and impactful.
                 </p>
                 <p>
-                  Today, we work with institutions, development partners, and high-growth enterprises to position ideas, sectors, and reforms with clarity, authority, and strategic intent.
+                  This is guided by our BrandStory Forge™ Model, a structured framework that connects strategy to delivery.
                 </p>
               </div>
             </motion.div>
@@ -175,10 +175,10 @@ const WhoWeAre = () => {
               How We Work
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-5">
-              Narrative architecture for institutional momentum
+              How We Work
             </h2>
             <p className="font-sans text-sm sm:text-base text-white/74 leading-relaxed max-w-3xl">
-              Through our proprietary BrandStory Forge™ model, we turn complex institutional, economic, and sector narratives into communication systems that build trust, strengthen credibility, and unlock engagement.
+              Our approach combines insight, narrative development, and strategic execution—ensuring communication is aligned, consistent, and impactful.
             </p>
           </motion.div>
 
@@ -192,15 +192,15 @@ const WhoWeAre = () => {
             {[
               {
                 icon: ShieldCheck,
-                text: "Build institutional credibility with local and global audiences",
+                text: "Build trust and credibility with local and global audiences",
               },
               {
                 icon: Globe,
-                text: "Align public positioning with investment, policy, and sector relevance",
+                text: "Position institutions as leaders in Africa’s transformation",
               },
               {
                 icon: Users,
-                text: "Create coherence across leadership, stakeholders, and market-facing communication",
+                text: "Inspire collaboration across public, private, and diaspora sectors",
               },
             ].map((item) => {
               const Icon = item.icon;
@@ -232,9 +232,9 @@ const WhoWeAre = () => {
                 <PenTool size={22} />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-prestige-black mb-3">Strategic Origin</h3>
+                <h3 className="text-xl font-bold text-prestige-black mb-3">Our Perspective</h3>
                 <p className="font-sans text-sm text-prestige-text leading-relaxed">
-                  Our origin is deeply personal, but our role today is strategic. We returned to Ethiopia to contribute to how the country and the continent are understood, then built Impala into a firm that helps institutions shape perception with discipline, confidence, and relevance.
+                  Africa’s growth story is complex and evolving. We translate this complexity into clear, structured narratives that connect with stakeholders across markets.
                 </p>
               </div>
             </div>
@@ -244,9 +244,9 @@ const WhoWeAre = () => {
                 <Globe size={22} />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-prestige-black mb-3">What We Build</h3>
+                <h3 className="text-xl font-bold text-prestige-black mb-3">Leadership</h3>
                 <p className="font-sans text-sm text-prestige-text leading-relaxed">
-                  We help institutions build communication systems that support leadership visibility, sector positioning, stakeholder alignment, and long-term institutional credibility in moments that matter.
+                  Meron Feleke is an impact-driven communications strategist with over a decade of experience working across Africa and internationally. She has led high-level engagements with governments, multilateral institutions, and private sector leaders—shaping narratives that influence investment, policy, and public understanding.
                 </p>
               </div>
             </div>
@@ -263,7 +263,7 @@ const WhoWeAre = () => {
       <section className="section-space section-shell bg-prestige-black text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-10 lg:mb-12">
-            This Year, We Are Going Bigger Than Ever
+              Experience across institutions, sectors, and audiences
           </h2>
           <div className="mx-auto max-w-5xl grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
             {[
@@ -299,7 +299,7 @@ const WhoWeAre = () => {
               Our Values
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black">
-              What Drives Us
+              What Guides Us
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
