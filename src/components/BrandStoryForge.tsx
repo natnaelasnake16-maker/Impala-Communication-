@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { BarChart3, Megaphone, PenTool, Search } from "lucide-react";
+import { BarChart3, Megaphone, Network, PenTool, Search } from "lucide-react";
 import { useState } from "react";
 
 const steps = [
@@ -11,7 +11,12 @@ const steps = [
   {
     title: "Narrative Development",
     icon: PenTool,
-    text: "Define positioning, build clear messaging, and align communication structure.",
+    text: "Define positioning and build clear, consistent messaging.",
+  },
+  {
+    title: "Systems & Alignment",
+    icon: Network,
+    text: "Ensure internal clarity, communication structure, and consistency.",
   },
   {
     title: "Activation & Engagement",
@@ -62,13 +67,13 @@ export default function BrandStoryForge() {
                 Our Approach
               </span>
               <h2 className="mt-3 text-xl font-bold leading-[1.02] sm:text-[1.8rem] lg:text-[2.2rem]">
-                The BrandStory Forge™ Model
+                Our Approach: BrandStory Forge™ Model
               </h2>
             </div>
 
             <div className="lg:border-l lg:border-white/24 lg:pl-6">
               <p className="font-sans text-xs leading-relaxed text-white/88 sm:text-sm">
-                Guided by our BrandStory Forge™ Model, we move from insight to narrative to activation with clarity and structure.
+                Our work is guided by a structured approach that transforms insight into clear narrative and measurable impact.
               </p>
             </div>
           </div>
@@ -92,7 +97,7 @@ export default function BrandStoryForge() {
               transition={{ duration: 1, ease: "easeOut" }}
             />
 
-            <div className="grid gap-3 lg:grid-cols-4 lg:gap-3.5">
+            <div className="grid gap-3 lg:grid-cols-5 lg:gap-3.5">
               {steps.map((step, index) => {
                 const Icon = step.icon;
                 const isActive = activeStep === index;

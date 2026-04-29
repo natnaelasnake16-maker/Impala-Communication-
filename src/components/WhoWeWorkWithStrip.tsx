@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { BarChart3, Briefcase, Handshake, Scale, TrendingUp } from "lucide-react";
+import { BarChart3, Handshake, Scale, TrendingUp } from "lucide-react";
 
 export default function WhoWeWorkWithStrip() {
   const audienceGroups = [
@@ -18,10 +18,6 @@ export default function WhoWeWorkWithStrip() {
     {
       label: "Private Sector & Growth Enterprises",
       icon: <Handshake size={22} />,
-    },
-    {
-      label: "Strategic Partners & Sector Leaders",
-      icon: <Briefcase size={22} />,
     },
   ];
 
@@ -48,7 +44,7 @@ export default function WhoWeWorkWithStrip() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3 lg:grid-cols-5">
+            <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4 sm:gap-3">
               {audienceGroups.map((item, index) => (
                 <motion.div
                   key={item.label}

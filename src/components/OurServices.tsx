@@ -49,11 +49,28 @@ const OurServices = () => {
       desc: "Support organisations in positioning themselves within Africa’s evolving economic and investment landscape.",
       proofRefs: ["Markets", "Credibility", "Leadership"],
     },
+  ];
+
+  const approachSteps = [
+    {
+      title: "Insight & Context",
+      desc: "Understand institutional priorities, market dynamics, and stakeholder perspectives.",
+    },
+    {
+      title: "Narrative Development",
+      desc: "Define positioning and build clear, consistent messaging.",
+    },
+    {
+      title: "Systems & Alignment",
+      desc: "Ensure internal clarity, communication structure, and consistency.",
+    },
+    {
+      title: "Activation & Engagement",
+      desc: "Deliver strategies, content, and engagement across key audiences.",
+    },
     {
       title: "Measurement & Refinement",
-      icon: <Film size={32} />,
-      desc: "Track communication performance, refine messaging, and continuously strengthen impact over time.",
-      proofRefs: ["Measurement", "Learning", "Improvement"],
+      desc: "Track performance and continuously strengthen impact.",
     },
   ];
 
@@ -108,11 +125,11 @@ const OurServices = () => {
             <div className="relative h-[420px] hidden lg:block">
               {/* Floating Icon Cards Cluster */}
               {[
-                { icon: <Compass size={24} />, label: "Positioning", top: "10%", left: "20%", delay: 0 },
-                { icon: <BarChart3 size={24} />, label: "Investment", top: "40%", left: "60%", delay: 0.2 },
-                { icon: <Radio size={24} />, label: "Thought Leadership", top: "70%", left: "15%", delay: 0.4 },
-                { icon: <Flag size={24} />, label: "Systems", top: "20%", left: "70%", delay: 0.6 },
-                { icon: <Film size={24} />, label: "Activation", top: "62%", left: "46%", delay: 0.8 }
+                { icon: <Compass size={24} />, label: "Insight & Context", top: "10%", left: "20%", delay: 0 },
+                { icon: <BarChart3 size={24} />, label: "Narrative", top: "40%", left: "60%", delay: 0.2 },
+                { icon: <Radio size={24} />, label: "Systems", top: "70%", left: "15%", delay: 0.4 },
+                { icon: <Flag size={24} />, label: "Activation", top: "20%", left: "70%", delay: 0.6 },
+                { icon: <Film size={24} />, label: "Measurement", top: "62%", left: "46%", delay: 0.8 }
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -214,7 +231,7 @@ const OurServices = () => {
               What We Offer
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black">
-              Strategic Service Areas
+              Services
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
@@ -305,6 +322,23 @@ const OurServices = () => {
               <p className="font-sans text-sm sm:text-base text-prestige-text leading-relaxed mb-6 sm:mb-7">
                 Our work is guided by a structured approach that transforms insight into clear narrative and measurable impact.
               </p>
+              <div className="mb-6 grid gap-2.5">
+                {approachSteps.map((step, index) => (
+                  <div key={step.title} className="flex items-start gap-3 rounded-xl bg-prestige-cream px-3.5 py-3">
+                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white">
+                      {index + 1}
+                    </span>
+                    <div>
+                      <h3 className="font-sans text-xs font-bold uppercase tracking-[0.14em] text-prestige-black">
+                        {step.title}
+                      </h3>
+                      <p className="mt-1 font-sans text-xs leading-relaxed text-prestige-text">
+                        {step.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
               <button className="w-full sm:w-auto bg-prestige-black text-white px-6 py-3 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-primary transition-all duration-300">
                 Explore Our Approach
               </button>
@@ -318,7 +352,7 @@ const OurServices = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 sm:mb-10 lg:mb-12">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black">
-            Why this approach works
+              Why this approach works
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">

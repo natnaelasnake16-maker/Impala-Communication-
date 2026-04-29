@@ -356,6 +356,9 @@ const WhyImpala = () => {
           <p className="font-sans text-sm sm:text-base text-prestige-text max-w-3xl mx-auto leading-relaxed">
             Our work is grounded in deep contextual understanding across African markets, combined with global standards of strategy and delivery.
           </p>
+          <p className="font-sans text-sm sm:text-base text-prestige-text max-w-3xl mx-auto leading-relaxed mt-3">
+            Guided by our BrandStory Forge™ Model, we move from insight to narrative to activation with clarity and structure.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
@@ -486,6 +489,9 @@ const FeaturedWork = () => {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black">
               Selected Work
             </h2>
+            <p className="mt-3 max-w-3xl font-sans text-sm text-prestige-text leading-relaxed sm:text-base">
+              We support institutions across Africa and internationally to communicate complex ideas with clarity and strategic intent.
+            </p>
           </div>
           <button className="font-sans font-bold text-sm text-prestige-black hover:text-primary transition-colors flex items-center gap-2 group border-b-2 border-prestige-black hover:border-primary pb-1">
             Explore Portfolio <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -540,7 +546,7 @@ const Footer = () => {
               imageClassName="h-12 sm:h-14 w-auto"
             />
             <p className="font-sans text-sm sm:text-base opacity-60 max-w-md leading-relaxed mb-6">
-              For when communication can change lives. Strategic narratives grounded in truth, culture, and impact.
+              Strategic communication and narrative advisory for institutions shaping how Africa is seen, understood, and engaged.
             </p>
             <div className="flex gap-4">
               {["FB", "IG", "TW", "YT"].map(s => (
@@ -575,7 +581,7 @@ const Footer = () => {
 
         <div className="border-t border-white/10 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 opacity-40 font-sans text-[9px] sm:text-[10px] uppercase tracking-[0.14em]">
           <span>© 2026 Impala Communication. All rights reserved.</span>
-          <p className="text-center md:text-left">Leveraging over 12 years of experience, shaping narratives that influence impact, investment, and institutional growth.</p>
+          <p className="text-center md:text-left">Helping institutions define positioning, align messaging, and engage key stakeholders and audiences.</p>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

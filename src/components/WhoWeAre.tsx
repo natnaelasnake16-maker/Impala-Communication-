@@ -147,15 +147,6 @@ const WhoWeAre = () => {
                 <p>
                   Our work sits at the intersection of context, strategy, and influence—bridging deep local insight with global standards of communication and delivery.
                 </p>
-                <p>
-                  Africa’s growth story is complex and evolving. We translate this complexity into clear, structured narratives that connect with stakeholders across markets.
-                </p>
-                <p>
-                  Our approach combines insight, narrative development, and strategic execution—ensuring communication is aligned, consistent, and impactful.
-                </p>
-                <p>
-                  This is guided by our BrandStory Forge™ Model, a structured framework that connects strategy to delivery.
-                </p>
               </div>
             </motion.div>
           </div>
@@ -178,7 +169,7 @@ const WhoWeAre = () => {
               How We Work
             </h2>
             <p className="font-sans text-sm sm:text-base text-white/74 leading-relaxed max-w-3xl">
-              Our approach combines insight, narrative development, and strategic execution—ensuring communication is aligned, consistent, and impactful.
+              Our approach combines insight, narrative development, and strategic execution—ensuring communication is aligned, consistent, and impactful. This is guided by our BrandStory Forge™ Model, a structured framework that connects strategy to delivery.
             </p>
           </motion.div>
 

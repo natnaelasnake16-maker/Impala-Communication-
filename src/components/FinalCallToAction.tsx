@@ -33,7 +33,7 @@ export default function FinalCallToAction() {
                 Contact Us
               </Link>
               <Link
-                to="/our-work"
+                to="/get-in-touch"
                 className="inline-flex min-h-11 items-center justify-center rounded-[1rem] border border-white/18 bg-white/6 px-6 py-3 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:border-primary hover:bg-primary/16"
               >
                 Start a Conversation

@@ -687,7 +687,7 @@ const CaseStudyCard = ({
                   </span>
                 </div>
                 <h4 className="mb-2 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-                  Project Detail
+                  Case Study
                 </h4>
                 <h2 className="mb-2 text-xl font-bold text-prestige-black sm:text-2xl lg:text-[2rem]">
                   {project.title}
@@ -702,7 +702,7 @@ const CaseStudyCard = ({
                 <div className="space-y-5 sm:space-y-6">
                   <div>
                     <h5 className="mb-2 font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
-                      The Challenge
+                      Context
                     </h5>
                     <p className="font-sans text-xs leading-relaxed text-prestige-text sm:text-sm">
                       {project.challenge}
@@ -710,7 +710,7 @@ const CaseStudyCard = ({
                   </div>
                   <div>
                     <h5 className="mb-2 font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
-                      Our Approach
+                      What We Did
                     </h5>
                     <p className="font-sans text-xs leading-relaxed text-prestige-text sm:text-sm">
                       {project.approach}
@@ -720,7 +720,7 @@ const CaseStudyCard = ({
                 <div className="space-y-5 sm:space-y-6">
                   <div>
                     <h5 className="mb-2 font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
-                      What We Delivered
+                      Key Actions
                     </h5>
                     <ul className="space-y-2">
                       {project.solution.map((item) => (
