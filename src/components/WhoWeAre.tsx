@@ -214,39 +214,153 @@ const WhoWeAre = () => {
         </div>
       </section>
 
-      {/* 3. Our Story + Our Commitment */}
-      <section className="bg-prestige-gray section-space section-shell">
-        <div className="max-w-7xl mx-auto space-y-8 sm:space-y-10 lg:space-y-14">
-          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start">
-            <div className="flex gap-4 sm:gap-5 lg:gap-6">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-white flex items-center justify-center rounded-full shadow-sm shrink-0 text-primary">
-                <PenTool size={22} />
+      {/* 4. Perspective */}
+      <section className="section-space section-shell bg-prestige-gray">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid items-center gap-6 sm:gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">
+            <motion.div
+              initial={{ opacity: 0, x: -26 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.35 }}
+              transition={{ duration: 0.55 }}
+              className="relative overflow-hidden rounded-[1.8rem] border border-white/70 bg-white p-3 shadow-[0_24px_70px_rgba(26,18,12,0.09)] sm:p-4"
+            >
+              <div className="aspect-[4/3] overflow-hidden rounded-[1.35rem] bg-prestige-black">
+                <img
+                  src={whoWeAreImages.visualStrip[0]}
+                  alt="Strategic communication context"
+                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                  referrerPolicy="no-referrer"
+                />
               </div>
-              <div>
-                <h3 className="text-xl font-bold text-prestige-black mb-3">Our Perspective</h3>
-                <p className="font-sans text-sm text-prestige-text leading-relaxed">
-                  Africa’s growth story is complex and evolving. We translate this complexity into clear, structured narratives that connect with stakeholders across markets.
+              <div className="absolute bottom-6 left-6 right-6 rounded-[1.25rem] border border-white/20 bg-prestige-black/62 p-4 text-white shadow-2xl backdrop-blur-md sm:bottom-8 sm:left-8 sm:right-auto sm:w-72">
+                <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white">
+                  <PenTool size={18} />
+                </div>
+                <p className="font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-white/64">
+                  Context into clarity
+                </p>
+                <p className="mt-1 text-lg font-bold leading-tight">
+                  Structured narratives for evolving markets.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex gap-4 sm:gap-5 lg:gap-6">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-white flex items-center justify-center rounded-full shadow-sm shrink-0 text-primary">
-                <Globe size={22} />
+            <motion.div
+              initial={{ opacity: 0, x: 26 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.35 }}
+              transition={{ duration: 0.55 }}
+              className="relative"
+            >
+              <div className="absolute -right-6 -top-6 h-28 w-28 rounded-full bg-primary/10 blur-2xl" />
+              <span className="mb-3 block font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-primary sm:text-xs">
+                Our Perspective
+              </span>
+              <h2 className="max-w-2xl text-2xl font-bold leading-tight text-prestige-black sm:text-3xl lg:text-4xl">
+                Africa’s growth story requires context before communication.
+              </h2>
+              <p className="mt-4 max-w-2xl font-sans text-sm leading-relaxed text-prestige-text sm:text-base">
+                Africa’s growth story is complex and evolving. We translate this complexity into clear, structured narratives that connect with stakeholders across markets.
+              </p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                {[
+                  "Local insight",
+                  "Institutional clarity",
+                  "Global relevance",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-[1.15rem] border border-white bg-white px-4 py-4 shadow-sm"
+                  >
+                    <CheckCircle size={16} className="mb-2 text-primary" />
+                    <p className="font-sans text-[11px] font-bold uppercase tracking-[0.16em] text-prestige-black">
+                      {item}
+                    </p>
+                  </div>
+                ))}
               </div>
-              <div>
-                <h3 className="text-xl font-bold text-prestige-black mb-3">Leadership</h3>
-                <p className="font-sans text-sm text-prestige-text leading-relaxed">
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Leadership */}
+      <section className="section-space section-shell bg-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 26 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.24 }}
+            transition={{ duration: 0.6 }}
+            className="relative overflow-hidden rounded-[2rem] bg-prestige-black text-white shadow-[0_30px_90px_rgba(10,10,10,0.22)]"
+          >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(241,90,41,0.34),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.12),transparent_32%)]" />
+            <div className="relative z-10 grid gap-0 lg:grid-cols-[0.88fr_1.12fr]">
+              <div className="relative min-h-[300px] overflow-hidden bg-prestige-black sm:min-h-[380px] lg:min-h-full">
+                <img
+                  src={whoWeAreImages.visualStrip[3]}
+                  alt="Impala leadership and production work"
+                  className="absolute inset-0 h-full w-full object-cover opacity-86"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-prestige-black via-prestige-black/18 to-transparent" />
+                <div className="absolute bottom-5 left-5 right-5 rounded-[1.4rem] border border-white/14 bg-white/10 p-4 backdrop-blur-md sm:bottom-7 sm:left-7 sm:right-7 sm:p-5">
+                  <p className="font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
+                    Leadership
+                  </p>
+                  <p className="mt-1 text-xl font-bold leading-tight sm:text-2xl">
+                    Meron Feleke
+                  </p>
+                </div>
+              </div>
+
+              <div className="px-5 py-7 sm:px-7 sm:py-9 lg:px-10 lg:py-12 xl:px-12">
+                <span className="mb-3 block font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-primary sm:text-xs">
+                  Strategic Leadership
+                </span>
+                <h2 className="max-w-3xl text-2xl font-bold leading-tight sm:text-3xl lg:text-4xl">
+                  Leadership built around influence, trust, and institutional clarity.
+                </h2>
+                <p className="mt-5 max-w-3xl font-sans text-sm leading-relaxed text-white/74 sm:text-base">
                   Meron Feleke is an impact-driven communications strategist with over a decade of experience working across Africa and internationally. She has led high-level engagements with governments, multilateral institutions, and private sector leaders—shaping narratives that influence investment, policy, and public understanding.
                 </p>
+
+                <div className="mt-7 grid gap-3 sm:grid-cols-3">
+                  {[
+                    { value: "10+", label: "Years of experience" },
+                    { value: "Africa", label: "Regional perspective" },
+                    { value: "Global", label: "Institutional engagement" },
+                  ].map((stat) => (
+                    <div
+                      key={stat.label}
+                      className="rounded-[1.15rem] border border-white/10 bg-white/7 px-4 py-4"
+                    >
+                      <p className="font-display text-2xl font-bold text-primary">
+                        {stat.value}
+                      </p>
+                      <p className="mt-1 font-sans text-[10px] font-bold uppercase tracking-[0.16em] text-white/58">
+                        {stat.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-7 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="max-w-lg font-sans text-xs leading-relaxed text-white/58 sm:text-sm">
+                    Shaping narratives that strengthen visibility, credibility, and strategic engagement.
+                  </p>
+                  <Link
+                    to="/get-in-touch"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:bg-white hover:text-primary"
+                  >
+                    Work With Us
+                    <ArrowRight size={15} />
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="text-center pt-6 sm:pt-8 border-t border-prestige-black/5">
-            <p className="text-xl sm:text-2xl font-bold text-primary italic">
-              Positioning Africa with clarity, credibility, and strategic intent.
-            </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
