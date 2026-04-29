@@ -222,29 +222,31 @@ const Hero = () => {
 
 const ClientTicker = () => {
   return (
-    <div className="bg-white border-y border-prestige-gray py-5 sm:py-6 lg:py-8 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-5 lg:px-6 mb-4 sm:mb-5 text-center">
+    <section className="relative overflow-hidden border-y border-prestige-gray bg-white py-4 sm:py-5 lg:py-6">
+      <div className="mx-auto mb-3 max-w-7xl px-4 text-center sm:mb-4 sm:px-5 lg:px-6">
         <h3 className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.24em] text-prestige-text opacity-60">
           Trusted by institutions shaping economies and communities
         </h3>
       </div>
-      <div className="flex whitespace-nowrap animate-marquee">
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-white to-transparent sm:w-24" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-white to-transparent sm:w-24" />
+      <div className="flex whitespace-nowrap animate-marquee will-change-transform">
         {[...homeTickerClients, ...homeTickerClients].map((client, i) => (
           <div
             key={`${client.slug}-${i}`}
-            className="mx-2 sm:mx-3 lg:mx-4 flex min-w-[120px] sm:min-w-[140px] lg:min-w-[160px] items-center justify-center rounded-xl border border-prestige-gray bg-prestige-cream px-4 sm:px-5 lg:px-6 py-3 sm:py-4 shadow-sm"
+            className="mx-1.5 flex min-w-[112px] items-center justify-center rounded-xl border border-prestige-gray bg-prestige-cream px-3 py-2.5 shadow-sm transition-all duration-300 hover:border-primary/30 hover:bg-white hover:shadow-md sm:mx-2.5 sm:min-w-[136px] sm:px-5 sm:py-3.5 lg:min-w-[156px]"
           >
             <img
               src={client.logoUrl}
               alt={client.alt}
-              className="h-7 sm:h-8 w-full object-contain"
+              className="h-6 w-full object-contain sm:h-7 lg:h-8"
               loading="lazy"
               referrerPolicy="no-referrer"
             />
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -513,6 +515,7 @@ const HomeContent = () => {
   return (
     <>
       <Hero />
+      <ClientTicker />
       <div id="services">
         <Services />
       </div>
