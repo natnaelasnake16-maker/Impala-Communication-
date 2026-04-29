@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import { ourServicesImages } from "../lib/images";
 import FinalCallToAction from "./FinalCallToAction";
+import BrandStoryForge from "./BrandStoryForge";
 
 const OurServices = () => {
   const services = [
@@ -200,88 +201,7 @@ const OurServices = () => {
         </div>
       </section>
 
-      {/* 5. Community Engagement Highlight Section */}
-      <section className="section-space section-shell bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-14 items-center">
-            <div className="order-2 lg:order-1 grid grid-cols-2 gap-2.5 sm:gap-3">
-              <div className="space-y-4">
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
-                  <img 
-                    src={ourServicesImages.communityCollage[0]}
-                    className="w-full h-full object-cover"
-                    alt="Community interaction"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
-                <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
-                  <img 
-                    src={ourServicesImages.communityCollage[1]}
-                    className="w-full h-full object-cover"
-                    alt="Collaboration"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
-              </div>
-              <div className="pt-4 sm:pt-6 lg:pt-8 space-y-3">
-                <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
-                  <img 
-                    src={ourServicesImages.communityCollage[2]}
-                    className="w-full h-full object-cover"
-                    alt="Workshop"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
-                  <img 
-                    src={ourServicesImages.communityCollage[3]}
-                    className="w-full h-full object-cover"
-                    alt="Community presence"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="order-1 lg:order-2"
-            >
-              <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
-                Specialization
-              </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black mb-4 sm:mb-5 leading-tight">
-                Our Approach: BrandStory Forge™ Model
-              </h2>
-              <p className="font-sans text-sm sm:text-base text-prestige-text leading-relaxed mb-6 sm:mb-7">
-                Our work is guided by a structured approach that transforms insight into clear narrative and measurable impact.
-              </p>
-              <div className="mb-6 grid gap-2.5">
-                {approachSteps.map((step, index) => (
-                  <div key={step.title} className="flex items-start gap-3 rounded-xl bg-prestige-cream px-3.5 py-3">
-                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white">
-                      {index + 1}
-                    </span>
-                    <div>
-                      <h3 className="font-sans text-xs font-bold uppercase tracking-[0.14em] text-prestige-black">
-                        {step.title}
-                      </h3>
-                      <p className="mt-1 font-sans text-xs leading-relaxed text-prestige-text">
-                        {step.desc}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <button className="w-full sm:w-auto bg-prestige-black text-white px-6 py-3 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-primary transition-all duration-300">
-                Explore Our Approach
-              </button>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <BrandStoryForge />
 
     </div>
   );

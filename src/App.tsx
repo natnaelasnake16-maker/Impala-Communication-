@@ -516,7 +516,7 @@ const HomeContent = () => {
       <div id="services">
         <Services />
       </div>
-      <WhyImpala />
+      <BrandStoryForge />
       <WhoWeWorkWithStrip />
       <div id="work">
         <FeaturedWork />
