@@ -11,31 +11,17 @@ import OurWork from "./components/OurWork";
 import Clients from "./components/Clients";
 import GetInTouch from "./components/GetInTouch";
 import FinalCallToAction from "./components/FinalCallToAction";
-import RoadAhead from "./components/RoadAhead";
-import BrandStoryForge from "./components/BrandStoryForge";
-import PrioritiesSection from "./components/PrioritiesSection";
 import WhoWeWorkWithStrip from "./components/WhoWeWorkWithStrip";
 import { useState, useEffect } from "react";
-import { brandAssets, homeImages, homeTickerClients } from "./lib/images";
+import { brandAssets, homeImages, ourWorkImages } from "./lib/images";
 import { 
   ArrowRight, 
   Menu, 
   X, 
   Compass, 
   Radio, 
-  Globe, 
-  Users, 
   MessageSquare,
   ChevronRight,
-  ChevronDown,
-  HeartPulse,
-  GraduationCap,
-  CloudRain,
-  Handshake,
-  TrendingUp,
-  Lightbulb,
-  ShieldCheck,
-  Sparkles,
 } from "lucide-react";
 // --- Components ---
 
@@ -168,7 +154,7 @@ const Navbar = () => {
 
 const Hero = () => {
   return (
-    <section className="relative flex min-h-[92svh] items-center justify-center overflow-hidden sm:min-h-[96svh]">
+    <section className="relative flex min-h-[86svh] items-center justify-center overflow-hidden sm:min-h-[90svh]">
       {/* Full Width Background Image */}
       <div className="absolute inset-0 z-0">
         <motion.img 
@@ -192,27 +178,23 @@ const Hero = () => {
           <div className="mb-4 flex flex-wrap items-center justify-center gap-2 sm:mb-5 sm:gap-3">
             <div className="h-0.5 w-5 sm:w-8 bg-primary" />
             <span className="font-sans text-[9px] sm:text-[11px] md:text-xs font-semibold uppercase tracking-[0.14em] sm:tracking-[0.18em]">
-              Strategic Communication & Institutional Positioning
+              Strategic Communication & Narrative Advisory
             </span>
             <div className="h-0.5 w-5 sm:w-8 bg-primary" />
           </div>
-          <h1 className="mb-4 text-[2.1rem] font-bold leading-[1.01] text-balance uppercase tracking-tight sm:mb-5 sm:text-[2.85rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4.7rem]">
-            Shaping Africa’s <br />
-            <span className="text-primary italic font-light">Investment Narrative</span>
+          <h1 className="mx-auto mb-4 max-w-5xl text-[2.25rem] font-bold leading-[1.02] text-balance uppercase tracking-tight sm:mb-5 sm:text-[3rem] md:text-[3.7rem] lg:text-[4.4rem] xl:text-[5rem]">
+            Shaping How Africa Is Seen and Understood
           </h1>
-          <p className="mx-auto mb-4 max-w-3xl font-sans text-sm leading-relaxed opacity-90 sm:mb-5 sm:text-base md:text-lg lg:text-[1.15rem]">
-            Strategic Communication. Institutional Positioning. Narratives That Drive Investment and Influence.
-          </p>
-          <p className="mx-auto mb-6 max-w-2xl font-sans text-xs leading-relaxed opacity-70 italic sm:mb-7 sm:text-sm md:text-base">
-            We work with institutions, governments, and market leaders to position Africa’s transformation with clarity, credibility, and strategic intent.
+          <p className="mx-auto mb-6 max-w-3xl font-sans text-sm leading-relaxed opacity-90 sm:mb-7 sm:text-base md:text-lg">
+            We partner with institutions, governments, and businesses to define their positioning, craft strategic narratives, and engage key stakeholders and audiences across Africa and global markets.
           </p>
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
-            <button className="w-full sm:w-auto bg-primary text-white px-5 sm:px-7 py-3 sm:py-3.5 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-white hover:text-primary transition-all duration-300 shadow-xl">
-              View Our Work
-            </button>
-            <button className="w-full sm:w-auto border-2 border-white text-white px-5 sm:px-7 py-3 sm:py-3.5 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-white hover:text-prestige-black transition-all duration-300">
-              Who We Are
-            </button>
+            <Link to="/get-in-touch" className="w-full sm:w-auto bg-primary text-white px-5 sm:px-7 py-3 sm:py-3.5 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-white hover:text-primary transition-all duration-300 shadow-xl">
+              Work With Us
+            </Link>
+            <Link to="/our-work" className="w-full sm:w-auto border-2 border-white text-white px-5 sm:px-7 py-3 sm:py-3.5 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-white hover:text-prestige-black transition-all duration-300">
+              Explore Our Work
+            </Link>
           </div>
         </motion.div>
       </div>
@@ -220,50 +202,22 @@ const Hero = () => {
   );
 };
 
-const ClientTicker = () => {
-  return (
-    <div className="bg-white border-y border-prestige-gray py-5 sm:py-6 lg:py-8 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-5 lg:px-6 mb-4 sm:mb-5 text-center">
-        <h3 className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.24em] text-prestige-text opacity-60">
-          Trusted by institutions shaping economies and communities
-        </h3>
-      </div>
-      <div className="flex whitespace-nowrap animate-marquee">
-        {[...homeTickerClients, ...homeTickerClients].map((client, i) => (
-          <div
-            key={`${client.slug}-${i}`}
-            className="mx-2 sm:mx-3 lg:mx-4 flex min-w-[120px] sm:min-w-[140px] lg:min-w-[160px] items-center justify-center rounded-xl border border-prestige-gray bg-prestige-cream px-4 sm:px-5 lg:px-6 py-3 sm:py-4 shadow-sm"
-          >
-            <img
-              src={client.logoUrl}
-              alt={client.alt}
-              className="h-7 sm:h-8 w-full object-contain"
-              loading="lazy"
-              referrerPolicy="no-referrer"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
 const Services = () => {
   const services = [
     {
-      title: "Strategic Narrative & Positioning",
+      title: "Narrative Strategy",
       icon: <Compass className="text-primary" size={32} />,
-      desc: "We define how institutions articulate their role, relevance, and strategic value within Africa’s transformation and wider global conversations."
+      desc: "Define your positioning, develop clear messaging, and map stakeholders to strengthen alignment and influence."
     },
     {
-      title: "Investment & Sector Positioning",
-      icon: <TrendingUp className="text-primary" size={32} />,
-      desc: "We translate complex market, financial, and sector developments into clear positioning that attracts investors, partners, and institutional confidence."
+      title: "Strategic Communication",
+      icon: <Radio className="text-primary" size={32} />,
+      desc: "Design and execute communication strategies that engage key stakeholders and audiences, including investors, policymakers, and communities."
     },
     {
-      title: "Institutional Credibility & Engagement",
-      icon: <Handshake className="text-primary" size={32} />,
-      desc: "We build communication systems that strengthen trust, align stakeholders, and position institutions with clarity, authority, and long-term relevance."
+      title: "Content & Campaigns",
+      icon: <MessageSquare className="text-primary" size={32} />,
+      desc: "Create high-impact content and campaigns that translate complex ideas into compelling narratives."
     }
   ];
 
@@ -278,7 +232,7 @@ const Services = () => {
             What We Do
           </h2>
           <p className="font-sans text-sm sm:text-base text-prestige-text max-w-3xl mx-auto leading-relaxed">
-            We work at the intersection of communication, investment, and institutional strategy — helping organizations position themselves with clarity, credibility, and relevance in evolving markets.
+            We translate complexity into clarity—helping organisations define their role, articulate their value, and engage the audiences that matter.
           </p>
         </div>
 
@@ -307,171 +261,52 @@ const Services = () => {
   );
 };
 
-const WhyImpala = () => {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-
-  const values = [
-    {
-      title: "Driving Social Change",
-      desc: "As a leading social and behavioral change agency, we create data-driven strategies that inspire action and deliver real results.",
-      image: homeImages.whyImpala.drivingSocialChange
-    },
-    {
-      title: "Innovative Approach",
-      desc: "Utilizing cutting-edge techniques and technologies, we create impactful campaigns that drive behaviour change and resonate with audiences.",
-      image: homeImages.whyImpala.innovativeApproach
-    },
-    {
-      title: "PR Strategy",
-      desc: "Helping organizations build, strengthen, and protect their reputation through strategic public relations and brand positioning.",
-      image: homeImages.whyImpala.prStrategy
-    },
-    {
-      title: "Collaborative Partnerships",
-      desc: "Working closely with clients and partners to co-create solutions and maximize the reach and impact of campaigns.",
-      image: homeImages.whyImpala.collaborativePartnerships
-    },
-    {
-      title: "Cultural Sensitivity",
-      desc: "Navigating diverse cultural contexts to ensure communication strategies are relevant and sensitive to the communities they serve.",
-      image: homeImages.whyImpala.culturalSensitivity
-    },
-    {
-      title: "Message Development",
-      desc: "Crafting inspiring, compelling messages that resonate with target audiences, promote desired behaviour change, and address misconceptions.",
-      image: homeImages.whyImpala.messageDevelopment
-    }
-  ];
-
-  return (
-    <section className="bg-white py-10 sm:py-14 lg:py-16 section-shell">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-8 sm:mb-10">
-          <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
-            Why Impala
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-prestige-black mb-4">
-            Why Impala
-          </h2>
-          <p className="font-sans text-sm sm:text-base text-prestige-text max-w-3xl mx-auto leading-relaxed">
-            We understand the audience you aim to reach and the change you want to create.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-          {values.map((v, i) => (
-            <motion.div 
-              key={i}
-              className="relative h-60 sm:h-64 lg:h-56 overflow-hidden group cursor-pointer"
-            >
-              {/* Background Image */}
-              <div className="absolute inset-0 z-0">
-                <img 
-                  src={v.image} 
-                  alt={v.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-prestige-black/45 via-prestige-black/22 to-transparent group-hover:bg-primary/55 transition-colors duration-500" />
-              </div>
-
-              {/* Content */}
-              <div className="relative z-10 h-full p-4 sm:p-5 lg:p-6 flex flex-col justify-end text-white">
-                <h3 className="text-[15px] sm:text-base font-bold mb-2 leading-tight uppercase tracking-[0.08em]">{v.title}</h3>
-                
-                <motion.div
-                  initial={false}
-                  animate={{ height: expandedIndex === i ? 'auto' : 0, opacity: expandedIndex === i ? 1 : 0 }}
-                  className="overflow-hidden"
-                >
-                  <p className="font-sans text-[11px] sm:text-xs opacity-90 leading-relaxed mb-3">
-                    {v.desc}
-                  </p>
-                </motion.div>
-
-                <button 
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setExpandedIndex(expandedIndex === i ? null : i);
-                  }}
-                  className="mt-1.5 flex items-center gap-2 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.16em]"
-                >
-                  {expandedIndex === i ? 'Show Less' : 'More Info'} 
-                  <ChevronDown size={12} className={`transition-transform duration-300 ${expandedIndex === i ? 'rotate-180' : ''}`} />
-                </button>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-const ImpactStats = () => {
-  const stats = [
-    { value: "20+", label: "Years of Experience" },
-    { value: "50+", label: "Projects Delivered" },
-    { value: "1M+", label: "People Reached" }
-  ];
-
-  return (
-    <section className="bg-prestige-black section-space section-shell text-white text-center">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-8 sm:mb-10 lg:mb-12">
-          <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
-            Our Reach
-          </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
-            Amplifying Your Impact
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
-          {stats.map((s, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08, duration: 0.45 }}
-              whileHover={{ y: -6, scale: 1.02 }}
-              className="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 sm:px-5 sm:py-6 lg:px-6 lg:py-7 shadow-[0_18px_40px_rgba(0,0,0,0.18)] transition-all duration-300 hover:border-primary/70 hover:bg-white/8 hover:shadow-[0_24px_45px_rgba(0,0,0,0.24)]"
-            >
-              <div className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-primary mb-2">
-                {s.value}
-              </div>
-              <div className="font-sans text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70">
-                {s.label}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
+const HomeApproach = () => (
+  <section className="section-space section-shell bg-[#fffaf4]">
+    <motion.div
+      className="mx-auto max-w-4xl rounded-[2rem] border border-[#efd8be] bg-white p-5 text-center shadow-[0_18px_55px_rgba(61,36,15,0.08)] sm:p-8"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.35 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
+      <p className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">
+        Our Approach
+      </p>
+      <h2 className="font-display text-2xl font-semibold text-prestige-black sm:text-3xl lg:text-4xl">
+        Our Approach
+      </h2>
+      <p className="mx-auto mt-4 max-w-2xl font-sans text-sm leading-7 text-prestige-text sm:text-base">
+        Our work is grounded in deep contextual understanding across African markets, combined with global standards of strategy and delivery.
+      </p>
+      <p className="mx-auto mt-4 max-w-2xl rounded-2xl bg-[#fff3e7] px-4 py-3 font-sans text-sm font-semibold leading-6 text-[#7a4720]">
+        Guided by our BrandStory Forge™ Model, we move from insight to narrative to activation with clarity and structure.
+      </p>
+    </motion.div>
+  </section>
+);
 
 // --- Main App ---
 
 const FeaturedWork = () => {
   const projects = [
     {
-      title: "Roha Medical Campus",
-      category: "Health · Branding",
-      desc: "Brand positioning and narrative development for Ethiopia's premier medical hub.",
-      image: homeImages.featuredWork.rohaMedicalCampus
-    },
-    {
-      title: "MICHU / CIRHT",
-      category: "Reproductive Health",
-      desc: "Brand transformation for University of Michigan's clinic culture initiative.",
-      image: homeImages.featuredWork.michuCirht
-    },
-    {
-      title: "World Bank",
-      category: "Development · Finance",
-      desc: "Translating complex economic data into accessible public-facing narratives.",
+      title: "World Bank Group",
+      category: "Development · Policy",
+      desc: "Translating complex economic data into accessible narratives that support policy engagement.",
       image: homeImages.featuredWork.worldBank
+    },
+    {
+      title: "AWiB – ElevateHER Campaign",
+      category: "Gender · Campaigns",
+      desc: "Profiling women leaders and shaping narratives that inspire investment in leadership.",
+      image: ourWorkImages.caseStudies.awib[0]
+    },
+    {
+      title: "IWMI – Climate Narrative Project",
+      category: "Climate · Research",
+      desc: "Transforming climate research into human-centred stories for policy and sustainability action.",
+      image: ourWorkImages.caseStudies.iwmi[0]
     }
   ];
 
@@ -484,12 +319,15 @@ const FeaturedWork = () => {
               Selected Work
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black">
-              Impact, Across Sectors
+              Selected Work
             </h2>
+            <p className="mt-3 max-w-3xl font-sans text-sm leading-7 text-prestige-text sm:text-base">
+              We support institutions across Africa and internationally to communicate complex ideas with clarity and strategic intent.
+            </p>
           </div>
-          <button className="font-sans font-bold text-sm text-prestige-black hover:text-primary transition-colors flex items-center gap-2 group border-b-2 border-prestige-black hover:border-primary pb-1">
+          <Link to="/our-work" className="font-sans font-bold text-sm text-prestige-black hover:text-primary transition-colors flex items-center gap-2 group border-b-2 border-prestige-black hover:border-primary pb-1">
             Explore Portfolio <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
-          </button>
+          </Link>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
@@ -590,21 +428,14 @@ const HomeContent = () => {
   return (
     <>
       <Hero />
-      <div id="clients">
-        <ClientTicker />
-      </div>
       <div id="services">
         <Services />
       </div>
+      <HomeApproach />
       <WhoWeWorkWithStrip />
-      <WhyImpala />
-      <BrandStoryForge />
-      <PrioritiesSection />
-      <ImpactStats />
       <div id="work">
         <FeaturedWork />
       </div>
-      <RoadAhead />
       <FinalCallToAction />
     </>
   );
@@ -628,19 +459,6 @@ export default function App() {
         </main>
         <Footer />
 
-        {/* Custom Styles for Marquee */}
-        <style>{`
-          @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-          .animate-marquee {
-            animation: marquee 40s linear infinite;
-          }
-          .animate-marquee:hover {
-            animation-play-state: paused;
-          }
-        `}</style>
       </div>
     </Router>
   );
