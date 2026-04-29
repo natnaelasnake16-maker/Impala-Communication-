@@ -159,70 +159,6 @@ const OurServices = () => {
       </section>
 
 
-      {/* 3. Core Service Spotlight */}
-      <section className="section-space section-shell bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-14 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
-                Featured Capability
-              </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black mb-4 sm:mb-5 leading-tight">
-                Narrative Strategy
-              </h2>
-              <p className="font-sans text-sm sm:text-base text-prestige-text leading-relaxed mb-6">
-                Define your positioning, develop clear messaging frameworks, and map stakeholders to strengthen alignment and influence.
-              </p>
-              <div className="flex flex-wrap gap-2.5 mb-7">
-                {["Positioning", "Narrative Architecture", "Credibility", "Market Relevance"].map(chip => (
-                  <span key={chip} className="px-3 py-1.5 bg-prestige-gray text-prestige-black font-sans text-[10px] font-bold uppercase tracking-[0.16em] rounded-full">
-                    {chip}
-                  </span>
-                ))}
-              </div>
-              <button className="flex items-center gap-2 text-primary font-bold uppercase tracking-[0.16em] text-xs sm:text-sm group">
-                More Info <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </button>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="bg-prestige-cream p-5 sm:p-6 lg:p-8 rounded-[1.7rem] border border-prestige-gray relative overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 p-6 text-primary/10">
-                <Target size={96} />
-              </div>
-              <div className="relative z-10">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white flex items-center justify-center rounded-[1rem] shadow-xl text-primary mb-5 sm:mb-6">
-                  <Compass size={32} />
-                </div>
-                <div className="h-px w-20 bg-primary mb-6" />
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full" />
-                    <span className="font-sans text-xs font-bold text-prestige-black uppercase tracking-[0.16em]">Insight & Context</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full" />
-                    <span className="font-sans text-xs font-bold text-prestige-black uppercase tracking-[0.16em]">Narrative Development</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full" />
-                    <span className="font-sans text-xs font-bold text-prestige-black uppercase tracking-[0.16em]">Activation & Engagement</span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* 4. Services Grid */}
       <section className="section-space section-shell bg-prestige-gray">
         <div className="max-w-7xl mx-auto">
@@ -347,38 +283,6 @@ const OurServices = () => {
         </div>
       </section>
 
-      {/* 6. Why Our Services Work */}
-      <section className="section-space section-shell bg-prestige-cream">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-8 sm:mb-10 lg:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black">
-              Why this approach works
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
-            {whyUs.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white p-5 sm:p-6 lg:p-7 shadow-sm hover:shadow-xl transition-all duration-500 text-center flex flex-col items-center"
-              >
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-prestige-gray flex items-center justify-center rounded-full mb-5 group-hover:bg-primary/10 transition-colors">
-                  {item.icon}
-                </div>
-                <h3 className="text-lg font-bold text-prestige-black mb-3">{item.title}</h3>
-                <p className="font-sans text-sm text-prestige-text leading-relaxed">
-                  {item.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <FinalCallToAction />
     </div>
   );
 };

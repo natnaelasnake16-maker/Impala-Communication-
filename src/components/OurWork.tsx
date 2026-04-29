@@ -720,22 +720,6 @@ const CaseStudyCard = ({
                 <div className="space-y-5 sm:space-y-6">
                   <div>
                     <h5 className="mb-2 font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
-                      Key Actions
-                    </h5>
-                    <ul className="space-y-2">
-                      {project.solution.map((item) => (
-                        <li
-                          key={item}
-                          className="flex items-center gap-2.5 font-sans text-xs text-prestige-text sm:text-sm"
-                        >
-                          <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="mb-2 font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
                       Impact
                     </h5>
                     <p className="font-sans text-xs font-medium leading-relaxed text-prestige-text sm:text-sm">
@@ -745,44 +729,6 @@ const CaseStudyCard = ({
                 </div>
               </div>
 
-              <div className="mb-6 sm:mb-7">
-                <h5 className="mb-4 text-center font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
-                  Deliverables
-                </h5>
-                <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3 lg:grid-cols-4 xl:grid-cols-6">
-                  {project.deliverables.map((item) => (
-                    <div
-                      key={item.label}
-                      className="group flex flex-col items-center border border-prestige-gray bg-white p-3 text-center transition-colors hover:border-primary"
-                    >
-                      <div className="mb-2 text-primary transition-transform duration-300 group-hover:scale-110">
-                        {item.icon}
-                      </div>
-                      <span className="font-sans text-[9px] font-bold uppercase tracking-[0.16em] text-prestige-black">
-                        {item.label}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {project.relatedImages.length > 0 && (
-                <div className="scrollbar-hide flex gap-3 overflow-x-auto pb-1 sm:gap-4">
-                  {project.relatedImages.map((image, imageIndex) => (
-                    <div
-                      key={`${project.id}-${imageIndex}`}
-                      className="group aspect-video min-w-[180px] overflow-hidden rounded-xl shadow-lg sm:min-w-[220px] lg:min-w-[280px]"
-                    >
-                      <img
-                        src={image}
-                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        alt={`${project.title} visual ${imageIndex + 1}`}
-                        referrerPolicy="no-referrer"
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
             </div>
           </motion.div>
         )}
@@ -867,29 +813,6 @@ const OurWork = () => {
               We work across sectors and geographies, supporting institutions to communicate complex ideas with clarity and strategic direction.
             </p>
 
-            <div className="grid max-w-xl grid-cols-2 gap-2.5 border-t border-prestige-gray pt-5 sm:grid-cols-3 sm:gap-3 sm:pt-6">
-              {[
-                { val: "12+", label: "Years" },
-                { val: "100+", label: "Projects" },
-                { val: "1M+", label: "Reach" },
-              ].map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 + index * 0.08, duration: 0.35 }}
-                  whileHover={{ y: -4, scale: 1.02 }}
-                  className="rounded-2xl border border-prestige-gray bg-white px-3.5 py-3.5 shadow-sm transition-all duration-300 hover:border-primary/40 hover:shadow-[0_14px_30px_rgba(0,0,0,0.07)]"
-                >
-                  <span className="text-xl sm:text-2xl font-bold text-primary">
-                    {stat.val}
-                  </span>
-                  <span className="mt-1 block font-sans text-[9px] font-bold uppercase tracking-[0.18em] text-prestige-text opacity-70">
-                    {stat.label}
-                  </span>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
 
           <div className="relative hidden h-[460px] lg:block">
@@ -1034,7 +957,6 @@ const OurWork = () => {
         </div>
       </section>
 
-      <FinalCallToAction />
     </div>
   );
 };

@@ -307,109 +307,26 @@ const Services = () => {
   );
 };
 
-const WhyImpala = () => {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-
-  const values = [
-    {
-      title: "Context",
-      desc: "We begin with deep understanding of market dynamics, institutional priorities, and stakeholder expectations.",
-      image: homeImages.whyImpala.drivingSocialChange
-    },
-    {
-      title: "Strategy",
-      desc: "We define clear positioning and messaging systems that help organisations communicate with discipline.",
-      image: homeImages.whyImpala.innovativeApproach
-    },
-    {
-      title: "Influence",
-      desc: "We build communication that strengthens trust, relevance, and engagement with the audiences that matter.",
-      image: homeImages.whyImpala.prStrategy
-    },
-    {
-      title: "Alignment",
-      desc: "We help leadership, teams, and partners speak from one clear narrative foundation.",
-      image: homeImages.whyImpala.collaborativePartnerships
-    },
-    {
-      title: "Execution",
-      desc: "We turn strategy into content, campaigns, and engagement designed for real-world delivery.",
-      image: homeImages.whyImpala.culturalSensitivity
-    },
-    {
-      title: "Clarity",
-      desc: "We translate complex ideas into narratives that are structured, credible, and easy to act on.",
-      image: homeImages.whyImpala.messageDevelopment
-    }
-  ];
-
-  return (
-    <section className="bg-white py-10 sm:py-14 lg:py-16 section-shell">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-8 sm:mb-10">
-          <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
-            Our Approach
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-prestige-black mb-4">
-            Our Approach
-          </h2>
-          <p className="font-sans text-sm sm:text-base text-prestige-text max-w-3xl mx-auto leading-relaxed">
-            Our work is grounded in deep contextual understanding across African markets, combined with global standards of strategy and delivery.
-          </p>
-          <p className="font-sans text-sm sm:text-base text-prestige-text max-w-3xl mx-auto leading-relaxed mt-3">
-            Guided by our BrandStory Forge™ Model, we move from insight to narrative to activation with clarity and structure.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-          {values.map((v, i) => (
-            <motion.div 
-              key={i}
-              className="relative h-60 sm:h-64 lg:h-56 overflow-hidden group cursor-pointer"
-            >
-              {/* Background Image */}
-              <div className="absolute inset-0 z-0">
-                <img 
-                  src={v.image} 
-                  alt={v.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-prestige-black/45 via-prestige-black/22 to-transparent group-hover:bg-primary/55 transition-colors duration-500" />
-              </div>
-
-              {/* Content */}
-              <div className="relative z-10 h-full p-4 sm:p-5 lg:p-6 flex flex-col justify-end text-white">
-                <h3 className="text-[15px] sm:text-base font-bold mb-2 leading-tight uppercase tracking-[0.08em]">{v.title}</h3>
-                
-                <motion.div
-                  initial={false}
-                  animate={{ height: expandedIndex === i ? 'auto' : 0, opacity: expandedIndex === i ? 1 : 0 }}
-                  className="overflow-hidden"
-                >
-                  <p className="font-sans text-[11px] sm:text-xs opacity-90 leading-relaxed mb-3">
-                    {v.desc}
-                  </p>
-                </motion.div>
-
-                <button 
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setExpandedIndex(expandedIndex === i ? null : i);
-                  }}
-                  className="mt-1.5 flex items-center gap-2 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.16em]"
-                >
-                  {expandedIndex === i ? 'Show Less' : 'More Info'} 
-                  <ChevronDown size={12} className={`transition-transform duration-300 ${expandedIndex === i ? 'rotate-180' : ''}`} />
-                </button>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+const WhyImpala = () => (
+  <section className="bg-white py-10 sm:py-14 lg:py-16 section-shell">
+    <div className="max-w-7xl mx-auto">
+      <div className="text-center">
+        <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
+          Our Approach
+        </span>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-prestige-black mb-4">
+          Our Approach
+        </h2>
+        <p className="font-sans text-sm sm:text-base text-prestige-text max-w-3xl mx-auto leading-relaxed">
+          Our work is grounded in deep contextual understanding across African markets, combined with global standards of strategy and delivery.
+        </p>
+        <p className="font-sans text-sm sm:text-base text-prestige-text max-w-3xl mx-auto leading-relaxed mt-3">
+          Guided by our BrandStory Forge™ Model, we move from insight to narrative to activation with clarity and structure.
+        </p>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 const ImpactStats = () => {
   const stats = [
@@ -596,21 +513,14 @@ const HomeContent = () => {
   return (
     <>
       <Hero />
-      <div id="clients">
-        <ClientTicker />
-      </div>
       <div id="services">
         <Services />
       </div>
-      <WhoWeWorkWithStrip />
       <WhyImpala />
-      <BrandStoryForge />
-      <PrioritiesSection />
-      <ImpactStats />
+      <WhoWeWorkWithStrip />
       <div id="work">
         <FeaturedWork />
       </div>
-      <RoadAhead />
       <FinalCallToAction />
     </>
   );

@@ -99,24 +99,6 @@ const GetInTouch = () => {
               </div>
             </div>
 
-            <div>
-              <h3 className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-4">Follow Our Journey</h3>
-              <div className="flex gap-3">
-                {[
-                  { icon: <Linkedin size={20} />, href: "#" },
-                  { icon: <Instagram size={20} />, href: "#" },
-                  { icon: <Twitter size={20} />, href: "#" }
-                ].map((social, i) => (
-                  <a 
-                    key={i} 
-                    href={social.href}
-                    className="w-10 h-10 border border-prestige-gray flex items-center justify-center rounded-full text-prestige-black hover:bg-primary hover:border-primary hover:text-white transition-all duration-300"
-                  >
-                    {social.icon}
-                  </a>
-                ))}
-              </div>
-            </div>
           </motion.div>
 
           {/* Right: Simple Elegant Form */}
@@ -174,27 +156,6 @@ const GetInTouch = () => {
         </div>
       </section>
 
-      {/* 3. Inspirational Quote/Image Section */}
-      <section className="py-10 sm:py-14 lg:py-16 section-shell bg-prestige-cream/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="relative rounded-[1.4rem] sm:rounded-[2rem] lg:rounded-[2.4rem] overflow-hidden aspect-[5/6] sm:aspect-[16/10] lg:aspect-[18/8] group">
-            <img 
-              src={getInTouchImages.quote}
-              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-              alt="Team collaboration"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-prestige-black/55 via-prestige-black/18 to-transparent flex items-end p-4 sm:p-8 lg:p-12">
-              <div className="max-w-2xl">
-                <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white mb-3 sm:mb-4">
-                  "Communication is the bridge between complexity and clarity."
-                </h2>
-                <p className="font-sans text-white/60 uppercase tracking-[0.16em] text-xs sm:text-sm">— Nat Turner</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
