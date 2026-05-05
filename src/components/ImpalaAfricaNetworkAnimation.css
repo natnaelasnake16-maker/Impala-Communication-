@@ -1,0 +1,16 @@
+.impala-africa-network {
+  isolation: isolate;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .impala-africa-network canvas {
+    animation: none !important;
+  }
+}
+
+.impala-africa-network canvas {
+  touch-action: none;
+  outline: none;
+}

@@ -194,7 +194,7 @@ const Hero = () => {
     <section className="relative flex min-h-[92svh] items-center justify-center overflow-hidden sm:min-h-[96svh]">
       {/* Full Width Background Image */}
       <div className="absolute inset-0 z-0">
-        <motion.img 
+        <motion.img
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5 }}
@@ -207,7 +207,7 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-5 text-center text-white">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
