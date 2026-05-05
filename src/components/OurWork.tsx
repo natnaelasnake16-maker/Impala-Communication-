@@ -20,7 +20,7 @@ const caseStudies: CaseStudy[] = [
     tag: "Branding & Strategy",
     logoUrl: brandMarks.esdp,
     fallback: "ESDP",
-    image: ourWorkImages.caseStudies.esdp[0],
+    image: ourWorkImages.caseStudies.esdp[1],
     context: "A new development organisation needed a clear identity before public launch.",
     work: "Defined positioning, messaging, values, tone, and a launch-ready narrative system.",
     impact: "Created a unified communication foundation for stakeholder engagement.",

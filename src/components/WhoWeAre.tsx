@@ -1,14 +1,14 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import { 
-  PenTool, 
-  Film, 
-  Globe, 
-  Eye, 
-  Handshake, 
-  Network, 
-  BarChart3, 
-  Flame, 
+import {
+  PenTool,
+  Film,
+  Globe,
+  Eye,
+  Handshake,
+  Network,
+  BarChart3,
+  Flame,
   CheckCircle,
   ArrowRight,
   ChevronRight,
@@ -21,7 +21,7 @@ import {
   Activity,
   UserCheck,
   Leaf,
-  Smartphone
+  Smartphone,
 } from "lucide-react";
 import { whoWeAreImages } from "../lib/images";
 import FinalCallToAction from "./FinalCallToAction";
@@ -350,13 +350,28 @@ const WhoWeAre = () => {
                   <p className="max-w-lg font-sans text-xs leading-relaxed text-white/58 sm:text-sm">
                     Shaping narratives that strengthen visibility, credibility, and strategic engagement.
                   </p>
-                  <Link
-                    to="/get-in-touch"
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:bg-white hover:text-primary"
-                  >
-                    Work With Us
-                    <ArrowRight size={15} />
-                  </Link>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <a
+                      href="https://www.linkedin.com/in/meron-feleke"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/8 px-5 py-3 font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:border-white/40 hover:bg-white/14"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                        <rect x="2" y="9" width="4" height="12"/>
+                        <circle cx="4" cy="4" r="2"/>
+                      </svg>
+                      LinkedIn
+                    </a>
+                    <Link
+                      to="/get-in-touch"
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:bg-white hover:text-primary"
+                    >
+                      Work With Us
+                      <ArrowRight size={15} />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

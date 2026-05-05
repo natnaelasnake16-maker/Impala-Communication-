@@ -209,11 +209,12 @@ export const whoWeAreImages = {
 };
 
 export const ourServicesImages = {
+  hero: "https://github.com/natnaelasnake16-maker/impala-communication-images/raw/98e5341d4234770bcd8375c15075d829ca727cfc/archive/12771984205_8d3975e096_b.jpg",
   communityCollage: [
     archive("home-page/story.jpeg"),
     archive("home-page/colaborate.jpg"),
     archive("who-we-are/img-3238-scaled.jpg"),
-    archive("home-page/sport-show-national.jpg"),
+    archive("who-we-are/22977935673-6f69e9de57-o-980x653.jpg"),
   ],
 };
 

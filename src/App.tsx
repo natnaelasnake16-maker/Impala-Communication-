@@ -17,9 +17,8 @@ import PrioritiesSection from "./components/PrioritiesSection";
 import WhoWeWorkWithStrip from "./components/WhoWeWorkWithStrip";
 import { useState, useEffect } from "react";
 import { brandAssets, homeImages, homeTickerClients } from "./lib/images";
-import { 
-  ArrowRight, 
-  Menu, 
+import {
+  Menu,
   X, 
   Compass, 
   Radio, 
@@ -76,6 +75,26 @@ const BrandLogo = ({
   );
 };
 
+const TypewriterText = ({ text, delayOffset = 0 }: { text: string; delayOffset?: number }) => {
+  return (
+    <span className="block whitespace-pre-wrap">
+      {text.split("").map((char, index) => (
+        <motion.span
+          key={index}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.01,
+            delay: delayOffset + index * 0.04,
+          }}
+        >
+          {char}
+        </motion.span>
+      ))}
+    </span>
+  );
+};
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -103,11 +122,15 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-5 lg:px-6 flex justify-between items-center gap-3 sm:gap-4">
-        <Link to="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-3">
           <BrandLogo
             className="inline-flex"
             imageClassName="h-8 sm:h-10 lg:h-12 w-auto"
           />
+          <div className="text-primary font-sans text-[8px] sm:text-[9px] lg:text-[10px] font-semibold uppercase tracking-[0.1em] leading-tight flex flex-col hidden sm:flex mt-2.5 sm:mt-3 lg:mt-3.5">
+            <TypewriterText text="For When Communication" delayOffset={0.2} />
+            <TypewriterText text="Can Change Lives" delayOffset={0.2 + ("For When Communication".length * 0.04)} />
+          </div>
         </Link>
 
         {/* Desktop Nav */}
@@ -254,16 +277,19 @@ const Services = () => {
   const services = [
     {
       title: "Narrative Strategy",
+      href: "/our-services#narrative-strategy",
       icon: <Compass className="text-primary" size={32} />,
       desc: "Define your positioning, develop clear messaging, and map stakeholders to strengthen alignment and influence."
     },
     {
       title: "Strategic Communication",
+      href: "/our-services#strategic-communication",
       icon: <TrendingUp className="text-primary" size={32} />,
       desc: "Design and execute communication strategies that engage key stakeholders and audiences, including investors, policymakers, and communities."
     },
     {
       title: "Content & Campaigns",
+      href: "/our-services#content-campaigns",
       icon: <Handshake className="text-primary" size={32} />,
       desc: "Create high-impact content and campaigns that translate complex ideas into compelling narratives."
     }
@@ -298,9 +324,9 @@ const Services = () => {
               <p className="font-sans text-sm text-prestige-text leading-relaxed mb-5 sm:mb-6 flex-grow">
                 {s.desc}
               </p>
-              <button className="flex items-center gap-2 text-primary font-bold text-[10px] sm:text-xs uppercase tracking-[0.18em] group/btn">
+              <Link to={s.href} className="flex items-center gap-2 text-primary font-bold text-[10px] sm:text-xs uppercase tracking-[0.18em] group/btn">
                 More Info <ChevronRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
-              </button>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -443,9 +469,6 @@ const FeaturedWork = () => {
               <p className="font-sans text-sm text-prestige-text leading-relaxed mb-3">
                 {p.desc}
               </p>
-              <div className="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-[0.18em] opacity-0 group-hover:opacity-100 transition-opacity">
-                View Project <ArrowRight size={16} />
-              </div>
             </motion.div>
           ))}
         </div>
@@ -460,19 +483,43 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-10 lg:mb-12">
           <div className="col-span-1 md:col-span-2">
-            <BrandLogo
-              className="mb-4 inline-flex"
-              imageClassName="h-12 sm:h-14 w-auto"
-            />
+            <span className="mb-4 inline-flex">
+              <img
+                src="https://github.com/natnaelasnake16-maker/impala-communication-images/raw/main/white%20impala.png"
+                alt="Impala Communication logo"
+                className="h-12 sm:h-14 w-auto"
+                referrerPolicy="no-referrer"
+              />
+            </span>
             <p className="font-sans text-sm sm:text-base opacity-60 max-w-md leading-relaxed mb-6">
               Strategic communication and narrative advisory for institutions shaping how Africa is seen, understood, and engaged.
             </p>
-            <div className="flex gap-4">
-              {["FB", "IG", "TW", "YT"].map(s => (
-                <a key={s} href="#" className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300">
-                  <span className="text-xs font-bold">{s}</span>
-                </a>
-              ))}
+            <div className="flex gap-3">
+              <a
+                href="https://www.linkedin.com/company/impala-communication/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+              </a>
+              <a
+                href="https://www.youtube.com/user/terusew1"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+                  <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/>
+                </svg>
+              </a>
             </div>
           </div>
           
@@ -493,7 +540,6 @@ const Footer = () => {
             <ul className="flex flex-col gap-3 opacity-60 font-sans text-sm">
               <li>info@impalacommunication.com</li>
               <li>Addis Ababa, Ethiopia</li>
-              <li>+251 911 000 000</li>
             </ul>
           </div>
         </div>

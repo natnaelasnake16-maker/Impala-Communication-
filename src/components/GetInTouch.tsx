@@ -1,8 +1,27 @@
 import { motion } from "motion/react";
-import { CalendarDays, Mail, Send } from "lucide-react";
+import { useState, type FormEvent } from "react";
+import { Mail, Send } from "lucide-react";
 import { getInTouchImages } from "../lib/images";
 
 const GetInTouch = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("Strategic Communication");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    const body = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Topic: ${subject}`,
+      ``,
+      message,
+    ].join("\n");
+
+    window.location.href = `mailto:info@impalacommunication.com?cc=meron@impalacommunication.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
   return (
     <div className="min-h-screen bg-prestige-white">
       <section className="relative page-hero-space section-shell overflow-hidden bg-prestige-black text-white">
@@ -69,28 +88,6 @@ const GetInTouch = () => {
                   </span>
                 </span>
               </a>
-
-              <a
-                href="mailto:info@impalacommunication.com?subject=Schedule%20a%20Conversation"
-                className="group flex items-center justify-between gap-4 rounded-[1.35rem] border border-primary/20 bg-primary p-4 text-white shadow-[0_24px_70px_rgba(241,90,41,0.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-prestige-black hover:shadow-[0_26px_80px_rgba(26,18,12,0.2)] sm:p-5"
-              >
-                <span className="flex items-center gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/16 text-white backdrop-blur-sm sm:h-12 sm:w-12">
-                    <CalendarDays size={20} />
-                  </span>
-                  <span>
-                    <span className="mb-1 block font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-white/70">
-                      Preferred Next Step
-                    </span>
-                    <span className="text-base font-bold sm:text-lg">
-                      Schedule a Conversation
-                    </span>
-                  </span>
-                </span>
-                <span className="font-sans text-xl transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-              </a>
             </div>
           </motion.div>
 
@@ -100,7 +97,7 @@ const GetInTouch = () => {
             viewport={{ once: true }}
             className="rounded-[1.7rem] border border-prestige-gray bg-white p-5 shadow-2xl sm:p-6 lg:p-8"
           >
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
                 <div className="space-y-2">
                   <label className="font-sans text-[9px] font-bold uppercase tracking-[0.18em] text-prestige-text opacity-60">
@@ -108,7 +105,9 @@ const GetInTouch = () => {
                   </label>
                   <input
                     type="text"
-                    placeholder="John Doe"
+                    placeholder="Your Full Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     className="w-full border-b border-prestige-gray py-2.5 font-sans text-sm outline-none transition-colors focus:border-primary"
                   />
                 </div>
@@ -118,7 +117,9 @@ const GetInTouch = () => {
                   </label>
                   <input
                     type="email"
-                    placeholder="john@example.com"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="w-full border-b border-prestige-gray py-2.5 font-sans text-sm outline-none transition-colors focus:border-primary"
                   />
                 </div>
@@ -128,7 +129,11 @@ const GetInTouch = () => {
                 <label className="font-sans text-[9px] font-bold uppercase tracking-[0.18em] text-prestige-text opacity-60">
                   Subject
                 </label>
-                <select className="w-full border-b border-prestige-gray bg-transparent py-2.5 font-sans text-sm outline-none transition-colors focus:border-primary">
+                <select
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
+                  className="w-full border-b border-prestige-gray bg-transparent py-2.5 font-sans text-sm outline-none transition-colors focus:border-primary"
+                >
                   <option>Strategic Communication</option>
                   <option>Narrative Advisory</option>
                   <option>Partnership</option>
@@ -143,11 +148,16 @@ const GetInTouch = () => {
                 <textarea
                   rows={4}
                   placeholder="Tell us about your goals, audiences, or project."
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   className="w-full resize-none border-b border-prestige-gray py-2.5 font-sans text-sm outline-none transition-colors focus:border-primary"
                 />
               </div>
 
-              <button className="group flex w-full items-center justify-center gap-3 bg-primary py-3.5 font-display text-xs font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:bg-prestige-black sm:text-sm">
+              <button
+                type="submit"
+                className="group flex w-full items-center justify-center gap-3 bg-primary py-3.5 font-display text-xs font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:bg-prestige-black sm:text-sm"
+              >
                 Send Message
                 <Send
                   size={18}

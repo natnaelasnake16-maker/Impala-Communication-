@@ -1,12 +1,13 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import { ArrowRight, BarChart3, Compass, Flag, Radio } from "lucide-react";
+import { BarChart3, Compass, Flag, Radio } from "lucide-react";
 import { ourServicesImages } from "../lib/images";
 import BrandStoryForge from "./BrandStoryForge";
 
 const services = [
   {
     title: "Narrative Strategy",
+    slug: "narrative-strategy",
     desc: "Define your positioning, develop clear messaging frameworks, and map stakeholders to strengthen alignment and influence.",
     image: ourServicesImages.communityCollage[0],
     icon: Compass,
@@ -14,6 +15,7 @@ const services = [
   },
   {
     title: "Strategic Communication",
+    slug: "strategic-communication",
     desc: "Design and execute communication strategies that engage key stakeholders and audiences, including investors, policymakers, and communities.",
     image: ourServicesImages.communityCollage[1],
     icon: BarChart3,
@@ -21,6 +23,7 @@ const services = [
   },
   {
     title: "Content & Campaigns",
+    slug: "content-campaigns",
     desc: "Create high-impact storytelling, multimedia content, and campaigns that translate complex ideas into compelling narratives.",
     image: ourServicesImages.communityCollage[2],
     icon: Radio,
@@ -28,6 +31,7 @@ const services = [
   },
   {
     title: "Institutional Positioning",
+    slug: "institutional-positioning",
     desc: "Support organisations in positioning themselves within Africa’s evolving economic and investment landscape.",
     image: ourServicesImages.communityCollage[3],
     icon: Flag,
@@ -38,8 +42,17 @@ const services = [
 const OurServices = () => {
   return (
     <div className="bg-prestige-white">
-      <section className="relative page-hero-space section-shell overflow-hidden bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative page-hero-space section-shell overflow-hidden bg-prestige-black text-white">
+        <div className="absolute inset-0">
+          <img
+            src={ourServicesImages.hero}
+            alt="Our services background"
+            className="w-full h-full object-cover"
+            referrerPolicy="no-referrer"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-prestige-black/72 via-prestige-black/48 to-prestige-black/20" />
+        </div>
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-12">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -49,17 +62,17 @@ const OurServices = () => {
               <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.22em] text-primary mb-4 block">
                 Our Services
               </span>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-prestige-black mb-4 sm:mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
                 What We Do
               </h1>
-              <p className="font-sans text-sm sm:text-base lg:text-lg text-prestige-text mb-6 sm:mb-8 leading-relaxed max-w-xl">
+              <p className="font-sans text-sm sm:text-base lg:text-lg text-white/70 mb-6 sm:mb-8 leading-relaxed max-w-xl">
                 We provide strategic communication and narrative advisory to help institutions define positioning, align messaging, and engage key stakeholders and audiences effectively.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <a href="#services-list" className="w-full sm:w-auto text-center bg-primary text-white px-6 sm:px-8 py-3 sm:py-3.5 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-prestige-black transition-all duration-300 shadow-xl">
+                <a href="#services-list" className="w-full sm:w-auto text-center bg-primary text-white px-6 sm:px-8 py-3 sm:py-3.5 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-white hover:text-primary transition-all duration-300 shadow-xl">
                   Explore Services
                 </a>
-                <Link to="/get-in-touch" className="w-full sm:w-auto text-center border-2 border-prestige-black text-prestige-black px-6 sm:px-8 py-3 sm:py-3.5 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-prestige-black hover:text-white transition-all duration-300">
+                <Link to="/get-in-touch" className="w-full sm:w-auto text-center border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-3.5 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-white hover:text-prestige-black transition-all duration-300">
                   Start a Conversation
                 </Link>
               </div>
@@ -67,10 +80,9 @@ const OurServices = () => {
 
             <div className="relative hidden h-[420px] lg:block">
               {[
-                { icon: <Compass size={24} />, label: "Insight & Context", top: "10%", left: "20%", delay: 0 },
-                { icon: <BarChart3 size={24} />, label: "Narrative", top: "40%", left: "60%", delay: 0.2 },
-                { icon: <Radio size={24} />, label: "Systems", top: "70%", left: "15%", delay: 0.4 },
-                { icon: <Flag size={24} />, label: "Activation", top: "20%", left: "70%", delay: 0.6 },
+                { icon: <Compass size={24} />, label: "Narrative Strategy", top: "10%", left: "20%", delay: 0 },
+                { icon: <BarChart3 size={24} />, label: "Strategic Communication", top: "40%", left: "55%", delay: 0.2 },
+                { icon: <Flag size={24} />, label: "Institutional Positioning", top: "20%", left: "62%", delay: 0.4 },
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -115,6 +127,7 @@ const OurServices = () => {
               return (
                 <motion.article
                   key={service.title}
+                  id={service.slug}
                   initial={{ opacity: 0, y: 28 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.28 }}
@@ -159,10 +172,6 @@ const OurServices = () => {
                             {item}
                           </span>
                         ))}
-                      </div>
-                      <div className="mt-7 inline-flex items-center gap-2 font-sans text-xs font-bold uppercase tracking-[0.18em] text-primary">
-                        Service Area
-                        <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                       </div>
                     </div>
                   </div>
