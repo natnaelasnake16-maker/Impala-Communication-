@@ -221,7 +221,7 @@ const Hero = () => {
           </div>
           <h1 className="mb-4 text-[2.1rem] font-bold leading-[1.01] text-balance uppercase tracking-tight sm:mb-5 sm:text-[2.85rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4.7rem]">
             Shaping How Africa Is <br />
-            <span className="text-primary italic font-light">Seen and Understood</span>
+            <span className="text-[#ff6a1a] italic font-light drop-shadow-[0_0_18px_rgba(255,106,26,0.38)]">Seen and Understood</span>
           </h1>
           <p className="mx-auto mb-4 max-w-3xl font-sans text-sm leading-relaxed opacity-90 sm:mb-5 sm:text-base md:text-lg lg:text-[1.15rem]">
             We partner with institutions, governments, and businesses to define their positioning, craft strategic narratives, and engage key stakeholders and audiences across Africa and global markets.
