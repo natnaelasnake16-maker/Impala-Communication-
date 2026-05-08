@@ -168,7 +168,7 @@ export const clientWallClients = pickClients([
 ]);
 
 export const homeImages = {
-  hero: archive("gender-social-impact/colorff.png"),
+  hero: archive("home-page/Hero.png"),
   whyImpala: {
     collaborativePartnerships: archive("home-page/women.jpg"),
     culturalSensitivity: archive("home-page/23309275930-5dc32a26db-o-scaled.jpg"),

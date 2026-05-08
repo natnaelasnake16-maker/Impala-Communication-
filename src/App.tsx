@@ -200,7 +200,7 @@ const Hero = () => {
           transition={{ duration: 1.5 }}
           src={homeImages.hero}
           alt="Team Collaboration"
-          className="w-full h-full object-cover"
+          className="h-full w-full object-cover object-center"
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-prestige-black/45 via-prestige-black/28 to-prestige-black/12" />
