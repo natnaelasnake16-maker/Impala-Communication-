@@ -2,6 +2,8 @@ const REMOTE_IMAGE_REPO_BASE_URL =
   import.meta.env.VITE_IMAGE_REPO_BASE_URL ??
   "https://raw.githubusercontent.com/natnaelasnake16-maker/impala-communication-images/main";
 
+const MAIN_REPO_RAW_URL = "https://raw.githubusercontent.com/natnaelasnake16-maker/Impala-Communication-/main";
+
 const localAssetModules = import.meta.glob(
   "../../impala-communication-images/**/*.{png,jpg,jpeg,webp,avif,gif,svg}",
   { eager: true, import: "default" },
@@ -200,7 +202,7 @@ export const homeImages = {
 export const whoWeAreImages = {
   about: archive("who-we-are/bw-image.jpg"),
   hero: archive("who-we-are/impala-home.jpg"),
-  meronCEO: archive("Meron CEO.jpeg"),
+  meronCEO: `${MAIN_REPO_RAW_URL}/public/Meron-CEO.jpeg`,
   visualStrip: [
     archive("who-we-are/22977935673-6f69e9de57-o-980x653.jpg"),
     archive("who-we-are/img-2659-scaled.jpg"),
