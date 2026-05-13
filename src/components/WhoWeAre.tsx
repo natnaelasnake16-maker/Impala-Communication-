@@ -136,8 +136,9 @@ const WhoWeAre = () => {
                     Leadership
                   </p>
                   <p className="mt-1 text-xl font-bold leading-tight sm:text-2xl">
-                    Meron Feleke, CEO and Co-Founder
+                    Meron Feleke, <span className="text-sm font-normal sm:text-base opacity-80">CEO and Co-Founder</span>
                   </p>
+
                 </div>
               </div>
 
