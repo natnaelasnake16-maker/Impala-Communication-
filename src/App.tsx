@@ -262,10 +262,11 @@ const ClientTicker = () => {
             <img
               src={client.logoUrl}
               alt={client.alt}
-              className="h-6 w-full object-contain sm:h-7 lg:h-8"
+              className="h-10 w-full object-contain sm:h-12 lg:h-14"
               loading="lazy"
               referrerPolicy="no-referrer"
             />
+
           </div>
         ))}
       </div>

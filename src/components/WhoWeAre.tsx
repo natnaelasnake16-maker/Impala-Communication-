@@ -111,6 +111,101 @@ const WhoWeAre = () => {
         </div>
       </section>
 
+      {/* 5. Leadership */}
+      <section className="section-space section-shell bg-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 26 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.24 }}
+            transition={{ duration: 0.6 }}
+            className="relative overflow-hidden rounded-[2rem] bg-prestige-black text-white shadow-[0_30px_90px_rgba(10,10,10,0.22)]"
+          >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(241,90,41,0.34),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.12),transparent_32%)]" />
+            <div className="relative z-10 grid gap-0 lg:grid-cols-[0.88fr_1.12fr]">
+              <div className="relative min-h-[300px] overflow-hidden bg-prestige-black sm:min-h-[380px] lg:min-h-full">
+                <img
+                  src={whoWeAreImages.meronCEO}
+                  alt="Meron Feleke CEO"
+                  className="absolute inset-0 h-full w-full object-cover opacity-86"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-prestige-black via-prestige-black/18 to-transparent" />
+                <div className="absolute bottom-5 left-5 right-5 rounded-[1.4rem] border border-white/14 bg-white/10 p-4 backdrop-blur-md sm:bottom-7 sm:left-7 sm:right-7 sm:p-5">
+                  <p className="font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
+                    Leadership
+                  </p>
+                  <p className="mt-1 text-xl font-bold leading-tight sm:text-2xl">
+                    Meron Feleke
+                  </p>
+                </div>
+              </div>
+
+              <div className="px-5 py-7 sm:px-7 sm:py-9 lg:px-10 lg:py-12 xl:px-12">
+                <span className="mb-3 block font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-primary sm:text-xs">
+                  Strategic Leadership
+                </span>
+                <h2 className="max-w-3xl text-2xl font-bold leading-tight sm:text-3xl lg:text-4xl">
+                  Leadership built around influence, trust, and institutional clarity.
+                </h2>
+                <p className="mt-5 max-w-3xl font-sans text-sm leading-relaxed text-white/74 sm:text-base">
+                  Meron Feleke is an impact-driven communications strategist with over a decade of experience working across Africa and internationally. She has led high-level engagements with governments, multilateral institutions, and private sector leaders—shaping narratives that influence investment, policy, and public understanding.
+                </p>
+
+                <div className="mt-7 grid gap-3 sm:grid-cols-3">
+                  {[
+                    { value: "10+", label: "Years of experience" },
+                    { value: "Africa", label: "Regional perspective" },
+                    { value: "Global", label: "Institutional engagement" },
+                  ].map((stat) => (
+                    <div
+                      key={stat.label}
+                      className="rounded-[1.15rem] border border-white/10 bg-white/7 px-4 py-4"
+                    >
+                      <p className="font-display text-2xl font-bold text-primary">
+                        {stat.value}
+                      </p>
+                      <p className="mt-1 font-sans text-[10px] font-bold uppercase tracking-[0.16em] text-white/58">
+                        {stat.label}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-7 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="max-w-lg font-sans text-xs leading-relaxed text-white/58 sm:text-sm">
+                    Shaping narratives that strengthen visibility, credibility, and strategic engagement.
+                  </p>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <a
+                      href="https://www.linkedin.com/in/meron-feleke"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/8 px-5 py-3 font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:border-white/40 hover:bg-white/14"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                        <rect x="2" y="9" width="4" height="12"/>
+                        <circle cx="4" cy="4" r="2"/>
+                      </svg>
+                      LinkedIn
+                    </a>
+                    <Link
+                      to="/get-in-touch"
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:bg-white hover:text-primary"
+                    >
+                      Work With Us
+                      <ArrowRight size={15} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+
       {/* 2. About Impala - Story Section */}
       <section className="section-space section-shell">
         <div className="max-w-7xl mx-auto">
@@ -285,99 +380,7 @@ const WhoWeAre = () => {
         </div>
       </section>
 
-      {/* 5. Leadership */}
-      <section className="section-space section-shell bg-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 26 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.24 }}
-            transition={{ duration: 0.6 }}
-            className="relative overflow-hidden rounded-[2rem] bg-prestige-black text-white shadow-[0_30px_90px_rgba(10,10,10,0.22)]"
-          >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(241,90,41,0.34),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.12),transparent_32%)]" />
-            <div className="relative z-10 grid gap-0 lg:grid-cols-[0.88fr_1.12fr]">
-              <div className="relative min-h-[300px] overflow-hidden bg-prestige-black sm:min-h-[380px] lg:min-h-full">
-                <img
-                  src={whoWeAreImages.visualStrip[3]}
-                  alt="Impala leadership and production work"
-                  className="absolute inset-0 h-full w-full object-cover opacity-86"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-prestige-black via-prestige-black/18 to-transparent" />
-                <div className="absolute bottom-5 left-5 right-5 rounded-[1.4rem] border border-white/14 bg-white/10 p-4 backdrop-blur-md sm:bottom-7 sm:left-7 sm:right-7 sm:p-5">
-                  <p className="font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
-                    Leadership
-                  </p>
-                  <p className="mt-1 text-xl font-bold leading-tight sm:text-2xl">
-                    Meron Feleke
-                  </p>
-                </div>
-              </div>
 
-              <div className="px-5 py-7 sm:px-7 sm:py-9 lg:px-10 lg:py-12 xl:px-12">
-                <span className="mb-3 block font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-primary sm:text-xs">
-                  Strategic Leadership
-                </span>
-                <h2 className="max-w-3xl text-2xl font-bold leading-tight sm:text-3xl lg:text-4xl">
-                  Leadership built around influence, trust, and institutional clarity.
-                </h2>
-                <p className="mt-5 max-w-3xl font-sans text-sm leading-relaxed text-white/74 sm:text-base">
-                  Meron Feleke is an impact-driven communications strategist with over a decade of experience working across Africa and internationally. She has led high-level engagements with governments, multilateral institutions, and private sector leaders—shaping narratives that influence investment, policy, and public understanding.
-                </p>
-
-                <div className="mt-7 grid gap-3 sm:grid-cols-3">
-                  {[
-                    { value: "10+", label: "Years of experience" },
-                    { value: "Africa", label: "Regional perspective" },
-                    { value: "Global", label: "Institutional engagement" },
-                  ].map((stat) => (
-                    <div
-                      key={stat.label}
-                      className="rounded-[1.15rem] border border-white/10 bg-white/7 px-4 py-4"
-                    >
-                      <p className="font-display text-2xl font-bold text-primary">
-                        {stat.value}
-                      </p>
-                      <p className="mt-1 font-sans text-[10px] font-bold uppercase tracking-[0.16em] text-white/58">
-                        {stat.label}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-7 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="max-w-lg font-sans text-xs leading-relaxed text-white/58 sm:text-sm">
-                    Shaping narratives that strengthen visibility, credibility, and strategic engagement.
-                  </p>
-                  <div className="flex flex-wrap items-center gap-3">
-                    <a
-                      href="https://www.linkedin.com/in/meron-feleke"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/8 px-5 py-3 font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:border-white/40 hover:bg-white/14"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                        <rect x="2" y="9" width="4" height="12"/>
-                        <circle cx="4" cy="4" r="2"/>
-                      </svg>
-                      LinkedIn
-                    </a>
-                    <Link
-                      to="/get-in-touch"
-                      className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:bg-white hover:text-primary"
-                    >
-                      Work With Us
-                      <ArrowRight size={15} />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
     </div>
   );

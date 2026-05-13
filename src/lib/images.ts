@@ -200,6 +200,7 @@ export const homeImages = {
 export const whoWeAreImages = {
   about: archive("who-we-are/bw-image.jpg"),
   hero: archive("who-we-are/impala-home.jpg"),
+  meronCEO: archive("Meron CEO.jpeg"),
   visualStrip: [
     archive("who-we-are/22977935673-6f69e9de57-o-980x653.jpg"),
     archive("who-we-are/img-2659-scaled.jpg"),
@@ -207,6 +208,7 @@ export const whoWeAreImages = {
     archive("who-we-are/filming.jpg"),
   ],
 };
+
 
 export const ourServicesImages = {
   hero: "https://github.com/natnaelasnake16-maker/impala-communication-images/raw/98e5341d4234770bcd8375c15075d829ca727cfc/archive/12771984205_8d3975e096_b.jpg",
