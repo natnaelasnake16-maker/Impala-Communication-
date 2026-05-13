@@ -136,7 +136,7 @@ const WhoWeAre = () => {
                     Leadership
                   </p>
                   <p className="mt-1 text-xl font-bold leading-tight sm:text-2xl">
-                    Meron Feleke
+                    Meron Feleke, CEO and Co-Founder
                   </p>
                 </div>
               </div>
@@ -149,12 +149,12 @@ const WhoWeAre = () => {
                   Leadership built around influence, trust, and institutional clarity.
                 </h2>
                 <p className="mt-5 max-w-3xl font-sans text-sm leading-relaxed text-white/74 sm:text-base">
-                  Meron Feleke is an impact-driven communications strategist with over a decade of experience working across Africa and internationally. She has led high-level engagements with governments, multilateral institutions, and private sector leaders—shaping narratives that influence investment, policy, and public understanding.
+                  Meron Feleke is an impact-driven communications strategist with 15+ years of experience working across Africa and internationally. She has led high-level engagements with governments, multilateral institutions, and private sector leaders—shaping narratives that influence investment, policy, and public understanding.
                 </p>
 
                 <div className="mt-7 grid gap-3 sm:grid-cols-3">
                   {[
-                    { value: "10+", label: "Years of experience" },
+                    { value: "15+", label: "Years of experience" },
                     { value: "Africa", label: "Regional perspective" },
                     { value: "Global", label: "Institutional engagement" },
                   ].map((stat) => (
