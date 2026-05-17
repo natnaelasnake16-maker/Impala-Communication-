@@ -127,11 +127,11 @@ const WhoWeAre = () => {
                 <img
                   src={whoWeAreImages.meronCEO}
                   alt="Meron Feleke CEO"
-                  className="absolute inset-0 h-full w-full object-cover opacity-86"
-                  style={{ objectPosition: "center 10%", transform: "scale(1.18)", transformOrigin: "center 20%" }}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  style={{ objectPosition: "center 55%" }}
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-prestige-black via-prestige-black/18 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-prestige-black/70 via-transparent to-transparent" />
                 <div className="absolute bottom-5 left-5 right-5 rounded-[1.4rem] border border-white/14 bg-white/10 p-4 backdrop-blur-md sm:bottom-7 sm:left-7 sm:right-7 sm:p-5">
                   <p className="font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
                     Leadership
