@@ -13,7 +13,7 @@ const initiatives = [
   {
     title: "Africa Agriculture Investment Summit 2026 – London",
     description:
-      "Serving as strategic curator and communication partner — shaping investment and sustainability narratives.",
+      "Serving as strategic curator and communication partner, shaping investment and sustainability narratives.",
     icon: Globe2,
     gradient:
       "linear-gradient(135deg, rgba(13,95,120,0.92), rgba(20,126,149,0.9), rgba(44,167,152,0.88))",
@@ -48,7 +48,7 @@ export default function RoadAhead() {
             Building the Bridge Between Africa and the World
           </h2>
           <p className="font-sans text-sm sm:text-base text-prestige-text leading-relaxed">
-            Impala Communication is evolving beyond a communications agency — becoming a platform that connects Africa’s opportunities with global investors, innovators, and change-makers.
+            Impala Communication is evolving beyond a communications agency, becoming a platform that connects Africa’s opportunities with global investors, innovators, and change-makers.
           </p>
         </div>
 

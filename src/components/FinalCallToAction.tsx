@@ -22,7 +22,7 @@ export default function FinalCallToAction() {
               Ready to define your narrative and strengthen your positioning?
             </h2>
             <p className="mt-5 max-w-xl font-sans text-sm leading-relaxed text-white/74 sm:mt-6 sm:text-base lg:text-lg">
-              Let’s shape Africa’s next chapter — together.
+              Let’s shape Africa’s next chapter together.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row">

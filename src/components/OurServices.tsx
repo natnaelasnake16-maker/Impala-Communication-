@@ -6,36 +6,36 @@ import BrandStoryForge from "./BrandStoryForge";
 
 const services = [
   {
-    title: "Narrative Strategy",
-    slug: "narrative-strategy",
-    desc: "Define your positioning, develop clear messaging frameworks, and map stakeholders to strengthen alignment and influence.",
-    image: ourServicesImages.communityCollage[0],
-    icon: Compass,
-    proofRefs: ["Positioning", "Messaging", "Stakeholders"],
-  },
-  {
     title: "Strategic Communication",
     slug: "strategic-communication",
     desc: "Design and execute communication strategies that engage key stakeholders and audiences, including investors, policymakers, and communities.",
-    image: ourServicesImages.communityCollage[1],
+    image: ourServicesImages.communityCollage[0],
     icon: BarChart3,
     proofRefs: ["Strategy", "Engagement", "Influence"],
-  },
-  {
-    title: "Content & Campaigns",
-    slug: "content-campaigns",
-    desc: "Create high-impact storytelling, multimedia content, and campaigns that translate complex ideas into compelling narratives.",
-    image: ourServicesImages.communityCollage[2],
-    icon: Radio,
-    proofRefs: ["Storytelling", "Campaigns", "Content"],
   },
   {
     title: "Institutional Positioning",
     slug: "institutional-positioning",
     desc: "Support organisations in positioning themselves within Africa’s evolving economic and investment landscape.",
-    image: ourServicesImages.communityCollage[3],
+    image: ourServicesImages.communityCollage[1],
     icon: Flag,
     proofRefs: ["Markets", "Credibility", "Leadership"],
+  },
+  {
+    title: "Narrative Strategy",
+    slug: "narrative-strategy",
+    desc: "Define your positioning, develop clear messaging frameworks, and map stakeholders to strengthen alignment and influence.",
+    image: ourServicesImages.communityCollage[2],
+    icon: Compass,
+    proofRefs: ["Positioning", "Messaging", "Stakeholders"],
+  },
+  {
+    title: "Content & Campaigns",
+    slug: "content-campaigns",
+    desc: "Create high-impact storytelling, multimedia content, and campaigns that translate complex ideas into compelling narratives.",
+    image: ourServicesImages.communityCollage[3],
+    icon: Radio,
+    proofRefs: ["Storytelling", "Campaigns", "Content"],
   },
 ];
 

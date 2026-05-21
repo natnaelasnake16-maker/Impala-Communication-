@@ -151,7 +151,7 @@ const WhoWeAre = () => {
                   Leadership built around influence, trust, and institutional clarity.
                 </h2>
                 <p className="mt-5 max-w-3xl font-sans text-sm leading-relaxed text-white/74 sm:text-base">
-                  Meron Feleke is an impact-driven communications strategist with 15+ years of experience working across Africa and internationally. She has led high-level engagements with governments, multilateral institutions, and private sector leaders—shaping narratives that influence investment, policy, and public understanding.
+                  Meron Feleke is an impact-driven communications strategist with 15+ years of experience working across Africa and internationally. She has led high-level engagements with governments, multilateral institutions, and private sector leaders, shaping narratives that influence investment, policy, and public understanding.
                 </p>
 
                 <div className="mt-7 grid gap-3 sm:grid-cols-3">
@@ -242,7 +242,7 @@ const WhoWeAre = () => {
               </h2>
               <div className="font-sans text-prestige-text space-y-4 sm:space-y-5 leading-relaxed text-sm sm:text-base">
                 <p>
-                  Our work sits at the intersection of context, strategy, and influence—bridging deep local insight with global standards of communication and delivery.
+                  Our work sits at the intersection of context, strategy, and influence, bridging deep local insight with global standards of communication and delivery.
                 </p>
               </div>
             </motion.div>
@@ -266,7 +266,7 @@ const WhoWeAre = () => {
               How We Work
             </h2>
             <p className="font-sans text-sm sm:text-base text-white/74 leading-relaxed max-w-3xl">
-              Our approach combines insight, narrative development, and strategic execution—ensuring communication is aligned, consistent, and impactful. This is guided by our BrandStory Forge™ Model, a structured framework that connects strategy to delivery.
+              Our approach combines insight, narrative development, and strategic execution, ensuring communication is aligned, consistent, and impactful. This is guided by our BrandStory Forge™ Model, a structured framework that connects strategy to delivery.
             </p>
           </motion.div>
 

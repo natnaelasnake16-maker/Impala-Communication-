@@ -307,7 +307,7 @@ const Services = () => {
             What We Do
           </h2>
           <p className="font-sans text-sm sm:text-base text-prestige-text max-w-3xl mx-auto leading-relaxed">
-            We translate complexity into clarity—helping organisations define their role, articulate their value, and engage the audiences that matter.
+            We translate complexity into clarity, helping organisations define their role, articulate their value, and engage the audiences that matter.
           </p>
         </div>
 

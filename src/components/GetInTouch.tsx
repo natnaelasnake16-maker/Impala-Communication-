@@ -48,7 +48,7 @@ const GetInTouch = () => {
               Work With <span className="text-primary italic">Us</span>
             </h1>
             <p className="font-sans text-sm leading-relaxed text-white/70 sm:text-base lg:text-lg">
-              If you are looking to define your narrative, strengthen your positioning, or engage key stakeholders and audiences—we would be glad to connect.
+              If you are looking to define your narrative, strengthen your positioning, or engage key stakeholders and audiences, we would be glad to connect.
             </p>
           </motion.div>
         </div>
