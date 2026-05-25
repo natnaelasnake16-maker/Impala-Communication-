@@ -256,11 +256,20 @@ export const brandMarks = {
   acsis: archive("clients-logo/acsis-logo.png"),
   awib: archive("clients-logo/awib-logo.png"),
   cirht: archive("clients-logo/cirht.png"),
+  dereja: archive("clients-logo/dereja-mastercard-foundation.jpeg"),
   esdp: archive("clients-logo/esdp-logo-1.png"),
   ewla: archive("clients-logo/ewla-logo.jpg"),
+  financialSector: archive(
+    "clients-logo/financial-sector-engagement-ethiopia.webp",
+  ),
+  ghanaCocoa: archive("clients-logo/ghana-cocoa-marketing-company.jpeg"),
+  haset: archive("clients-logo/haset.png"),
   iwmi: archive("clients-logo/iwmi.png"),
   lonadd: archive("clients-logo/LonAdd.png"),
   roha: archive("clients-logo/roha-medical-campus-plc.webp"),
+  ukBlackBusiness: archive(
+    "clients-logo/uk-black-business-entrepreneurs-conference.png",
+  ),
   worldBank: archive("clients-logo/worldbank.png"),
 };
 

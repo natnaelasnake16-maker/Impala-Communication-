@@ -45,6 +45,7 @@ const caseStudies: CaseStudy[] = [
   {
     client: "Ghana Cocoa Marketing Company (UK & Ghana)",
     tag: "Current Project",
+    logoUrl: brandMarks.ghanaCocoa,
     fallback: "GCMC",
     context: "Ghana’s cocoa story needed global framing across sustainability and diaspora engagement.",
     work: "Built sector storytelling around heritage, sustainability, and market relevance.",
@@ -53,6 +54,7 @@ const caseStudies: CaseStudy[] = [
   {
     client: "Financial Sector Engagement (Ethiopia)",
     tag: "Current Focus",
+    logoUrl: brandMarks.financialSector,
     fallback: "FSE",
     context: "Financial reform needed clearer communication for investors, regulators, and public audiences.",
     work: "Structured narratives around banking reform, Islamic finance, and capital-market readiness.",
@@ -61,6 +63,7 @@ const caseStudies: CaseStudy[] = [
   {
     client: "Haset",
     tag: "Portfolio Project",
+    logoUrl: brandMarks.haset,
     fallback: "HAS",
     context: "Community-focused work needed clearer public positioning.",
     work: "Clarified core messaging and audience relevance.",
@@ -69,6 +72,7 @@ const caseStudies: CaseStudy[] = [
   {
     client: "UK Black Business Entrepreneurs Conference & Africa Business Platform",
     tag: "Partnership",
+    logoUrl: brandMarks.ukBlackBusiness,
     fallback: "UKB",
     context: "African opportunities needed stronger placement in international investment platforms.",
     work: "Integrated African narratives into conference positioning and stakeholder communication.",
@@ -126,6 +130,7 @@ const caseStudies: CaseStudy[] = [
   {
     client: "Dereja (Mastercard Foundation)",
     tag: "Completed",
+    logoUrl: brandMarks.dereja,
     fallback: "DE",
     context: "Youth employability work needed stories that built confidence and readiness.",
     work: "Created narratives connecting youth potential with practical career pathways.",
@@ -152,30 +157,97 @@ const caseStudies: CaseStudy[] = [
   },
 ];
 
-const LogoBadge = ({
+const BrandMark = ({
   fallback,
   logoUrl,
+  placement,
   title,
 }: {
   fallback: string;
   logoUrl?: string;
+  placement: "overlay" | "stage";
   title: string;
-}) => (
-  <div className="flex h-12 w-28 shrink-0 items-center justify-center rounded-[1rem] border border-prestige-gray bg-prestige-cream/95 px-3 shadow-sm">
-    {logoUrl ? (
-      <img
-        src={logoUrl}
-        alt={`${title} logo`}
-        className="max-h-7 w-full object-contain"
-        referrerPolicy="no-referrer"
-      />
-    ) : (
-      <span className="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-prestige-black">
-        {fallback}
-      </span>
-    )}
-  </div>
-);
+}) => {
+  const isStage = placement === "stage";
+
+  return (
+    <div
+      className={`flex shrink-0 items-center justify-center border bg-white/94 shadow-[0_18px_46px_rgba(26,18,12,0.12)] backdrop-blur-md ${
+        isStage
+          ? "relative z-10 h-36 w-[94%] max-w-[21rem] rounded-[1rem] border-white px-4 py-4 sm:h-40"
+          : "min-h-[4.65rem] w-[min(78%,15.5rem)] rounded-[0.95rem] border-white/70 px-5 py-3"
+      }`}
+    >
+      {logoUrl ? (
+        <img
+          src={logoUrl}
+          alt={`${title} logo`}
+          className={`w-full object-contain ${
+            isStage ? "max-h-28 sm:max-h-32" : "max-h-12 sm:max-h-14"
+          }`}
+          referrerPolicy="no-referrer"
+        />
+      ) : (
+        <span
+          className={`font-sans font-bold uppercase text-prestige-black ${
+            isStage
+              ? "text-3xl tracking-[0.18em] sm:text-4xl"
+              : "text-base tracking-[0.2em]"
+          }`}
+        >
+          {fallback}
+        </span>
+      )}
+    </div>
+  );
+};
+
+const ProjectVisual = ({ project }: { project: CaseStudy }) => {
+  const hasImage = Boolean(project.image);
+
+  return (
+    <div
+      className={`relative flex min-h-[220px] items-center justify-center overflow-hidden rounded-[1.05rem] border md:min-h-full ${
+        hasImage
+          ? "border-white/10 bg-prestige-black"
+          : "border-prestige-gray bg-[linear-gradient(135deg,#f8f3ed_0%,#fffaf8_47%,#efe3d7_100%)]"
+      }`}
+    >
+      {hasImage ? (
+        <>
+          <img
+            src={project.image}
+            alt={project.client}
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            referrerPolicy="no-referrer"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-prestige-black/62 via-prestige-black/10 to-transparent" />
+          <div className="absolute inset-x-4 bottom-4">
+            <BrandMark
+              fallback={project.fallback}
+              logoUrl={project.logoUrl}
+              placement="overlay"
+              title={project.client}
+            />
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-primary/12 blur-2xl" />
+          <div className="absolute -bottom-20 left-0 h-48 w-48 rounded-full bg-prestige-black/6 blur-3xl" />
+          <div className="absolute inset-x-8 top-8 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+          <div className="absolute inset-x-10 bottom-8 h-px bg-gradient-to-r from-transparent via-prestige-black/12 to-transparent" />
+          <BrandMark
+            fallback={project.fallback}
+            logoUrl={project.logoUrl}
+            placement="stage"
+            title={project.client}
+          />
+        </>
+      )}
+    </div>
+  );
+};
 
 const Field = ({ label, text }: { label: string; text: string }) => (
   <div className="space-y-1.5">
@@ -264,42 +336,13 @@ const OurWork = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ delay: index * 0.035, duration: 0.45 }}
-                className="group relative overflow-hidden rounded-[1.55rem] border border-prestige-gray bg-white p-3 shadow-[0_18px_50px_rgba(26,18,12,0.07)] transition-all duration-500 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_24px_70px_rgba(241,90,41,0.13)] sm:p-4"
+                className="group relative overflow-hidden rounded-[1.25rem] border border-prestige-gray bg-white p-3 shadow-[0_18px_50px_rgba(26,18,12,0.07)] transition-all duration-500 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_24px_70px_rgba(241,90,41,0.13)] sm:p-4"
               >
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(241,90,41,0.12),transparent_34%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                <div className="relative z-10 grid gap-4 sm:grid-cols-[0.78fr_1.22fr]">
-                  <div className="relative min-h-[150px] overflow-hidden rounded-[1.15rem] bg-[linear-gradient(135deg,#f6efe7_0%,#fffaf5_50%,#efe3d8_100%)] sm:min-h-full">
-                    {project.image ? (
-                      <img
-                        src={project.image}
-                        alt={project.client}
-                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        referrerPolicy="no-referrer"
-                      />
-                    ) : (
-                      <div className="flex h-full min-h-[150px] items-center justify-center px-5">
-                        <LogoBadge
-                          fallback={project.fallback}
-                          logoUrl={project.logoUrl}
-                          title={project.client}
-                        />
-                      </div>
-                    )}
-                    {project.image && (
-                      <>
-                        <div className="absolute inset-0 bg-gradient-to-t from-prestige-black/50 via-transparent to-transparent" />
-                        <div className="absolute bottom-3 left-3">
-                          <LogoBadge
-                            fallback={project.fallback}
-                            logoUrl={project.logoUrl}
-                            title={project.client}
-                          />
-                        </div>
-                      </>
-                    )}
-                  </div>
+                <div className="relative z-10 grid gap-4 md:grid-cols-[0.92fr_1.08fr]">
+                  <ProjectVisual project={project} />
 
-                  <div className="flex flex-col gap-4 px-1 py-1 sm:px-2">
+                  <div className="flex min-w-0 flex-col gap-4 px-1 py-1 sm:px-2">
                     <div className="flex items-start justify-between gap-3">
                       <div>
                         <span className="mb-2 inline-flex rounded-full border border-primary/18 bg-primary/8 px-3 py-1 font-sans text-[9px] font-bold uppercase tracking-[0.16em] text-primary">
