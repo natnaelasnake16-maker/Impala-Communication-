@@ -17,21 +17,28 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   {
     client: "ESDP",
-    tag: "Branding & Strategy",
+    tag: "Strategic Narrative",
     logoUrl: brandMarks.esdp,
     fallback: "ESDP",
     image: ourWorkImages.caseStudies.esdp[1],
-    context: "A new development organisation needed a clear identity before public launch.",
-    work: "Defined positioning, messaging, values, tone, and a launch-ready narrative system.",
-    impact: "Created a unified communication foundation for stakeholder engagement.",
+    context:
+      "A European supplier diversity initiative required a strategic identity and engagement framework ahead of expansion into France, the Netherlands, and Germany, where diversity and minority business narratives differ significantly across markets.",
+    work:
+      "Designed the programme's positioning, messaging architecture, values, tone of voice, and launch narrative, alongside culturally informed communication strategies tailored to the realities of Black and minority-owned business ecosystems in each country.",
+    impact:
+      "Created a market-sensitive communication foundation that supported international rollout with clarity, relevance, and credibility.",
   },
   {
     client: "African Business Magazine – Ethiopia Representation",
-    tag: "Partnership",
+    tag: "Institutional Profiling",
+    logoUrl: brandMarks.africanBusiness,
     fallback: "ABM",
-    context: "Ethiopia needed stronger visibility within African and global business conversations.",
-    work: "Developed institutional profiling and investment-facing narrative support.",
-    impact: "Positioned Ethiopia’s growth story for investor and policy audiences.",
+    context:
+      "Ethiopia needed stronger representation within continental business discourse and investor-facing editorial platforms.",
+    work:
+      "Positioned institutions, leaders, and market developments within African Business Magazine's ecosystem through profile development, editorial alignment, and investment-relevant market framing.",
+    impact:
+      "Expanded Ethiopia's visibility in a platform read by influential business, policy, and investment audiences.",
   },
   {
     client: "LonAdd HR Consultancy",
@@ -52,22 +59,17 @@ const caseStudies: CaseStudy[] = [
     impact: "Reframed cocoa as an economic, cultural, and sustainability narrative.",
   },
   {
-    client: "Financial Sector Engagement (Ethiopia)",
-    tag: "Current Focus",
-    logoUrl: brandMarks.financialSector,
-    fallback: "FSE",
-    context: "Financial reform needed clearer communication for investors, regulators, and public audiences.",
-    work: "Structured narratives around banking reform, Islamic finance, and capital-market readiness.",
-    impact: "Made sector momentum easier to understand and engage.",
-  },
-  {
-    client: "Haset",
-    tag: "Portfolio Project",
+    client: "Haset – Women of Excellence Platform",
+    tag: "Leadership Visibility",
     logoUrl: brandMarks.haset,
     fallback: "HAS",
-    context: "Community-focused work needed clearer public positioning.",
-    work: "Clarified core messaging and audience relevance.",
-    impact: "Improved recognition of the organisation’s role and value.",
+    image: ourWorkImages.caseStudies.awib[1],
+    context:
+      "AWiB's Haset platform needed a stronger editorial and visibility framework to position women leaders as credible drivers of business, leadership, and economic influence.",
+    work:
+      "Profiled more than 60 Women of Excellence and shaped the platform's narrative direction, editorial framing, and visibility strategy through a long-term partnership with AWiB.",
+    impact:
+      "Elevated women leaders as high-value voices in business and public life while strengthening AWiB's role in shaping that conversation.",
   },
   {
     client: "UK Black Business Entrepreneurs Conference & Africa Business Platform",

@@ -50,8 +50,14 @@ export const brandAssets = {
 };
 
 export const clientLogos = {
+  "african-business-magazine": clientLogo(
+    "african-business-magazine",
+    "African Business Magazine",
+    "african-business-magazine.png",
+  ),
   amref: clientLogo("amref", "AMREF"),
   "african-union": clientLogo("african-union", "African Union"),
+  awib: clientLogo("awib", "AWiB", "awib.png"),
   "bill-and-melinda-gates-foundation": clientLogo(
     "bill-and-melinda-gates-foundation",
     "Bill & Melinda Gates Foundation",
@@ -61,12 +67,19 @@ export const clientLogos = {
   dkt: clientLogo("dkt", "DKT", "dkt.jpg"),
   ecx: clientLogo("ecx", "ECX", "ecx.jpg"),
   entro: clientLogo("entro", "ENTRO"),
+  esdp: clientLogo("esdp", "ESDP", "esdp.png"),
   "ethiopian-airlines": clientLogo("ethiopian-airlines", "Ethiopian Airlines"),
   "european-union": clientLogo(
     "european-union",
     "European Union",
     "european-union.jpeg",
   ),
+  "ghana-cocoa": clientLogo(
+    "ghana-cocoa",
+    "Ghana Cocoa Marketing Company",
+    "ghana-cocoa-marketing-company.jpeg",
+  ),
+  haset: clientLogo("haset", "Haset", "haset.png"),
   ilo: clientLogo("ilo", "ILO", "ilo.webp"),
   lonadd: clientLogo("lonadd", "LonAdd"),
   "nile-basin-initiative": clientLogo(
@@ -91,22 +104,26 @@ export const homeTickerClients = pickClients([
   "world-bank",
   "ilo",
   "amref",
+  "awib",
+  "african-business-magazine",
   "african-union",
   "european-union",
   "ethiopian-airlines",
   "who",
   "entro",
+  "ghana-cocoa",
   "zemen-bank",
   "cirht",
 ]);
 
 export const featuredClientStrip = pickClients([
+  "awib",
+  "african-business-magazine",
+  "lonadd",
+  "ghana-cocoa",
+  "esdp",
+  "haset",
   "world-bank",
-  "african-union",
-  "who",
-  "unicef",
-  "european-union",
-  "ethiopian-airlines",
 ]);
 
 export const clientGroups = [
@@ -148,6 +165,12 @@ export const clientGroups = [
 ];
 
 export const clientWallClients = pickClients([
+  "awib",
+  "african-business-magazine",
+  "esdp",
+  "ghana-cocoa",
+  "haset",
+  "lonadd",
   "world-bank",
   "who",
   "european-union",
@@ -165,7 +188,6 @@ export const clientWallClients = pickClients([
   "technoserve",
   "cirht",
   "zemen-bank",
-  "lonadd",
 ]);
 
 export const homeImages = {
@@ -192,6 +214,7 @@ export const homeImages = {
     youthEmployment: archive("home-page/youth.jpg"),
   },
   featuredWork: {
+    awib: archive("our-works/awib-woe-scaled.jpg"),
     michuCirht: archive("our-works/michu.jpg"),
     rohaMedicalCampus: archive("our-works/roha-image.webp"),
     worldBank: archive("our-works/world-bank-hall-led.jpg"),
@@ -255,14 +278,12 @@ export const ourWorkImages = {
 
 export const brandMarks = {
   acsis: archive("clients-logo/acsis-logo.png"),
+  africanBusiness: asset("site/work-logos/african-business-magazine.png"),
   awib: archive("clients-logo/awib-logo.png"),
   cirht: archive("clients-logo/cirht.png"),
   dereja: publicAsset("work-logos/dereja-mastercard-foundation.jpeg"),
   esdp: archive("clients-logo/esdp-logo-1.png"),
   ewla: archive("clients-logo/ewla-logo.jpg"),
-  financialSector: publicAsset(
-    "work-logos/financial-sector-engagement-ethiopia.webp",
-  ),
   ghanaCocoa: publicAsset("work-logos/ghana-cocoa-marketing-company.jpeg"),
   haset: publicAsset("work-logos/haset.png"),
   iwmi: archive("clients-logo/iwmi.png"),

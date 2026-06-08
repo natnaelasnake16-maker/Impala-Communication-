@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import WhoWeAre from "./components/WhoWeAre";
 import OurServices from "./components/OurServices";
@@ -403,23 +403,31 @@ const ImpactStats = () => {
 // --- Main App ---
 
 const FeaturedWork = () => {
+  const [expandedProject, setExpandedProject] = useState<string | null>(null);
+
   const projects = [
     {
-      title: "Roha Medical Campus",
-      category: "Health · Positioning",
-      desc: "Strategic communication and brand-aligned storytelling for a healthcare platform with regional significance.",
-      image: homeImages.featuredWork.rohaMedicalCampus
+      title: "AWiB – ElevateHER Campaign",
+      category: "Leadership · Visibility",
+      desc: "Campaign narratives and profile-led communication that advanced women leaders with sharper visibility and institutional presence.",
+      details:
+        "Through a long-term collaboration with AWiB, Impala supported campaign framing, executive profiling, and high-visibility storytelling that positioned women leaders as influential voices in business and public life.",
+      image: homeImages.featuredWork.awib
     },
     {
       title: "MICHU / CIRHT",
       category: "Health · Campaigns",
       desc: "Campaign messaging and audience-facing content for reproductive health education and service awareness.",
+      details:
+        "We translated technical health priorities into clearer public messaging, training communication, and service-awareness content that could resonate across both institutional and community audiences.",
       image: homeImages.featuredWork.michuCirht
     },
     {
       title: "World Bank",
       category: "Development · Policy",
       desc: "Translating complex economic data into accessible narratives that support policy engagement.",
+      details:
+        "Impala helped convert research and development insights into structured public-facing communication that made economic issues easier to understand for policy, media, and stakeholder audiences.",
       image: homeImages.featuredWork.worldBank
     }
   ];
@@ -439,19 +447,22 @@ const FeaturedWork = () => {
               We support institutions across Africa and internationally to communicate complex ideas with clarity and strategic intent.
             </p>
           </div>
-          <button className="font-sans font-bold text-sm text-prestige-black hover:text-primary transition-colors flex items-center gap-2 group border-b-2 border-prestige-black hover:border-primary pb-1">
+          <Link
+            to="/our-work"
+            className="font-sans font-bold text-sm text-prestige-black hover:text-primary transition-colors flex items-center gap-2 group border-b-2 border-prestige-black hover:border-primary pb-1"
+          >
             Explore Portfolio <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
-          </button>
+          </Link>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {projects.map((p, i) => (
+          {projects.map((p) => (
             <motion.div 
-              key={i}
+              key={p.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="group cursor-pointer"
+              className="group"
             >
               <div className="overflow-hidden mb-4 aspect-[4/3]">
                 <img 
@@ -470,6 +481,38 @@ const FeaturedWork = () => {
               <p className="font-sans text-sm text-prestige-text leading-relaxed mb-3">
                 {p.desc}
               </p>
+              <button
+                type="button"
+                onClick={() =>
+                  setExpandedProject((current) =>
+                    current === p.title ? null : p.title,
+                  )
+                }
+                className="inline-flex items-center gap-2 font-sans text-[11px] font-bold uppercase tracking-[0.16em] text-prestige-black transition-colors hover:text-primary"
+              >
+                {expandedProject === p.title ? "Less" : "More"}
+                <ChevronDown
+                  size={16}
+                  className={`transition-transform duration-300 ${
+                    expandedProject === p.title ? "rotate-180 text-primary" : ""
+                  }`}
+                />
+              </button>
+              <AnimatePresence initial={false}>
+                {expandedProject === p.title ? (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.28, ease: "easeOut" }}
+                    className="overflow-hidden"
+                  >
+                    <p className="pt-3 font-sans text-sm leading-relaxed text-prestige-text">
+                      {p.details}
+                    </p>
+                  </motion.div>
+                ) : null}
+              </AnimatePresence>
             </motion.div>
           ))}
         </div>

@@ -18,7 +18,7 @@ const ClientBadge = ({ client }: { client: ClientLogo }) => {
         scale: 1.02,
         transition: { duration: 0.3 }
       }}
-      className="group relative flex h-20 sm:h-24 items-center justify-center rounded-xl border border-prestige-gray bg-[#F9F6F2] px-3.5 py-3 sm:px-4 sm:py-3.5 shadow-[inset_0_1px_2px_rgba(0,0,0,0.04),0_6px_14px_rgba(0,0,0,0.05)] transition-all duration-500 hover:border-primary/30 overflow-hidden"
+      className="group relative flex h-24 sm:h-28 items-center justify-center rounded-xl border border-prestige-gray bg-[#F9F6F2] px-4 py-3.5 sm:px-5 sm:py-4 shadow-[inset_0_1px_2px_rgba(0,0,0,0.04),0_8px_18px_rgba(0,0,0,0.06)] transition-all duration-500 hover:border-primary/30 overflow-hidden"
     >
       {/* Shine Sweep Animation */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shine_1.5s_ease-in-out_infinite]" />
@@ -30,7 +30,7 @@ const ClientBadge = ({ client }: { client: ClientLogo }) => {
         <img
           src={client.logoUrl}
           alt={client.alt}
-          className="h-8 sm:h-9 lg:h-10 w-full max-w-[120px] object-contain"
+          className="h-10 sm:h-11 lg:h-12 w-full max-w-[140px] object-contain"
           loading="lazy"
           referrerPolicy="no-referrer"
         />
@@ -102,11 +102,11 @@ const Clients = () => {
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-5 sm:gap-6 items-center">
               {featuredClientStrip.map((client) => (
-                <div key={client.slug} className="bg-white px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-xl shadow-sm border border-prestige-gray flex items-center justify-center min-w-[130px] sm:min-w-[160px] lg:min-w-[190px]">
+                <div key={client.slug} className="bg-white px-5 sm:px-6 lg:px-8 py-3.5 sm:py-4 rounded-xl shadow-sm border border-prestige-gray flex items-center justify-center min-w-[145px] sm:min-w-[180px] lg:min-w-[210px]">
                   <img
                     src={client.logoUrl}
                     alt={client.alt}
-                    className="h-8 sm:h-10 w-full object-contain"
+                    className="h-9 sm:h-11 lg:h-12 w-full object-contain"
                     loading="lazy"
                     referrerPolicy="no-referrer"
                   />
@@ -134,7 +134,7 @@ const Clients = () => {
       <section className="section-space section-shell bg-prestige-cream border-y border-prestige-gray">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black mb-4 sm:mb-5">
-            Over 12 years of trusted partnerships
+            Over 15 years of trusted partnerships
           </h2>
           <p className="font-sans text-sm sm:text-base text-prestige-text mb-8 sm:mb-10 leading-relaxed">
             Working across sectors, regions, and communities to deliver communication that creates real impact.
