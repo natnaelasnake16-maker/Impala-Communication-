@@ -52,6 +52,20 @@
 }
 
 @layer utilities {
+  @keyframes logo-marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-logo-marquee {
+    animation: logo-marquee 34s linear infinite;
+  }
+
   .noise-overlay {
     background-image:
       radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.18) 1px, transparent 1px),

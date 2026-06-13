@@ -1,42 +1,92 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import { BarChart3, Compass, Flag, Radio } from "lucide-react";
+import { BarChart3, CheckCircle, Compass, Flag, Globe, Handshake, Megaphone, MessageSquare, Radio, Users } from "lucide-react";
 import { ourServicesImages } from "../lib/images";
-import BrandStoryForge from "./BrandStoryForge";
 
 const services = [
   {
     title: "Strategic Communication",
     slug: "strategic-communication",
-    desc: "Design and execute communication strategies that engage key stakeholders and audiences, including investors, policymakers, and communities.",
+    desc: "Communication strategies aligned with organisational priorities and stakeholder expectations.",
     image: ourServicesImages.communityCollage[0],
     icon: BarChart3,
-    proofRefs: ["Strategy", "Engagement", "Influence"],
+    proofRefs: ["Strategy", "Priorities", "Expectations"],
   },
   {
     title: "Institutional Positioning",
     slug: "institutional-positioning",
-    desc: "Support organisations in positioning themselves within Africa’s evolving economic and investment landscape.",
+    desc: "Defining who organisations are, what they stand for, and how they are understood.",
     image: ourServicesImages.communityCollage[1],
     icon: Flag,
-    proofRefs: ["Markets", "Credibility", "Leadership"],
+    proofRefs: ["Identity", "Reputation", "Clarity"],
   },
   {
-    title: "Narrative Strategy",
-    slug: "narrative-strategy",
-    desc: "Define your positioning, develop clear messaging frameworks, and map stakeholders to strengthen alignment and influence.",
+    title: "Stakeholder Engagement",
+    slug: "stakeholder-engagement",
+    desc: "Building trust and meaningful relationships with investors, government, partners, employees, communities, and customers.",
     image: ourServicesImages.communityCollage[2],
-    icon: Compass,
-    proofRefs: ["Positioning", "Messaging", "Stakeholders"],
+    icon: Handshake,
+    proofRefs: ["Trust", "Relationships", "Alignment"],
   },
   {
-    title: "Content & Campaigns",
-    slug: "content-campaigns",
-    desc: "Create high-impact storytelling, multimedia content, and campaigns that translate complex ideas into compelling narratives.",
+    title: "Leadership Communications",
+    slug: "leadership-communications",
+    desc: "Strengthening leadership visibility, credibility, and thought leadership.",
     image: ourServicesImages.communityCollage[3],
-    icon: Radio,
-    proofRefs: ["Storytelling", "Campaigns", "Content"],
+    icon: Users,
+    proofRefs: ["Visibility", "Credibility", "Leadership"],
   },
+  {
+    title: "Content & Storytelling",
+    slug: "content-storytelling",
+    desc: "Transforming complex ideas into compelling communication products.",
+    image: ourServicesImages.communityCollage[0],
+    icon: MessageSquare,
+    proofRefs: ["Content", "Storytelling", "Clarity"],
+  },
+  {
+    title: "Campaign Development",
+    slug: "campaign-development",
+    desc: "Creating initiatives that inform, influence, and inspire action.",
+    image: ourServicesImages.communityCollage[1],
+    icon: Megaphone,
+    proofRefs: ["Campaigns", "Influence", "Action"],
+  },
+  {
+    title: "Public Affairs & Visibility",
+    slug: "public-affairs-visibility",
+    desc: "Strengthening public understanding, confidence, and visibility around institutional priorities.",
+    image: ourServicesImages.communityCollage[2],
+    icon: Globe,
+    proofRefs: ["Public Affairs", "Visibility", "Confidence"],
+  },
+  {
+    title: "Executive Profiling",
+    slug: "executive-profiling",
+    desc: "Positioning leaders to communicate vision, credibility, and influence with the audiences that matter.",
+    image: ourServicesImages.communityCollage[3],
+    icon: Compass,
+    proofRefs: ["Profiles", "Vision", "Influence"],
+  },
+  {
+    title: "Media & Event Strategy",
+    slug: "media-event-strategy",
+    desc: "Shaping media and event communication so institutional messages are clear, credible, and audience-ready.",
+    image: ourServicesImages.communityCollage[0],
+    icon: Radio,
+    proofRefs: ["Media", "Events", "Messaging"],
+  },
+];
+
+const engagementMoments = [
+  "Communicate transformation",
+  "Strengthen reputation",
+  "Engage stakeholders",
+  "Position leadership",
+  "Launch new initiatives",
+  "Manage change",
+  "Support investment attraction",
+  "Strengthen public confidence",
 ];
 
 const OurServices = () => {
@@ -60,13 +110,13 @@ const OurServices = () => {
               transition={{ duration: 0.8 }}
             >
               <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.22em] text-primary mb-4 block">
-                Our Services
+                What We Do
               </span>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
                 What We Do
               </h1>
               <p className="font-sans text-sm sm:text-base lg:text-lg text-white/70 mb-6 sm:mb-8 leading-relaxed max-w-xl">
-                We provide strategic communication and narrative advisory to help institutions define positioning, align messaging, and engage key stakeholders and audiences effectively.
+                We support organisations in communicating their priorities, strengthening stakeholder relationships, and ensuring their achievements are understood, recognised, and valued.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <a href="#services-list" className="w-full sm:w-auto text-center bg-primary text-white px-6 sm:px-8 py-3 sm:py-3.5 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-white hover:text-primary transition-all duration-300 shadow-xl">
@@ -80,9 +130,9 @@ const OurServices = () => {
 
             <div className="relative hidden h-[420px] lg:block">
               {[
-                { icon: <Compass size={24} />, label: "Narrative Strategy", top: "10%", left: "20%", delay: 0 },
-                { icon: <BarChart3 size={24} />, label: "Strategic Communication", top: "40%", left: "55%", delay: 0.2 },
-                { icon: <Flag size={24} />, label: "Institutional Positioning", top: "20%", left: "62%", delay: 0.4 },
+                { icon: <BarChart3 size={24} />, label: "Strategic Communication", top: "10%", left: "20%", delay: 0 },
+                { icon: <Flag size={24} />, label: "Institutional Positioning", top: "40%", left: "55%", delay: 0.2 },
+                { icon: <Handshake size={24} />, label: "Stakeholder Engagement", top: "20%", left: "62%", delay: 0.4 },
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -112,7 +162,7 @@ const OurServices = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 sm:mb-10 lg:mb-12">
             <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
-              What We Offer
+              Services
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black">
               Services
@@ -182,7 +232,37 @@ const OurServices = () => {
         </div>
       </section>
 
-      <BrandStoryForge />
+      <section className="section-space section-shell bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+            <span className="font-sans text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3 block">
+              When Clients Engage Impala
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-prestige-black">
+              We are typically engaged when organisations need to:
+            </h2>
+          </div>
+
+          <div className="grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {engagementMoments.map((item, index) => (
+              <motion.div
+                key={item}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.35 }}
+                transition={{ delay: index * 0.045, duration: 0.4 }}
+                whileHover={{ y: -4, scale: 1.01 }}
+                className="rounded-[1.15rem] border border-prestige-gray bg-prestige-cream px-4 py-5 shadow-sm transition-all duration-300 hover:border-primary/40 hover:bg-white hover:shadow-md"
+              >
+                <CheckCircle size={17} className="mb-3 text-primary" />
+                <p className="font-sans text-[11px] font-bold uppercase tracking-[0.16em] text-prestige-black">
+                  {item}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
