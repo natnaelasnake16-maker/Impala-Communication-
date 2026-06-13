@@ -42,13 +42,13 @@ const GetInTouch = () => {
             className="max-w-3xl"
           >
             <span className="mb-4 block font-sans text-[10px] font-bold uppercase tracking-[0.24em] text-primary sm:text-xs">
-              Contact
+              Get In Touch
             </span>
             <h1 className="mb-4 text-3xl font-bold leading-tight sm:mb-6 sm:text-4xl lg:text-5xl xl:text-6xl">
-              Work With <span className="text-primary italic">Us</span>
+              Let&apos;s Turn Achievement Into <span className="text-primary italic">Reputation</span>
             </h1>
             <p className="font-sans text-sm leading-relaxed text-white/70 sm:text-base lg:text-lg">
-              If you are looking to define your narrative, strengthen your positioning, or engage key stakeholders and audiences, we would be glad to connect.
+              Whether you are communicating transformation, strengthening stakeholder confidence, launching a new initiative, or elevating your institutional profile, we would welcome the opportunity to explore how strategic communication can support your objectives.
             </p>
           </motion.div>
         </div>
@@ -135,8 +135,9 @@ const GetInTouch = () => {
                   className="w-full border-b border-prestige-gray bg-transparent py-2.5 font-sans text-sm outline-none transition-colors focus:border-primary"
                 >
                   <option>Strategic Communication</option>
-                  <option>Narrative Advisory</option>
-                  <option>Partnership</option>
+                  <option>Institutional Positioning</option>
+                  <option>Stakeholder Engagement</option>
+                  <option>Leadership Communications</option>
                   <option>Schedule a Conversation</option>
                 </select>
               </div>
@@ -147,7 +148,7 @@ const GetInTouch = () => {
                 </label>
                 <textarea
                   rows={4}
-                  placeholder="Tell us about your goals, audiences, or project."
+                  placeholder="Tell us about your objectives, stakeholders, or initiative."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   className="w-full resize-none border-b border-prestige-gray py-2.5 font-sans text-sm outline-none transition-colors focus:border-primary"

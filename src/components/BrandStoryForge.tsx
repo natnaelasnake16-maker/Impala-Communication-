@@ -1,22 +1,22 @@
 import { motion } from "motion/react";
-import { BarChart3, Megaphone, Network, PenTool, Search } from "lucide-react";
+import { BarChart3, Compass, Megaphone, PenTool, Search } from "lucide-react";
 import { useState } from "react";
 
 const steps = [
   {
-    title: "Insight & Context",
+    title: "Discovery & Insight",
     icon: Search,
     text: "Understand institutional priorities, market dynamics, and stakeholder perspectives.",
   },
   {
-    title: "Narrative Development",
-    icon: PenTool,
-    text: "Define positioning and build clear, consistent messaging.",
+    title: "Positioning & Strategy",
+    icon: Compass,
+    text: "Define how the organisation should be understood and what strategic priorities communication must support.",
   },
   {
-    title: "Systems & Alignment",
-    icon: Network,
-    text: "Ensure internal clarity, communication structure, and consistency.",
+    title: "Narrative Development",
+    icon: PenTool,
+    text: "Build clear, consistent messaging that turns priorities, achievements, and value into a coherent story.",
   },
   {
     title: "Activation & Engagement",
@@ -73,7 +73,7 @@ export default function BrandStoryForge() {
 
             <div className="lg:border-l lg:border-white/24 lg:pl-6">
               <p className="font-sans text-xs leading-relaxed text-white/88 sm:text-sm">
-                Our work is guided by a structured approach that transforms insight into clear narrative and measurable impact.
+                A structured process that connects insight, strategy, communication, and impact.
               </p>
             </div>
           </div>

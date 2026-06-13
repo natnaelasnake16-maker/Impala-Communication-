@@ -4,158 +4,72 @@ import { brandMarks, homeImages, ourWorkImages } from "../lib/images";
 import FinalCallToAction from "./FinalCallToAction";
 
 interface CaseStudy {
+  approach: string;
+  challenge: string;
   client: string;
-  context: string;
   fallback: string;
   image?: string;
-  impact: string;
   logoUrl?: string;
+  outcome: string;
   tag: string;
-  work: string;
 }
 
 const caseStudies: CaseStudy[] = [
   {
-    client: "ESDP",
-    tag: "Strategic Narrative",
-    logoUrl: brandMarks.esdp,
-    fallback: "ESDP",
-    image: ourWorkImages.caseStudies.esdp[1],
-    context:
-      "A European supplier diversity initiative required a strategic identity and engagement framework ahead of expansion into France, the Netherlands, and Germany, where diversity and minority business narratives differ significantly across markets.",
-    work:
-      "Designed the programme's positioning, messaging architecture, values, tone of voice, and launch narrative, alongside culturally informed communication strategies tailored to the realities of Black and minority-owned business ecosystems in each country.",
-    impact:
-      "Created a market-sensitive communication foundation that supported international rollout with clarity, relevance, and credibility.",
-  },
-  {
-    client: "African Business Magazine – Ethiopia Representation",
+    client: "African Business Magazine",
     tag: "Institutional Profiling",
     logoUrl: brandMarks.africanBusiness,
     fallback: "ABM",
-    context:
-      "Ethiopia needed stronger representation within continental business discourse and investor-facing editorial platforms.",
-    work:
-      "Positioned institutions, leaders, and market developments within African Business Magazine's ecosystem through profile development, editorial alignment, and investment-relevant market framing.",
-    impact:
-      "Expanded Ethiopia's visibility in a platform read by influential business, policy, and investment audiences.",
+    challenge: "Ethiopia's story needed clearer representation for international investment audiences.",
+    approach: "Led strategic profiling of Ethiopian institutions and businesses.",
+    outcome: "Helped elevate Ethiopia's transformation story within African and global conversations.",
+  },
+  {
+    client: "Association of Women in Business (AWiB)",
+    tag: "Leadership Visibility",
+    logoUrl: brandMarks.awib,
+    fallback: "AWI",
+    image: ourWorkImages.caseStudies.awib[1],
+    challenge: "Amplify women's leadership and increase visibility.",
+    approach: "Supported leadership initiatives and profiled more than 60 Women of Excellence.",
+    outcome: "Amplified voices, strengthened visibility, and inspired future leaders.",
+  },
+  {
+    client: "Ethiopian Women Lawyers Association (EWLA)",
+    tag: "Access to Justice",
+    logoUrl: brandMarks.ewla,
+    fallback: "EWL",
+    challenge: "Strengthen visibility and expand access to justice.",
+    approach: "Developed strategic storytelling and multimedia content.",
+    outcome: "Enabled stronger engagement with local and international stakeholders.",
   },
   {
     client: "LonAdd HR Consultancy",
-    tag: "Current Project",
+    tag: "Market Leadership",
     logoUrl: brandMarks.lonadd,
     fallback: "LON",
-    context: "A 17-year HR consultancy needed sharper positioning for African growth.",
-    work: "Refined brand architecture, messaging, and thought-leadership direction.",
-    impact: "Strengthened LonAdd’s profile as a trusted workforce solutions voice.",
+    challenge: "Strengthen market leadership and support growth across Africa.",
+    approach: "Led strategic positioning and communication transformation.",
+    outcome: "Strengthened brand, clearer positioning, and stronger market leadership.",
   },
   {
-    client: "Ghana Cocoa Marketing Company (UK & Ghana)",
-    tag: "Current Project",
-    logoUrl: brandMarks.ghanaCocoa,
-    fallback: "GCMC",
-    context: "Ghana’s cocoa story needed global framing across sustainability and diaspora engagement.",
-    work: "Built sector storytelling around heritage, sustainability, and market relevance.",
-    impact: "Reframed cocoa as an economic, cultural, and sustainability narrative.",
-  },
-  {
-    client: "Haset – Women of Excellence Platform",
-    tag: "Leadership Visibility",
-    logoUrl: brandMarks.haset,
-    fallback: "HAS",
-    image: ourWorkImages.caseStudies.awib[1],
-    context:
-      "AWiB's Haset platform needed a stronger editorial and visibility framework to position women leaders as credible drivers of business, leadership, and economic influence.",
-    work:
-      "Profiled more than 60 Women of Excellence and shaped the platform's narrative direction, editorial framing, and visibility strategy through a long-term partnership with AWiB.",
-    impact:
-      "Elevated women leaders as high-value voices in business and public life while strengthening AWiB's role in shaping that conversation.",
-  },
-  {
-    client: "UK Black Business Entrepreneurs Conference & Africa Business Platform",
-    tag: "Partnership",
-    logoUrl: brandMarks.ukBlackBusiness,
-    fallback: "UKB",
-    context: "African opportunities needed stronger placement in international investment platforms.",
-    work: "Integrated African narratives into conference positioning and stakeholder communication.",
-    impact: "Strengthened Africa’s presence in global investment dialogue.",
-  },
-  {
-    client: "Roha Medical Campus",
-    tag: "Health",
-    logoUrl: brandMarks.roha,
-    fallback: "ROH",
-    image: ourWorkImages.caseStudies.roha[0],
-    context: "A healthcare platform needed positioning that matched its regional ambition.",
-    work: "Developed strategic communication and brand-aligned storytelling.",
-    impact: "Strengthened visibility for a major health initiative.",
-  },
-  {
-    client: "MICHU / CIRHT",
-    tag: "Health Campaign",
-    logoUrl: brandMarks.cirht,
-    fallback: "CIR",
-    image: ourWorkImages.caseStudies.michu[0],
-    context: "Technical reproductive health priorities needed clearer public and internal communication.",
-    work: "Supported campaign messaging, training communication, and audience-facing content.",
-    impact: "Improved clarity around reproductive health education and service awareness.",
-  },
-  {
-    client: "EWLA – Expanding Access to Justice",
-    tag: "Strategic Project",
-    logoUrl: brandMarks.ewla,
-    fallback: "EWL",
-    context: "Legal services needed clearer narratives around access, trust, and institutional visibility.",
-    work: "Translated access-to-justice work into public-interest messaging.",
-    impact: "Strengthened public understanding of EWLA’s role.",
-  },
-  {
-    client: "AWiB – ElevateHER Campaign",
-    tag: "Ongoing Collaboration",
-    logoUrl: brandMarks.awib,
-    fallback: "AWI",
-    image: ourWorkImages.caseStudies.awib[0],
-    context: "Women leaders needed stronger visibility and profile-led storytelling.",
-    work: "Developed campaign narratives and profiles for more than 60 women leaders.",
-    impact: "Expanded recognition of women’s leadership and influence.",
-  },
-  {
-    client: "IWMI – Climate Narrative Project",
-    tag: "Ongoing",
-    logoUrl: brandMarks.iwmi,
-    fallback: "IWM",
-    image: ourWorkImages.caseStudies.iwmi[0],
-    context: "Climate research needed to reach policy and development audiences clearly.",
-    work: "Translated technical findings into human-centred climate narratives.",
-    impact: "Made sustainability evidence more accessible for decision-making.",
-  },
-  {
-    client: "Dereja (Mastercard Foundation)",
-    tag: "Completed",
-    logoUrl: brandMarks.dereja,
-    fallback: "DE",
-    context: "Youth employability work needed stories that built confidence and readiness.",
-    work: "Created narratives connecting youth potential with practical career pathways.",
-    impact: "Strengthened communication around employability and opportunity.",
-  },
-  {
-    client: "ACSIS",
-    tag: "Portfolio Project",
-    logoUrl: brandMarks.acsis,
-    fallback: "ACS",
-    context: "Climate and sustainability work required concise institutional visibility.",
-    work: "Supported communication positioning within the development ecosystem.",
-    impact: "Created a clearer signal for sector partners and stakeholders.",
-  },
-  {
-    client: "World Bank Group",
-    tag: "Long-term Collaboration",
+    client: "World Bank and Development Partners",
+    tag: "Development Communication",
     logoUrl: brandMarks.worldBank,
     fallback: "WBG",
     image: homeImages.featuredWork.worldBank,
-    context: "Complex economic data needed accessible public and policy-facing communication.",
-    work: "Translated research and development insights into structured narratives.",
-    impact: "Supported policy engagement through clearer economic storytelling.",
+    challenge: "Communicate complex development programmes clearly.",
+    approach: "Supported communication initiatives and stakeholder engagement.",
+    outcome: "Created clearer public narratives and stronger stakeholder understanding and engagement.",
+  },
+  {
+    client: "CMAG",
+    tag: "Trade Narrative",
+    logoUrl: brandMarks.ghanaCocoa,
+    fallback: "CMAG",
+    challenge: "Ghana's cocoa story needed global framing across sustainability and diaspora engagement.",
+    approach: "Built sector storytelling around heritage, sustainability, and market relevance.",
+    outcome: "Reframed cocoa as an economic, cultural, and sustainability narrative.",
   },
 ];
 
@@ -287,10 +201,10 @@ const OurWork = () => {
               Our Work
             </span>
             <h1 className="max-w-3xl text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl xl:text-6xl">
-              Selected <span className="text-primary italic">Work</span>
+              Selected <span className="text-primary italic">Experience</span>
             </h1>
             <p className="mt-5 max-w-2xl font-sans text-sm leading-relaxed text-white/72 sm:text-base lg:text-lg">
-              We work across sectors and geographies, supporting institutions to communicate complex ideas with clarity and strategic direction.
+              We help organisations communicate achievements, engage stakeholders, and strengthen reputation through focused strategic communication.
             </p>
           </motion.div>
 
@@ -326,7 +240,7 @@ const OurWork = () => {
               Case Studies
             </span>
             <h2 className="text-2xl font-bold leading-tight text-prestige-black sm:text-3xl lg:text-4xl">
-              Communication work built around context, execution, and impact.
+              Scannable examples of challenge, approach, and outcome.
             </h2>
           </div>
 
@@ -361,9 +275,9 @@ const OurWork = () => {
                     </div>
 
                     <div className="grid gap-3.5">
-                      <Field label="Context" text={project.context} />
-                      <Field label="What We Did" text={project.work} />
-                      <Field label="Impact" text={project.impact} />
+                      <Field label="Challenge" text={project.challenge} />
+                      <Field label="Approach" text={project.approach} />
+                      <Field label="Outcome" text={project.outcome} />
                     </div>
                   </div>
                 </div>

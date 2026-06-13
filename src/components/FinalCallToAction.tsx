@@ -19,10 +19,10 @@ export default function FinalCallToAction() {
           <div className="flex flex-col justify-center px-5 py-8 sm:px-8 sm:py-10 lg:px-10 lg:py-12">
             <div className="mb-5 h-1 w-16 bg-primary sm:mb-6 sm:w-20" />
             <h2 className="max-w-2xl text-3xl font-bold leading-[1.04] sm:text-4xl lg:text-[3.35rem]">
-              Ready to define your narrative and strengthen your positioning?
+              Let&apos;s Turn Achievement Into Reputation
             </h2>
             <p className="mt-5 max-w-xl font-sans text-sm leading-relaxed text-white/74 sm:mt-6 sm:text-base lg:text-lg">
-              Let’s shape Africa’s next chapter together.
+              Communicate your value with clarity, strengthen stakeholder confidence, and reinforce the trust that supports long-term success.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row">
@@ -49,7 +49,7 @@ export default function FinalCallToAction() {
                 Start the Conversation
               </p>
               <p className="mt-2 text-base font-semibold leading-snug text-white sm:text-lg">
-                Strengthen your positioning with clear, strategic communication.
+                Strengthen stakeholder confidence with clear, strategic communication.
               </p>
             </div>
           </div>
