@@ -11,6 +11,7 @@ interface CaseStudy {
   image?: string;
   logoUrl?: string;
   outcome: string;
+  partnership?: string;
   tag: string;
 }
 
@@ -30,6 +31,7 @@ const caseStudies: CaseStudy[] = [
     logoUrl: brandMarks.awib,
     fallback: "AWI",
     image: ourWorkImages.caseStudies.awib[1],
+    partnership: "15-year partnership",
     challenge: "Amplify women's leadership and increase visibility.",
     approach: "Supported leadership initiatives and profiled more than 60 Women of Excellence.",
     outcome: "Amplified voices, strengthened visibility, and inspired future leaders.",
@@ -58,18 +60,39 @@ const caseStudies: CaseStudy[] = [
     logoUrl: brandMarks.worldBank,
     fallback: "WBG",
     image: homeImages.featuredWork.worldBank,
+    partnership: "12-year partnership",
     challenge: "Communicate complex development programmes clearly.",
     approach: "Supported communication initiatives and stakeholder engagement.",
     outcome: "Created clearer public narratives and stronger stakeholder understanding and engagement.",
   },
   {
     client: "CMAG",
+    tag: "Critical Minerals Communication",
+    logoUrl: brandMarks.cmag,
+    image: ourWorkImages.caseStudies.cmag[0],
+    fallback: "CMAG",
+    challenge: "Critical minerals work needed clearer communication for policy, investment, and advisory audiences.",
+    approach: "Supported newsletter and stakeholder communication around CMAG priorities and expert activity.",
+    outcome: "Created clearer public-facing updates for a specialised critical minerals audience.",
+  },
+  {
+    client: "Ghana Cocoa Marketing Company",
     tag: "Trade Narrative",
     logoUrl: brandMarks.ghanaCocoa,
-    fallback: "CMAG",
+    fallback: "COCOA",
     challenge: "Ghana's cocoa story needed global framing across sustainability and diaspora engagement.",
     approach: "Built sector storytelling around heritage, sustainability, and market relevance.",
     outcome: "Reframed cocoa as an economic, cultural, and sustainability narrative.",
+  },
+  {
+    client: "Michu Clinic",
+    tag: "Healthcare Communication",
+    logoUrl: brandMarks.universityMichigan,
+    image: ourWorkImages.caseStudies.michu[0],
+    fallback: "MICHU",
+    challenge: "A healthcare initiative needed clear visibility and stronger public understanding.",
+    approach: "Supported communication around clinical work, institutional credibility, and stakeholder engagement.",
+    outcome: "Helped make the initiative easier to understand and more credible to priority audiences.",
   },
 ];
 
@@ -264,9 +287,16 @@ const OurWork = () => {
                         <span className="mb-2 inline-flex rounded-full border border-primary/18 bg-primary/8 px-3 py-1 font-sans text-[9px] font-bold uppercase tracking-[0.16em] text-primary">
                           {project.tag}
                         </span>
-                        <h3 className="text-xl font-bold leading-tight text-prestige-black sm:text-2xl">
-                          {project.client}
-                        </h3>
+                        <div className="flex flex-wrap items-center gap-2">
+                          <h3 className="text-xl font-bold leading-tight text-prestige-black sm:text-2xl">
+                            {project.client}
+                          </h3>
+                          {project.partnership && (
+                            <span className="inline-flex rounded-full border border-prestige-gray bg-prestige-cream px-2.5 py-1 font-sans text-[9px] font-bold uppercase tracking-[0.14em] text-prestige-text">
+                              {project.partnership}
+                            </span>
+                          )}
+                        </div>
                       </div>
                       <ArrowUpRight
                         size={19}

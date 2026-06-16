@@ -64,6 +64,12 @@ export const clientLogos = {
     "bill-and-melinda-gates-foundation.jpeg",
   ),
   cirht: clientLogo("cirht", "CIRHT"),
+  cmag: {
+    slug: "cmag",
+    name: "CMAG",
+    logoUrl: publicAsset("work-logos/cmag-branding.png"),
+    alt: "CMAG logo",
+  },
   dkt: clientLogo("dkt", "DKT", "dkt.jpg"),
   ecx: clientLogo("ecx", "ECX", "ecx.jpg"),
   entro: clientLogo("entro", "ENTRO"),
@@ -81,12 +87,25 @@ export const clientLogos = {
   ),
   haset: clientLogo("haset", "Haset", "haset.png"),
   ilo: clientLogo("ilo", "ILO", "ilo.webp"),
+  iwmi: clientLogo("iwmi", "IWMI"),
   lonadd: clientLogo("lonadd", "LonAdd"),
   "nile-basin-initiative": clientLogo(
     "nile-basin-initiative",
     "Nile Basin Initiative",
     "nile-basin-initiative.svg",
   ),
+  ewla: {
+    slug: "ewla",
+    name: "EWLA",
+    logoUrl: archive("clients-logo/ewla-logo.jpg"),
+    alt: "EWLA logo",
+  },
+  "university-michigan": {
+    slug: "university-michigan",
+    name: "University of Michigan",
+    logoUrl: archive("clients-logo/university-of-michigan.png"),
+    alt: "University of Michigan logo",
+  },
   "save-the-children": clientLogo("save-the-children", "Save the Children"),
   technoserve: clientLogo("technoserve", "TechnoServe"),
   unicef: clientLogo("unicef", "UNICEF", "unicef.jpeg"),
@@ -119,8 +138,10 @@ export const homeTickerClients = pickClients([
 export const featuredClientStrip = pickClients([
   "awib",
   "african-business-magazine",
+  "cmag",
   "lonadd",
   "ghana-cocoa",
+  "university-michigan",
   "esdp",
   "haset",
   "world-bank",
@@ -167,8 +188,10 @@ export const clientGroups = [
 export const clientWallClients = pickClients([
   "awib",
   "african-business-magazine",
+  "cmag",
   "esdp",
   "ghana-cocoa",
+  "university-michigan",
   "haset",
   "lonadd",
   "world-bank",
@@ -179,6 +202,8 @@ export const clientWallClients = pickClients([
   "unicef",
   "african-union",
   "nile-basin-initiative",
+  "ewla",
+  "iwmi",
   "ecx",
   "ethiopian-airlines",
   "entro",
@@ -236,11 +261,23 @@ export const whoWeAreImages = {
 
 export const ourServicesImages = {
   hero: "https://github.com/natnaelasnake16-maker/impala-communication-images/raw/98e5341d4234770bcd8375c15075d829ca727cfc/archive/12771984205_8d3975e096_b.jpg",
+  successAlone: archive("home-page/img-4147-scaled.jpg"),
   communityCollage: [
     archive("home-page/story.jpeg"),
     archive("home-page/colaborate.jpg"),
     archive("who-we-are/img-3238-scaled.jpg"),
     archive("who-we-are/22977935673-6f69e9de57-o-980x653.jpg"),
+  ],
+  serviceCards: [
+    archive("home-page/story.jpeg"),
+    archive("home-page/important.jpg"),
+    archive("who-we-are/img-3238-scaled.jpg"),
+    archive("our-works/world-bank-hall-led.jpg"),
+    archive("who-we-are/filming.jpg"),
+    archive("home-page/sport-show-national.jpg"),
+    archive("home-page/colaborate.jpg"),
+    archive("who-we-are/camera-hold.jpg"),
+    archive("home-page/machine.jpg"),
   ],
 };
 
@@ -250,18 +287,20 @@ export const ourWorkImages = {
       archive("our-works/awib-woe-scaled.jpg"),
       archive("our-works/woe-2023-crystal-photo-1.png"),
     ],
+    cmag: [publicAsset("work-images/cmag-newsletter.jpg")],
     esdp: [
       archive("our-works/corporate.jpg"),
       archive("our-works/group-478.png"),
     ],
+    ghanaCocoa: [publicAsset("work-logos/ghana-cocoa-marketing-company.jpeg")],
     iwmi: [
       archive("our-works/iwmi.jpg"),
       archive("our-works/field-project.jpg"),
     ],
     michu: [
       archive("our-works/michu.jpg"),
-      archive("our-works/20190411-michu-training-001-web-1-scaled.jpg"),
       archive("our-works/20180126-michu-029-scaled.jpg"),
+      archive("our-works/20190411-michu-training-001-web-1-scaled.jpg"),
     ],
     roha: [
       archive("our-works/roha-image.webp"),
@@ -281,6 +320,7 @@ export const brandMarks = {
   africanBusiness: asset("site/work-logos/african-business-magazine.png"),
   awib: archive("clients-logo/awib-logo.png"),
   cirht: archive("clients-logo/cirht.png"),
+  cmag: publicAsset("work-logos/cmag-branding.png"),
   dereja: publicAsset("work-logos/dereja-mastercard-foundation.jpeg"),
   esdp: archive("clients-logo/esdp-logo-1.png"),
   ewla: archive("clients-logo/ewla-logo.jpg"),
@@ -292,6 +332,7 @@ export const brandMarks = {
   ukBlackBusiness: publicAsset(
     "work-logos/uk-black-business-entrepreneurs-conference.png",
   ),
+  universityMichigan: archive("clients-logo/university-of-michigan.png"),
   worldBank: archive("clients-logo/worldbank.png"),
 };
 

@@ -30,7 +30,7 @@ const ClientBadge = ({ client }: { client: ClientLogo }) => {
         <img
           src={client.logoUrl}
           alt={client.alt}
-          className="h-10 sm:h-11 lg:h-12 w-full max-w-[140px] object-contain"
+          className="mx-auto max-h-10 w-auto max-w-[140px] object-contain object-center sm:max-h-11 lg:max-h-12"
           loading="lazy"
           referrerPolicy="no-referrer"
         />
@@ -106,7 +106,7 @@ const Clients = () => {
                   <img
                     src={client.logoUrl}
                     alt={client.alt}
-                    className="h-9 sm:h-11 lg:h-12 w-full object-contain"
+                    className="mx-auto max-h-9 w-auto max-w-[150px] object-contain object-center sm:max-h-11 lg:max-h-12 lg:max-w-[170px]"
                     loading="lazy"
                     referrerPolicy="no-referrer"
                   />

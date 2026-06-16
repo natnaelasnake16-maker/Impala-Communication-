@@ -9,11 +9,12 @@ import { useEffect, useState } from "react";
 import WhoWeAre from "./components/WhoWeAre";
 import OurServices from "./components/OurServices";
 import OurWork from "./components/OurWork";
+import Clients from "./components/Clients";
 import Approach from "./components/Approach";
 import Sectors from "./components/Sectors";
 import GetInTouch from "./components/GetInTouch";
 import FinalCallToAction from "./components/FinalCallToAction";
-import { brandAssets, brandMarks, homeImages, homeTickerClients, ourServicesImages } from "./lib/images";
+import { brandAssets, brandMarks, homeImages, homeTickerClients, ourServicesImages, ourWorkImages } from "./lib/images";
 import {
   ArrowRight,
   BarChart3,
@@ -100,6 +101,7 @@ const navLinks = [
   { name: "Services", href: "/our-services" },
   { name: "Approach", href: "/approach" },
   { name: "Our Work", href: "/our-work" },
+  { name: "Clients", href: "/clients" },
   { name: "Sectors", href: "/sectors" },
 ];
 
@@ -215,7 +217,7 @@ const Hero = () => {
             <span className="text-[#ff6a1a] italic font-light drop-shadow-[0_0_18px_rgba(255,106,26,0.38)]">Strategic Communication</span>
           </h1>
           <p className="mx-auto mb-6 max-w-3xl font-sans text-sm leading-relaxed opacity-90 sm:mb-7 sm:text-base md:text-lg lg:text-[1.15rem]">
-            Impala Communication is an African strategic communication consultancy that partners with organisations to communicate their vision, achievements, and value with clarity, building trust, strengthening stakeholder confidence, and supporting long-term success.
+            Impala Communication is an African strategic communication consultancy that partners with organisations to help communicate their vision, achievements, and value with clarity, building trust, strengthening stakeholder confidence, and supporting long-term success.
           </p>
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
             <Link to="/our-work" className="w-full sm:w-auto bg-primary text-white px-5 sm:px-7 py-3 sm:py-3.5 font-display text-xs sm:text-sm font-bold uppercase tracking-[0.18em] hover:bg-white hover:text-primary transition-all duration-300 shadow-xl">
@@ -260,7 +262,7 @@ const TrustedByCarousel = () => {
               <img
                 src={client.logoUrl}
                 alt={index < homeTickerClients.length ? client.alt : ""}
-                className="max-h-9 max-w-full object-contain grayscale transition-all duration-300 hover:grayscale-0 sm:max-h-11"
+                className="max-h-9 max-w-full object-contain transition-all duration-300 sm:max-h-11"
                 referrerPolicy="no-referrer"
               />
             </div>
@@ -301,7 +303,7 @@ const WhyThisMatters = () => {
         className="group relative min-h-[760px] overflow-hidden bg-[#2a211c] shadow-[0_28px_90px_rgba(36,25,17,0.18)] sm:min-h-[720px] lg:h-[31.9vw] lg:min-h-[490px] lg:max-h-[620px]"
       >
         <img
-          src={ourServicesImages.communityCollage[1]}
+          src={ourServicesImages.successAlone}
           alt="Impala Communication strategy discussion"
           className="absolute inset-0 h-full w-full object-cover object-[61%_center] opacity-100 transition-transform duration-[1200ms] ease-out group-hover:scale-[1.02]"
           referrerPolicy="no-referrer"
@@ -310,14 +312,15 @@ const WhyThisMatters = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_36%,rgba(241,90,41,0.14),transparent_24%),linear-gradient(180deg,rgba(61,45,35,0.02),rgba(35,27,22,0.2))]" />
 
         <div className="relative z-10 flex min-h-[760px] w-full flex-col justify-between gap-6 px-4 py-5 sm:min-h-[720px] sm:px-7 sm:py-8 lg:block lg:h-full lg:min-h-0 lg:px-0 lg:py-0">
-          <div className="relative overflow-hidden rounded-[1.65rem] border border-primary/48 bg-[#211a16]/62 px-5 py-7 shadow-[0_28px_90px_rgba(0,0,0,0.34)] backdrop-blur-[22px] sm:px-8 sm:py-9 lg:absolute lg:bottom-[2vw] lg:left-[3.65vw] lg:top-[3.35vw] lg:w-[48.7vw] lg:rounded-[1.9rem] lg:px-[3.05vw] lg:py-[2.55vw] lg:[clip-path:polygon(0_0,70%_0,76.8%_55%,100%_76.5%,100%_100%,0_100%)]">
+          <div className="relative overflow-hidden rounded-[1.65rem] border border-primary/48 bg-[#211a16]/62 px-5 py-7 shadow-[0_28px_90px_rgba(0,0,0,0.34)] backdrop-blur-[22px] sm:px-8 sm:py-9 lg:absolute lg:bottom-[2vw] lg:left-[3.65vw] lg:top-[3.35vw] lg:w-[48.7vw] lg:rounded-[1.9rem] lg:px-[3.05vw] lg:py-[2.55vw] lg:[clip-path:polygon(0_0,75%_0,81%_55%,100%_76.5%,100%_100%,0_100%)]">
             <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.22),rgba(255,255,255,0.055)_34%,rgba(241,90,41,0.1)_100%)]" />
             <div className="absolute -right-24 bottom-4 hidden h-64 w-64 rounded-full border border-primary/22 blur-[1px] lg:block" />
 
             <div className="relative flex h-full flex-col justify-between gap-10">
               <div className="max-w-[36rem]">
                 <h2 className="font-sans text-[2.9rem] font-medium leading-[0.96] tracking-normal text-white normal-case drop-shadow-[0_2px_18px_rgba(0,0,0,0.35)] sm:text-[4.1rem] lg:text-[clamp(3.45rem,3.85vw,4.2rem)]">
-                Success Alone Is Not Enough
+                Success Alone <br />
+                Is Not Enough
               </h2>
               <div className="mt-6 flex items-center gap-3">
                 <span className="h-[2px] w-10 bg-primary" />
@@ -413,7 +416,7 @@ const Challenges = () => {
                 Limited Recognition.
               </h3>
               <span className="mt-5 h-[2px] w-7 bg-primary" />
-              <p className="mt-4 max-w-xs font-sans text-sm leading-relaxed text-[#3f3a34] sm:text-[0.95rem] lg:text-[0.86rem] xl:text-[0.95rem]">
+              <p className="mt-4 max-w-xs font-sans text-base leading-relaxed text-[#3f3a34] sm:text-[1.05rem] lg:text-[0.98rem] xl:text-[1.05rem]">
                 Many institutions achieve significant results but struggle to communicate their impact effectively.
               </p>
             </div>
@@ -438,7 +441,7 @@ const Challenges = () => {
                   Fully Aligned.
                 </h3>
                 <span className="mt-4 block h-[2px] w-7 bg-primary" />
-                <p className="mt-4 font-sans text-sm leading-relaxed text-white/70 lg:text-[0.82rem] xl:text-sm">
+                <p className="mt-4 font-sans text-base leading-relaxed text-white/70 lg:text-[0.95rem] xl:text-base">
                   Employees, regulators, investors, partners, communities, and customers often receive fragmented messages.
                 </p>
               </div>
@@ -470,7 +473,7 @@ const Challenges = () => {
                   Reflect Reality.
                 </h3>
                 <span className="mt-4 block h-[2px] w-7 bg-primary" />
-                <p className="mt-4 font-sans text-sm leading-relaxed text-prestige-text lg:text-[0.82rem] xl:text-sm">
+                <p className="mt-4 font-sans text-base leading-relaxed text-prestige-text lg:text-[0.95rem] xl:text-base">
                   Organisations delivering meaningful impact are frequently under-recognised or misunderstood.
                 </p>
               </div>
@@ -497,7 +500,7 @@ const Challenges = () => {
                   Confusion.
                 </h3>
                 <span className="mt-5 block h-[2px] w-7 bg-primary" />
-                <p className="mt-5 font-sans text-sm leading-relaxed text-white/72 lg:text-[0.86rem] xl:text-sm">
+                <p className="mt-5 font-sans text-base leading-relaxed text-white/72 lg:text-[0.98rem] xl:text-base">
                   Technical, financial, policy, and institutional priorities are often difficult for stakeholders to understand.
                 </p>
               </div>
@@ -620,7 +623,7 @@ const WhyImpala = () => {
           >
             <div className="mb-4 flex items-center gap-3">
               <span className="h-[2px] w-10 bg-primary" />
-              <span className="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+              <span className="font-sans text-sm font-bold uppercase tracking-[0.18em] text-primary sm:text-base">
                 Why Impala
               </span>
             </div>
@@ -687,6 +690,7 @@ const FeaturedExperience = () => {
       title: "AWiB",
       logo: brandMarks.awib,
       tag: "Leadership Visibility",
+      partnership: "15-year partnership",
       challenge: "Amplify women's leadership and increase visibility.",
       role: "Supported leadership initiatives and profiled more than 60 Women of Excellence.",
       impact: "Amplified voices, strengthened visibility, and inspired future leaders.",
@@ -703,6 +707,7 @@ const FeaturedExperience = () => {
       title: "World Bank",
       logo: brandMarks.worldBank,
       tag: "Development Communication",
+      partnership: "12-year partnership",
       challenge: "Communicate complex development programmes clearly.",
       role: "Supported communication initiatives and stakeholder engagement.",
       impact: "Created clearer public narratives and stronger stakeholder understanding.",
@@ -717,11 +722,29 @@ const FeaturedExperience = () => {
     },
     {
       title: "CMAG",
+      logo: brandMarks.cmag,
+      image: ourWorkImages.caseStudies.cmag[0],
+      tag: "Critical Minerals Communication",
+      challenge: "Critical minerals work needed clearer communication for policy, investment, and advisory audiences.",
+      role: "Supported newsletter and stakeholder communication around CMAG priorities and expert activity.",
+      impact: "Created clearer public-facing updates for a specialised critical minerals audience.",
+    },
+    {
+      title: "Ghana Cocoa Marketing Company",
       logo: brandMarks.ghanaCocoa,
       tag: "Trade Narrative",
       challenge: "Ghana's cocoa story needed global framing across sustainability and diaspora engagement.",
       role: "Built sector storytelling around heritage, sustainability, and market relevance.",
       impact: "Reframed cocoa as an economic, cultural, and sustainability narrative.",
+    },
+    {
+      title: "Michu Clinic",
+      logo: brandMarks.universityMichigan,
+      image: ourWorkImages.caseStudies.michu[0],
+      tag: "Healthcare Communication",
+      challenge: "A healthcare initiative needed clear visibility and stronger public understanding.",
+      role: "Supported communication around clinical work, institutional credibility, and stakeholder engagement.",
+      impact: "Helped make the initiative easier to understand and more credible to priority audiences.",
     },
   ];
 
@@ -754,13 +777,37 @@ const FeaturedExperience = () => {
             >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(241,90,41,0.12),transparent_34%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <div className="relative z-10 grid gap-4 md:grid-cols-[0.82fr_1.18fr]">
-                <div className="relative flex min-h-[180px] items-center justify-center overflow-hidden rounded-[1.05rem] border border-prestige-gray bg-[linear-gradient(135deg,#f8f3ed_0%,#fffaf8_47%,#efe3d7_100%)]">
-                  <img
-                    src={project.logo}
-                    alt={`${project.title} logo`}
-                    className="max-h-20 w-[78%] object-contain transition-transform duration-700 group-hover:scale-105"
-                    referrerPolicy="no-referrer"
-                  />
+                <div className={`relative flex min-h-[180px] items-center justify-center overflow-hidden rounded-[1.05rem] border ${
+                  project.image
+                    ? "border-white/10 bg-prestige-black"
+                    : "border-prestige-gray bg-[linear-gradient(135deg,#f8f3ed_0%,#fffaf8_47%,#efe3d7_100%)]"
+                }`}>
+                  {project.image ? (
+                    <>
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-prestige-black/64 via-prestige-black/12 to-transparent" />
+                      <div className="absolute inset-x-4 bottom-4 flex min-h-[4.25rem] items-center justify-center rounded-[0.95rem] border border-white/70 bg-white/94 px-5 py-3 shadow-[0_18px_46px_rgba(26,18,12,0.12)] backdrop-blur-md">
+                        <img
+                          src={project.logo}
+                          alt={`${project.title} logo`}
+                          className="max-h-12 w-full object-contain transition-transform duration-700 group-hover:scale-105 sm:max-h-14"
+                          referrerPolicy="no-referrer"
+                        />
+                      </div>
+                    </>
+                  ) : (
+                    <img
+                      src={project.logo}
+                      alt={`${project.title} logo`}
+                      className="max-h-20 w-[78%] object-contain transition-transform duration-700 group-hover:scale-105"
+                      referrerPolicy="no-referrer"
+                    />
+                  )}
                 </div>
 
                 <div className="flex min-w-0 flex-col gap-3 px-1 py-1 sm:px-2">
@@ -768,9 +815,16 @@ const FeaturedExperience = () => {
                     <span className="mb-2 inline-flex rounded-full border border-primary/18 bg-primary/8 px-3 py-1 font-sans text-[9px] font-bold uppercase tracking-[0.16em] text-primary">
                       {project.tag}
                     </span>
-                    <h3 className="text-xl font-bold leading-tight text-prestige-black sm:text-2xl">
-                      {project.title}
-                    </h3>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <h3 className="text-xl font-bold leading-tight text-prestige-black sm:text-2xl">
+                        {project.title}
+                      </h3>
+                      {project.partnership && (
+                        <span className="inline-flex rounded-full border border-prestige-gray bg-prestige-cream px-2.5 py-1 font-sans text-[9px] font-bold uppercase tracking-[0.14em] text-prestige-text">
+                          {project.partnership}
+                        </span>
+                      )}
+                    </div>
                   </div>
                   <div className="grid gap-3">
                     <Field label="Challenge" text={project.challenge} />
@@ -905,6 +959,7 @@ export default function App() {
             <Route path="/our-services" element={<OurServices />} />
             <Route path="/approach" element={<Approach />} />
             <Route path="/our-work" element={<OurWork />} />
+            <Route path="/clients" element={<Clients />} />
             <Route path="/sectors" element={<Sectors />} />
             <Route path="/get-in-touch" element={<GetInTouch />} />
           </Routes>

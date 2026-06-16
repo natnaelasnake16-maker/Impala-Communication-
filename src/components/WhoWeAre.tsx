@@ -139,7 +139,7 @@ const WhoWeAre = () => {
                   <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-[1rem] border border-primary/40 bg-primary/10 text-primary shadow-[0_0_18px_rgba(241,90,41,0.25)]">
                     <Icon size={16} strokeWidth={1.9} />
                   </div>
-                  <p className="font-sans text-xs sm:text-sm leading-relaxed text-white/78">
+                  <p className="font-sans text-sm leading-relaxed text-white/82 sm:text-base">
                     {item.text}
                   </p>
                 </div>
