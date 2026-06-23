@@ -216,7 +216,7 @@ const Hero = () => {
             <br />
             <span className="text-[#ff6a1a] italic font-light drop-shadow-[0_0_18px_rgba(255,106,26,0.38)]">Strategic Communication</span>
           </h1>
-          <p className="mx-auto mb-6 max-w-3xl font-sans text-sm leading-relaxed opacity-90 sm:mb-7 sm:text-base md:text-lg lg:text-[1.15rem]">
+          <p className="mx-auto mb-6 max-w-3xl font-sans text-base leading-relaxed opacity-90 sm:mb-7 sm:text-lg md:text-[1.18rem] lg:text-[1.26rem]">
             Impala Communication is an African strategic communication consultancy that partners with organisations to help communicate their vision, achievements, and value with clarity, building trust, strengthening stakeholder confidence, and supporting long-term success.
           </p>
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
@@ -240,10 +240,10 @@ const TrustedByCarousel = () => {
     <section className="relative overflow-hidden bg-white pt-8 sm:pt-10 lg:pt-12">
       <div className="mx-auto max-w-7xl">
         <div className="mb-4 flex flex-col gap-2 sm:mb-5 sm:flex-row sm:items-end sm:justify-between">
-          <p className="font-sans text-[10px] font-bold uppercase tracking-[0.22em] text-primary">
+          <p className="font-sans text-xs font-bold uppercase tracking-[0.22em] text-primary sm:text-[13px]">
             Trusted By
           </p>
-          <p className="max-w-xl font-sans text-xs leading-relaxed text-prestige-text sm:text-sm">
+          <p className="max-w-xl font-sans text-sm leading-relaxed text-prestige-text sm:text-base">
             Organisations and partners whose work depends on clarity, credibility, and stakeholder confidence.
           </p>
         </div>
@@ -256,13 +256,17 @@ const TrustedByCarousel = () => {
           {clients.map((client, index) => (
             <div
               key={`${client.slug}-${index}`}
-              className="flex h-14 w-36 shrink-0 items-center justify-center rounded-[0.85rem] border border-[#ded4c8] bg-white/78 px-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/34 hover:bg-white hover:shadow-[0_16px_36px_rgba(241,90,41,0.12)] sm:h-[4.5rem] sm:w-[10.5rem]"
+              className="flex h-16 w-40 shrink-0 items-center justify-center rounded-[0.85rem] border border-[#ded4c8] bg-white/78 px-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/34 hover:bg-white hover:shadow-[0_16px_36px_rgba(241,90,41,0.12)] sm:h-[4.9rem] sm:w-[11.75rem]"
               aria-hidden={index >= homeTickerClients.length}
             >
               <img
                 src={client.logoUrl}
                 alt={index < homeTickerClients.length ? client.alt : ""}
-                className="max-h-9 max-w-full object-contain transition-all duration-300 sm:max-h-11"
+                className={`w-auto object-contain object-center transition-all duration-300 ${
+                  client.slug === "ewla"
+                    ? "max-h-12 max-w-[9.5rem] sm:max-h-[3.7rem] sm:max-w-[10.75rem]"
+                    : "max-h-10 max-w-[7.6rem] sm:max-h-12 sm:max-w-[9rem]"
+                }`}
                 referrerPolicy="no-referrer"
               />
             </div>
@@ -326,7 +330,7 @@ const WhyThisMatters = () => {
                 <span className="h-[2px] w-10 bg-primary" />
                 <span className="h-px w-24 bg-white/18" />
               </div>
-                <p className="mt-5 max-w-[29rem] font-sans text-sm leading-relaxed text-white/82 sm:text-base">
+                <p className="mt-5 max-w-[29rem] font-sans text-base leading-relaxed text-white/82 sm:text-[1.04rem]">
                 Extraordinary achievements deserve more than passing glance. They deserve understanding, confidence, and lasting trust.
               </p>
             </div>
@@ -348,7 +352,7 @@ const WhyThisMatters = () => {
                     <div className="mb-3 text-primary drop-shadow-[0_0_18px_rgba(241,90,41,0.22)] transition-transform duration-300 group-hover/point:scale-110">
                       <Icon size={36} strokeWidth={1.35} />
                     </div>
-                    <p className="max-w-[9.8rem] font-sans text-xs leading-relaxed text-white/92 sm:text-sm lg:text-[0.78rem] xl:text-[0.82rem]">
+                    <p className="max-w-[9.8rem] font-sans text-sm leading-relaxed text-white/92 sm:text-[0.98rem] lg:text-[0.92rem] xl:text-[0.96rem]">
                       {point.text}
                     </p>
                   </motion.div>
@@ -364,7 +368,7 @@ const WhyThisMatters = () => {
           >
             <span className="flex min-h-[6.6rem] flex-1 items-center gap-4 px-5 py-5 lg:min-h-[6.9rem]">
               <span className="h-px w-6 shrink-0 bg-primary" />
-              <span className="font-sans text-sm leading-relaxed text-white/84">
+              <span className="font-sans text-base leading-relaxed text-white/84">
                 We translate impact into influence that moves people, decisions and markets.
               </span>
             </span>
@@ -572,10 +576,10 @@ const HomeServices = () => {
                 {s.icon}
               </div>
               <h3 className="text-lg sm:text-xl font-bold mb-3 text-prestige-black">{s.title}</h3>
-              <p className="font-sans text-sm text-prestige-text leading-relaxed mb-5 sm:mb-6 flex-grow">
+              <p className="font-sans text-base text-prestige-text leading-relaxed mb-5 sm:mb-6 sm:text-[1.02rem] flex-grow">
                 {s.desc}
               </p>
-              <Link to={s.href} className="flex items-center gap-2 text-primary font-bold text-[10px] sm:text-xs uppercase tracking-[0.18em] group/btn">
+              <Link to={s.href} className="flex items-center gap-2 text-primary font-bold text-xs sm:text-[13px] uppercase tracking-[0.18em] group/btn">
                 More Info <ChevronRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
@@ -623,20 +627,20 @@ const WhyImpala = () => {
           >
             <div className="mb-4 flex items-center gap-3">
               <span className="h-[2px] w-10 bg-primary" />
-              <span className="font-sans text-sm font-bold uppercase tracking-[0.18em] text-primary sm:text-base">
+              <span className="font-sans text-base font-bold uppercase tracking-[0.18em] text-primary sm:text-lg">
                 Why Impala
               </span>
             </div>
-            <h2 className="text-2xl font-bold leading-tight text-prestige-black sm:text-3xl lg:text-[2.35rem]">
+            <h2 className="text-[2rem] font-bold leading-tight text-prestige-black sm:text-[2.4rem] lg:text-[2.8rem]">
               African Context. Global Standards.
             </h2>
           </motion.div>
 
           <div>
-            <p className="max-w-3xl font-sans text-sm leading-relaxed text-prestige-text sm:text-base">
+            <p className="max-w-3xl font-sans text-base leading-relaxed text-prestige-text sm:text-[1.02rem]">
               Our strength lies in understanding how institutions operate within African realities while applying international standards of strategy, communication, and delivery.
             </p>
-            <p className="mt-3 max-w-3xl font-sans text-sm leading-relaxed text-prestige-text sm:text-base">
+            <p className="mt-3 max-w-3xl font-sans text-base leading-relaxed text-prestige-text sm:text-[1.02rem]">
               We combine contextual intelligence, strategic thinking, and practical execution to help organisations communicate with confidence.
             </p>
 
@@ -659,10 +663,10 @@ const WhyImpala = () => {
                         0{index + 1}
                       </span>
                     </div>
-                    <h3 className="font-sans text-sm font-bold uppercase leading-snug tracking-[0.04em] text-prestige-black">
+                    <h3 className="font-sans text-base font-bold uppercase leading-snug tracking-[0.04em] text-prestige-black">
                       {pillar.title}
                     </h3>
-                    <p className="mt-2 font-sans text-xs leading-relaxed text-prestige-text sm:text-[0.82rem]">
+                    <p className="mt-2 font-sans text-sm leading-relaxed text-prestige-text sm:text-[0.94rem]">
                       {pillar.text}
                     </p>
                   </motion.div>
@@ -730,12 +734,12 @@ const FeaturedExperience = () => {
       impact: "Created clearer public-facing updates for a specialised critical minerals audience.",
     },
     {
-      title: "Ghana Cocoa Marketing Company",
-      logo: brandMarks.ghanaCocoa,
-      tag: "Trade Narrative",
-      challenge: "Ghana's cocoa story needed global framing across sustainability and diaspora engagement.",
-      role: "Built sector storytelling around heritage, sustainability, and market relevance.",
-      impact: "Reframed cocoa as an economic, cultural, and sustainability narrative.",
+      title: "Africa Cocoa Finance & Investment Forum (ACFIF)",
+      logo: brandMarks.acfif,
+      tag: "Finance & Investment Communications",
+      challenge: "Position Africa's cocoa story within global finance and investment conversations.",
+      role: "Leading strategic communications, positioning, and stakeholder engagement across New York, Amsterdam, and Accra.",
+      impact: "Strengthening ACFIF's profile as a platform for investment, dialogue, and collaboration across Africa's cocoa sector.",
     },
     {
       title: "Michu Clinic",
@@ -795,7 +799,7 @@ const FeaturedExperience = () => {
                         <img
                           src={project.logo}
                           alt={`${project.title} logo`}
-                          className="max-h-12 w-full object-contain transition-transform duration-700 group-hover:scale-105 sm:max-h-14"
+                          className="max-h-14 w-auto max-w-full object-contain object-center transition-transform duration-700 group-hover:scale-105 sm:max-h-16"
                           referrerPolicy="no-referrer"
                         />
                       </div>
@@ -804,7 +808,7 @@ const FeaturedExperience = () => {
                     <img
                       src={project.logo}
                       alt={`${project.title} logo`}
-                      className="max-h-20 w-[78%] object-contain transition-transform duration-700 group-hover:scale-105"
+                      className="max-h-24 w-auto max-w-[82%] object-contain object-center transition-transform duration-700 group-hover:scale-105"
                       referrerPolicy="no-referrer"
                     />
                   )}
@@ -847,7 +851,7 @@ const Field = ({ label, text }: { label: string; text: string }) => (
       <CheckCircle size={13} strokeWidth={1.8} />
       {label}
     </div>
-    <p className="font-sans text-sm leading-relaxed text-prestige-text">
+    <p className="font-sans text-base leading-relaxed text-prestige-text sm:text-[1.02rem]">
       {text}
     </p>
   </div>

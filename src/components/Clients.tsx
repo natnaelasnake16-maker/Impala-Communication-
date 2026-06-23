@@ -30,7 +30,7 @@ const ClientBadge = ({ client }: { client: ClientLogo }) => {
         <img
           src={client.logoUrl}
           alt={client.alt}
-          className="mx-auto max-h-10 w-auto max-w-[140px] object-contain object-center sm:max-h-11 lg:max-h-12"
+          className={`mx-auto w-auto object-contain object-center ${client.slug === "ewla" ? "max-h-16 max-w-[160px] sm:max-h-20 lg:max-h-24" : "max-h-10 max-w-[140px] sm:max-h-11 lg:max-h-12"}`}
           loading="lazy"
           referrerPolicy="no-referrer"
         />
