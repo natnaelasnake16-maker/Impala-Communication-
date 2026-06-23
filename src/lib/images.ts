@@ -50,14 +50,20 @@ export const brandAssets = {
 };
 
 export const clientLogos = {
-  "african-business-magazine": clientLogo(
-    "african-business-magazine",
-    "African Business Magazine",
-    "african-business-magazine.png",
-  ),
+  "african-business-magazine": {
+    slug: "african-business-magazine",
+    name: "African Business Magazine",
+    logoUrl: publicAsset("work-logos/african-business-magazine.png"),
+    alt: "African Business Magazine logo",
+  },
   amref: clientLogo("amref", "AMREF"),
   "african-union": clientLogo("african-union", "African Union"),
-  awib: clientLogo("awib", "AWiB", "awib.png"),
+  awib: {
+    slug: "awib",
+    name: "AWiB",
+    logoUrl: publicAsset("work-logos/awib.png"),
+    alt: "AWiB logo",
+  },
   "bill-and-melinda-gates-foundation": clientLogo(
     "bill-and-melinda-gates-foundation",
     "Bill & Melinda Gates Foundation",
@@ -73,7 +79,12 @@ export const clientLogos = {
   dkt: clientLogo("dkt", "DKT", "dkt.jpg"),
   ecx: clientLogo("ecx", "ECX", "ecx.jpg"),
   entro: clientLogo("entro", "ENTRO"),
-  esdp: clientLogo("esdp", "ESDP", "esdp.png"),
+  esdp: {
+    slug: "esdp",
+    name: "ESDP",
+    logoUrl: publicAsset("work-logos/esdp.png"),
+    alt: "ESDP logo",
+  },
   "ethiopian-airlines": clientLogo("ethiopian-airlines", "Ethiopian Airlines"),
   "european-union": clientLogo(
     "european-union",
@@ -86,7 +97,12 @@ export const clientLogos = {
     logoUrl: publicAsset("work-logos/acfif.jpeg"),
     alt: "Africa Cocoa Finance & Investment Forum logo",
   },
-  haset: clientLogo("haset", "Haset", "haset.png"),
+  haset: {
+    slug: "haset",
+    name: "Haset",
+    logoUrl: publicAsset("work-logos/haset.png"),
+    alt: "Haset logo",
+  },
   ilo: clientLogo("ilo", "ILO", "ilo.webp"),
   iwmi: {
     slug: "iwmi",
