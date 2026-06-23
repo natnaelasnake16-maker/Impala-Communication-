@@ -346,7 +346,7 @@ export const ourWorkImages = {
 
 export const brandMarks = {
   acsis: archive("clients-logo/acsis-logo.png"),
-  africanBusiness: asset("site/work-logos/african-business-magazine.png"),
+  africanBusiness: publicAsset("work-logos/african-business-magazine.png"),
   awib: archive("clients-logo/awib-logo.png"),
   cirht: archive("clients-logo/cirht.png"),
   cmag: publicAsset("work-logos/cmag-branding.png"),
